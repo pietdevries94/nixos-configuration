@@ -9,6 +9,7 @@
       ../../services/xserver.nix
       ../../services/pulseaudio.nix
       ../../services/bluetooth.nix
+      ../../services/dconf.nix
 
       ../../home-manager/base.nix
     ];

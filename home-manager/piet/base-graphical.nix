@@ -29,5 +29,23 @@ in
     rofi.enable = true;
   };
 
-  home.packages = [ pkgs.firefox-bin unstable.spotify pkgs.gimp ];
+  home.packages = [ 
+    pkgs.firefox-bin 
+    unstable.spotify 
+    pkgs.gimp 
+
+    # File manager
+    pkgs.xfce.thunar
+    pkgs.xfce.thunar-archive-plugin
+    pkgs.xfce.thunar-volman
+  ];
+
+  gtk = {
+    enable = true;
+
+    iconTheme = {
+      package = pkgs.gnome3.adwaita-icon-theme;
+      name = "Adwaita";
+    };
+  };
 }
