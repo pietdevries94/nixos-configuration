@@ -1,8 +1,8 @@
 { config, pkgs, lib, ... }:
 
-let 
-  unstable = import ../../channels/unstable.nix;
-  personal = import ../../channels/personal.nix;
+let
+  unstable = import <nixpkgs-unstable> { config.allowUnfree = true; };
+  personal = import <personal> {};
 in
 {
   imports = [ 

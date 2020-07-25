@@ -1,7 +1,7 @@
 { config, pkgs, lib, ... }:
 
 let
-  unstable = import ../../../channels/unstable.nix;
+  unstable = import <nixpkgs-unstable> {};
 in
 {
   services.picom = {
