@@ -9,6 +9,9 @@
     };
     config = {
       "bar/top" = {
+        font-0 = "curie:size=8;2";
+        font-1 = "siji:size=12;2";
+
         background = "#444444";
         monitor = "\${env:MONITOR:}";
         width = "100%";

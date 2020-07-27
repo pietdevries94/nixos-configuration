@@ -18,4 +18,4 @@ nix-channel --update
 ## Credits
 
 ### Wallpaper
-- Autumn | [Original by Max Suleimanov](https://www.artstation.com/artwork/dvk9w) | [More saturated edit found on Reddit](https://www.reddit.com/r/wallpapers/comments/hhq9sk/autumn_by_max_suleimanov_3840x2160/)
+- avatar | [Original by John Staub](https://twitter.com/seewhatsnext/status/1042073279895224332) | [Upscaled wallpaper on Reddit](https://www.reddit.com/r/WidescreenWallpaper/comments/gh0qjr/appa_and_aang_in_the_south_pole_6480x2777/)

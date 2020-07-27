@@ -34,8 +34,10 @@ in
       settings = {
         font_family = "Inconsolata Nerd Font";
         font_size = "10.0";
+        window_padding_width = 4;
         foreground = "#000000";
         background = "#ffffff";
+        enable_audio_bell = "no";
       };
     };
   };
@@ -44,6 +46,7 @@ in
     pkgs.firefox-bin 
     unstable.spotify 
     pkgs.gimp 
+    pkgs.remmina
 
     # File manager
     pkgs.xfce.thunar

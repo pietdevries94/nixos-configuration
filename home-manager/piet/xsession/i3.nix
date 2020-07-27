@@ -12,8 +12,8 @@
         "Mod4+space" = "exec ${pkgs.rofi}/bin/rofi -show drun -modi drun";
       };
 
-      window.border = 4;
-      floating.border = 4;
+      window.border = 0;
+      floating.border = 0;
 
       gaps = {
         inner = 16;
@@ -28,5 +28,5 @@
     };
   };
 
-  home.file.".background-image.png".source = "/etc/nixos/home-manager/piet/wallpapers/Autumn-cropped.png";
+  home.file.".background-image.png".source = "/etc/nixos/home-manager/piet/wallpapers/avatar.jpg";
 }
