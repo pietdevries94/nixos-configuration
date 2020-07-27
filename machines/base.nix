@@ -11,7 +11,9 @@
 
   boot.cleanTmpDir = true;
 
+  programs.zsh.enable = true;
   users.users.piet = {
+    shell = pkgs.zsh;
     isNormalUser = true;
     extraGroups = [ "wheel" ];
   };

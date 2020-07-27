@@ -26,7 +26,18 @@ in
       package = personal.vscodium;
       extensions = [ unstable.vscode-extensions.bbenoist.Nix ];
     };
+
     rofi.enable = true;
+
+    kitty = {
+      enable = true;
+      settings = {
+        font_family = "Inconsolata Nerd Font";
+        font_size = "10.0";
+        foreground = "#000000";
+        background = "#ffffff";
+      };
+    };
   };
 
   home.packages = [ 

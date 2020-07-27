@@ -7,7 +7,7 @@
       keybindings = let
         modifier = config.xsession.windowManager.i3.config.modifier;
       in lib.mkOptionDefault {
-        "${modifier}+Return" = "exec i3-sensible-terminal";
+        "${modifier}+Return" = "exec --no-startup-id kitty";
         "${modifier}+Shift+q" = "kill";
         "Mod4+space" = "exec ${pkgs.rofi}/bin/rofi -show drun -modi drun";
       };

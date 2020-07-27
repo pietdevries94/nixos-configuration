@@ -10,6 +10,7 @@
       ../../services/pulseaudio.nix
       ../../services/bluetooth.nix
       ../../services/dconf.nix
+      ../../services/fonts.nix
 
       ../../home-manager/base.nix
     ];
