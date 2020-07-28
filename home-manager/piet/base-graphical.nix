@@ -3,6 +3,15 @@
 let
   unstable = import <nixpkgs-unstable> { config.allowUnfree = true; };
   personal = import <personal> {};
+
+  myCustomLayout = pkgs.writeText "xkb-layout" ''
+    clear lock
+    clear mod3
+    clear mod4
+    keycode 66 = Hyper_L
+    add mod3 = Hyper_L
+    add mod4 = Super_L Super_R
+  '';
 in
 {
   imports = [ 
@@ -13,6 +22,7 @@ in
 
   xsession.windowManager.i3.config.startup = [
     { command = "systemctl --user restart polybar"; always = true; notification = false; }
+    { command = "${pkgs.xorg.xmodmap}/bin/xmodmap ${myCustomLayout} &"; always = true; notification = false; }
   ];
 
   xsession = {
