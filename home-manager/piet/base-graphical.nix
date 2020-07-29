@@ -1,9 +1,6 @@
 { config, pkgs, lib, ... }:
 
 let
-  unstable = import <nixpkgs-unstable> { config.allowUnfree = true; };
-  personal = import <personal> {};
-
   myCustomLayout = pkgs.writeText "xkb-layout" ''
     clear lock
     clear mod3
@@ -18,6 +15,10 @@ in
     ./xsession/i3.nix
     ./xsession/polybar.nix
     ./xsession/picom.nix
+    ./xsession/rofi.nix
+    ./xsession/gtk.nix
+
+    ./programs/vscode.nix
   ];
 
   xsession.windowManager.i3.config.startup = [
@@ -31,14 +32,6 @@ in
   };
 
   programs = {
-    vscode = {
-      enable = true;
-      package = personal.vscodium;
-      extensions = [ unstable.vscode-extensions.bbenoist.Nix ];
-    };
-
-    rofi.enable = true;
-
     kitty = {
       enable = true;
       settings = {
@@ -52,24 +45,15 @@ in
     };
   };
 
-  home.packages = [ 
-    pkgs.firefox-bin 
-    unstable.spotify 
-    pkgs.gimp 
-    pkgs.remmina
+  home.packages = with pkgs; [ 
+    firefox-bin 
+    spotify 
+    gimp 
+    remmina
 
     # File manager
-    pkgs.xfce.thunar
-    pkgs.xfce.thunar-archive-plugin
-    pkgs.xfce.thunar-volman
+    xfce.thunar
+    xfce.thunar-archive-plugin
+    xfce.thunar-volman
   ];
-
-  gtk = {
-    enable = true;
-
-    iconTheme = {
-      package = pkgs.gnome3.adwaita-icon-theme;
-      name = "Adwaita";
-    };
-  };
 }

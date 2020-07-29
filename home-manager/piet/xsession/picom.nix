@@ -1,12 +1,8 @@
 { config, pkgs, lib, ... }:
 
-let
-  unstable = import <nixpkgs-unstable> {};
-in
 {
   services.picom = {
     enable = true;
-    package = unstable.picom;
     vSync = true;
     experimentalBackends = true;
 
