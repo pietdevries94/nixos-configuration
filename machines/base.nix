@@ -20,14 +20,6 @@ in {
     binaryCachePublicKeys = [ "pietdevries94.cachix.org-1:EmL0bay0YH7tI9SU3sLeyhBR5QYx+Zg6vMvBOmZ6MMQ=" ];
   };
 
-  # Enable cron service and setup channel updates
-  services.cron = {
-    enable = true;
-    systemCronJobs = [
-      "@hourly root nix-channel --update"
-    ];
-  };
-
   boot.cleanTmpDir = true;
   
   i18n.defaultLocale = "en_US.UTF-8";
