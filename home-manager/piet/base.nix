@@ -1,7 +1,12 @@
 { config, pkgs, ... }:
 
 {
-  home.packages = [ pkgs.git pkgs.niv pkgs.unzip ];
+  home.packages = with pkgs; [
+    git
+    niq
+    niv
+    unzip
+  ];
 
   imports = [ 
     ./terminal/lorri.nix

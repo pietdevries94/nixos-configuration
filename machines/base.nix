@@ -1,12 +1,13 @@
 { config, pkgs, options, ... }:
 
-let
-  unstableOverlay = import ../overlays/unstable.nix;
-  personalOverlay = import ../overlays/personal.nix;
-in {
+{
   nixpkgs = {
     config.allowUnfree = true;
-    overlays = [ unstableOverlay personalOverlay ];
+    overlays = [
+      (import ../overlays/unstable.nix)
+      (import ../overlays/personal.nix)
+      (import ../overlays/wietse.nix)
+    ];
   };
 
   system.stateVersion = "20.03";
