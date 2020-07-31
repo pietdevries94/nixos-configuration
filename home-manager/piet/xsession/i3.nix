@@ -1,3 +1,4 @@
+{ wallpaper }:
 { config, pkgs, lib, ... }:
 
 {
@@ -122,6 +123,7 @@
       gaps = {
         inner = 16;
         outer = 0;
+        bottom = 30;
       };
 
       bars = [];
@@ -132,5 +134,5 @@
     };
   };
 
-  home.file.".background-image.png".source = "/etc/nixos/home-manager/piet/wallpapers/avatar.jpg";
+  home.file.".background-image.png".source = wallpaper;
 }

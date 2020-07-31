@@ -7,5 +7,5 @@ https://github.com/pietdevries94/personal-nix-overlay
 
 ## Credits
 
-### Wallpaper
-- avatar | [Original by John Staub](https://twitter.com/seewhatsnext/status/1042073279895224332) | [Upscaled wallpaper on Reddit](https://www.reddit.com/r/WidescreenWallpaper/comments/gh0qjr/appa_and_aang_in_the_south_pole_6480x2777/)
+### Wallpapers
+- horizon | [reddit](https://www.reddit.com/r/WidescreenWallpaper/comments/i0576m/somewhere_in_norway_3440x1440/)

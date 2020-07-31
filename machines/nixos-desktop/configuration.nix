@@ -1,6 +1,10 @@
 { config, pkgs, ... }:
 
-{
+let 
+  graphicalConfig = {
+    theme = import ../../themes/horizon { pkgs = pkgs; };
+  };
+in {
   imports =
     [
       ./hardware-configuration.nix
@@ -17,9 +21,10 @@
   
   home-manager.users.piet = {
     imports = [
-      ../../home-manager/piet/base.nix
-      ../../home-manager/piet/base-graphical.nix
       ./autorandr-profiles.nix
+
+      ../../home-manager/piet/base.nix
+      (import ../../home-manager/piet/base-graphical.nix graphicalConfig)
     ];
 
 

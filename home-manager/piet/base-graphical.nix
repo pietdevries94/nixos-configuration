@@ -1,3 +1,4 @@
+{ theme }:
 { config, pkgs, lib, ... }:
 
 let
@@ -12,13 +13,13 @@ let
 in
 {
   imports = [ 
-    ./xsession/i3.nix
-    ./xsession/polybar.nix
+    (import ./xsession/i3.nix {wallpaper = theme.wallpaper;})
+    (import ./xsession/polybar.nix { colors = theme.colors; })
     ./xsession/picom.nix
     ./xsession/rofi.nix
-    ./xsession/gtk.nix
 
-    ./programs/vscode.nix
+    (import ./programs/vscode.nix theme.vscode)
+    (import ./programs/kitty.nix { colors = theme.colors; })
   ];
 
   xsession.windowManager.i3.config.startup = [
@@ -31,19 +32,9 @@ in
     scriptPath = ".hm-xsession";
   };
 
-  programs = {
-    kitty = {
-      enable = true;
-      settings = {
-        font_family = "Inconsolata Nerd Font";
-        font_size = "10.0";
-        window_padding_width = 4;
-        foreground = "#000000";
-        background = "#ffffff";
-        enable_audio_bell = "no";
-      };
-    };
-  };
+  gtk = {
+    enable = true;
+  } // theme.gtk;
 
   home.packages = with pkgs; [ 
     firefox-bin 
@@ -55,5 +46,6 @@ in
     xfce.thunar
     xfce.thunar-archive-plugin
     xfce.thunar-volman
+    gnome3.file-roller
   ];
 }
