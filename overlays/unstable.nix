@@ -4,9 +4,10 @@ let
     config.allowUnfree = true; 
   };
 in with unstable; {
-   spotify = spotify;
-   inconsolata-nerdfont = inconsolata-nerdfont;
-   siji = siji;
-   starship = starship;
-   picom = picom;
+  inherit spotify
+          inconsolata-nerdfont
+          siji
+          starship
+          picom
+  ;
 }
