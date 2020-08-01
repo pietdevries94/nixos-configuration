@@ -6,7 +6,7 @@
     overlays = [
       (import ../overlays/unstable.nix)
       (import ../overlays/personal.nix)
-      (import ../overlays/wietse.nix)
+      (import ../overlays/wietsedv.nix)
     ];
   };
 
