@@ -26,7 +26,7 @@
         fixed-center = true;
         modules-left = "i3";
         modules-center = "date";
-        modules-right = "pulseaudio";
+        modules-right = "pulseaudio tempcpu tempwifi tempamdgpu filesystem memory cpu";
 
         override-redirect = true;
         wm-restack = "i3";
@@ -59,6 +59,40 @@
         label-unfocused-background = colors.ui.accent;
         label-visible-background = colors.ui.accent;
         label-urgent-background = colors.ui.accent;
+      };
+      "module/memory" = {
+        type = "internal/memory";
+        label-background = colors.ui.accent;
+        label = " | ram %gb_used%";
+      };
+      "module/cpu" = {
+        type = "internal/cpu";
+        label-background = colors.ui.accent;
+        label = " | cpu %percentage%%";
+      };
+      "module/filesystem" = {
+        type = "internal/fs";
+        mount-0 = "/";
+        label-mounted-background = colors.ui.accent;
+        label-mounted = " | / %percentage_used%%";
+      };
+      "module/tempcpu" = {
+        type = "internal/temperature";
+        hwmon-path = "/sys/devices/pci0000:00/0000:00:18.3/hwmon/hwmon0/temp1_input";
+        label = " | cpu %temperature-c%";
+        label-background = colors.ui.accent;
+      };
+      "module/tempwifi" = {
+        type = "internal/temperature";
+        hwmon-path = "/sys/devices/virtual/thermal/thermal_zone0/hwmon2/temp1_input";
+        label = " | wifi %temperature-c%";
+        label-background = colors.ui.accent;
+      };
+      "module/tempamdgpu" = {
+        type = "internal/temperature";
+        hwmon-path = "/sys/devices/pci0000:00/0000:00:03.1/0000:0b:00.0/hwmon/hwmon3/temp1_input";
+        label = " | gpu %temperature-c%";
+        label-background = colors.ui.accent;
       };
     };
   };

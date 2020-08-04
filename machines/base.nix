@@ -13,7 +13,12 @@
   system.stateVersion = "20.03";
   system.autoUpgrade.enable = true;
 
-  environment.systemPackages = [ pkgs.htop pkgs.killall pkgs.cachix ];
+  environment.systemPackages = with pkgs; [
+    htop
+    killall
+    cachix
+    lm_sensors
+  ];
 
   # This binary cache is for my personal repository https://github.com/pietdevries94/personal-nix-channel
   nix = {

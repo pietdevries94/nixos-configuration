@@ -6,6 +6,7 @@
     niq
     niv
     unzip
+    nix-boilerplate
   ];
 
   imports = [ 
