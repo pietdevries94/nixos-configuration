@@ -123,7 +123,7 @@
       gaps = {
         inner = 16;
         outer = 0;
-        bottom = 30;
+        bottom = 34;
       };
 
       bars = [];

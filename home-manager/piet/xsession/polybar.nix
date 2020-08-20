@@ -19,9 +19,9 @@
         monitor = "\${env:MONITOR:}";
         height = 26;
         radius = 0;
-        offset-y = 6;
-        offset-x = 8;
-        width = "100%:-16 ";
+        offset-y = 10;
+        offset-x = 16;
+        width = "100%:-32 ";
 
         fixed-center = true;
         modules-left = "i3";
@@ -36,8 +36,8 @@
         type = "internal/pulseaudio";
         # format-volume = "<label-volume> <bar-volume>";
         format-volume = "<label-volume>";
-        label-volume = "VOL %percentage%%";
-        label-muted = "muted";
+        label-volume = " VOL %percentage%%";
+        label-muted = " muted";
         label-volume-background = colors.ui.accent;
         label-muted-background = colors.ui.accent;
       };
@@ -46,7 +46,7 @@
         internal = 5;
         date = "%Y-%m-%d";
         time = "%H:%M";
-        label = "%date% %time%";
+        label = " %date% %time% ";
         label-background = colors.ui.accent;
       };
       "module/i3" = {
@@ -68,7 +68,7 @@
       "module/cpu" = {
         type = "internal/cpu";
         label-background = colors.ui.accent;
-        label = " | cpu %percentage%%";
+        label = " | cpu %percentage%% ";
       };
       "module/filesystem" = {
         type = "internal/fs";
