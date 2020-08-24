@@ -32,6 +32,8 @@ in
     scriptPath = ".hm-xsession";
   };
 
+  services.dunst.enable = true;
+
   gtk = {
     enable = true;
   } // theme.gtk;
