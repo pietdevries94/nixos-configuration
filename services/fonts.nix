@@ -6,7 +6,7 @@
     enableDefaultFonts = true;
     fonts = with pkgs; [
       curie
-      siji.otb
+      siji
       inconsolata-nerdfont
     ];
   };
