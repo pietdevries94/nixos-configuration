@@ -14,7 +14,7 @@
         font-1 = "siji:size=12;2";
 
         background = "#00000000";
-        foreground = colors.ui.darkText;
+        foreground = colors.ui.foreground;
 
         monitor = "\${env:MONITOR:}";
         height = 26;
@@ -38,8 +38,8 @@
         format-volume = "<label-volume>";
         label-volume = " VOL %percentage%%";
         label-muted = " muted";
-        label-volume-background = colors.ui.accent;
-        label-muted-background = colors.ui.accent;
+        label-volume-background = colors.ui.background;
+        label-muted-background = colors.ui.background;
       };
       "module/date" = {
         type = "internal/date";
@@ -47,52 +47,52 @@
         date = "%Y-%m-%d";
         time = "%H:%M";
         label = " %date% %time% ";
-        label-background = colors.ui.accent;
+        label-background = colors.ui.background;
       };
       "module/i3" = {
         type = "internal/i3";
         scroll-up = "i3wm-wsnext";
         scroll-down = "i3wm-wsprev";
         pin-workspaces = true;
-        label-mode-background = colors.ui.accent;
-        label-focused-background = colors.ui.accent;
-        label-unfocused-background = colors.ui.accent;
-        label-visible-background = colors.ui.accent;
-        label-urgent-background = colors.ui.accent;
+        label-mode-background = colors.ui.background;
+        label-focused-background = colors.ui.background;
+        label-unfocused-background = colors.ui.background;
+        label-visible-background = colors.ui.background;
+        label-urgent-background = colors.ui.background;
       };
       "module/memory" = {
         type = "internal/memory";
-        label-background = colors.ui.accent;
+        label-background = colors.ui.background;
         label = " | ram %gb_used%";
       };
       "module/cpu" = {
         type = "internal/cpu";
-        label-background = colors.ui.accent;
+        label-background = colors.ui.background;
         label = " | cpu %percentage%% ";
       };
       "module/filesystem" = {
         type = "internal/fs";
         mount-0 = "/";
-        label-mounted-background = colors.ui.accent;
+        label-mounted-background = colors.ui.background;
         label-mounted = " | / %percentage_used%%";
       };
       "module/tempcpu" = {
         type = "internal/temperature";
         hwmon-path = "/sys/devices/pci0000:00/0000:00:18.3/hwmon/hwmon0/temp1_input";
         label = " | cpu %temperature-c%";
-        label-background = colors.ui.accent;
+        label-background = colors.ui.background;
       };
       "module/tempwifi" = {
         type = "internal/temperature";
         hwmon-path = "/sys/devices/virtual/thermal/thermal_zone0/hwmon2/temp1_input";
         label = " | wifi %temperature-c%";
-        label-background = colors.ui.accent;
+        label-background = colors.ui.background;
       };
       "module/tempamdgpu" = {
         type = "internal/temperature";
         hwmon-path = "/sys/devices/pci0000:00/0000:00:03.1/0000:0b:00.0/hwmon/hwmon3/temp1_input";
         label = " | gpu %temperature-c%";
-        label-background = colors.ui.accent;
+        label-background = colors.ui.background;
       };
     };
   };
