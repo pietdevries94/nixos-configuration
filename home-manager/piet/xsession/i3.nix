@@ -81,8 +81,6 @@
         "${modifier}+8" = "workspace ${ws8}";
         "${modifier}+9" = "workspace ${ws9}";
         "${modifier}+0" = "workspace ${ws10}";
-        "control+Left" = "workspace prev";
-        "control+Right" = "workspace next";
 
         # move focused container to workspace
         "${modifier}+Mod4+1" = "move container to workspace ${ws1}; workspace ${ws1}";
