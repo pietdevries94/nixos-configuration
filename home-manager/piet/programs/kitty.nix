@@ -10,17 +10,17 @@
       window_padding_width = 4;
       enable_audio_bell = "no";
 
-      foreground = colors.ui.text;
+      foreground = colors.ui.foreground;
       background = colors.ui.background;
 
-      selection_foreground = colors.ui.text;
+      selection_foreground = colors.ui.foreground;
       selection_background = colors.ui.backgroundAlt;
 
-      mark1_foreground = colors.ui.text;
+      mark1_foreground = colors.ui.foreground;
       mark1_background = colors.ui.accent;
-      mark2_foreground = colors.ui.text;
+      mark2_foreground = colors.ui.foreground;
       mark2_background = colors.ui.secondaryAccent;
-      mark3_foreground = colors.ui.text;
+      mark3_foreground = colors.ui.foreground;
       mark3_background = colors.ui.tertiaryAccent;
 
       color0 = colors.normal.black;
@@ -40,5 +40,9 @@
       color7  = colors.normal.white;
       color15 = colors.bright.white;
     };
+  };
+
+  services.sxhkd.keybindings = {
+    "mod3 + Return" = "kitty";
   };
 }

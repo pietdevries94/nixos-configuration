@@ -32,7 +32,7 @@ let
       jaffa = "#F77D26";
       black = "#333333";
     };
-    ui = {
+    ui = rec {
       shadow = "#16161C";
       border = "#1A1C23";
       background = "#FDF0ED";
@@ -48,7 +48,7 @@ let
       modified = "#1EAEAE";
       lightText = "#D5D8DA";
       darkText = "#06060C";
-      text = darkText;
+      foreground = darkText;
     };
   };
 in {

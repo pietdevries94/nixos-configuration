@@ -48,7 +48,7 @@ let
       modified = "#21BFC2";
       lightText = "#D5D8DA";
       darkText = "#06060C";
-      text = "#FADAD1";
+      foreground = "#FADAD1";
     };
   };
 in {

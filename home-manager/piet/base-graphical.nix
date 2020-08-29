@@ -2,6 +2,8 @@
 { config, pkgs, lib, ... }:
 
 let
+  inherit (theme) colors;
+
   myCustomLayout = pkgs.writeText "xkb-layout" ''
     clear lock
     clear mod3
@@ -12,17 +14,18 @@ let
   '';
 in
 {
-  imports = [ 
-    ./xsession/sxhkd.nix
+  # Imports may provide keybindings for sxhkd
+  services.sxhkd.enable = true;
 
+  imports = [
     ./xsession/i3.nix
-    (import ./xsession/polybar.nix { colors = theme.colors; })
+    (import ./xsession/polybar.nix { inherit colors; })
     ./xsession/picom.nix
-    ./xsession/rofi.nix
-    (import ./xsession/tint2.nix { colors = theme.colors; })
+    (import ./xsession/rofi.nix { inherit colors; })
+    (import ./xsession/tint2.nix { inherit colors; })
 
     (import ./programs/vscode.nix theme.vscode)
-    (import ./programs/kitty.nix { colors = theme.colors; })
+    (import ./programs/kitty.nix { inherit colors; })
   ];
 
   xsession.windowManager.i3.config.startup = [
