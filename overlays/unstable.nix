@@ -12,5 +12,7 @@ in with unstable; {
     starship
     picom
     niv
+    sweet
+    numix-icon-theme
   ;
 }

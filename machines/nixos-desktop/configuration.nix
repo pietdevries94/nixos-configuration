@@ -2,7 +2,7 @@
 
 let 
   graphicalConfig = {
-    theme = import ../../themes/horizon { pkgs = pkgs; };
+    theme = import ../../themes/horizon-dark { inherit pkgs; };
   };
 in {
   imports =

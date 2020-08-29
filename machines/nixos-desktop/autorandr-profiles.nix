@@ -17,6 +17,7 @@
 
           "HDMI-A-0" = {
               enable = true;
+              primary = true;
               mode = "2560x1080";
               position = "1920x0";
               rate = "74.99";

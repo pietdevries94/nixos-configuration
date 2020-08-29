@@ -10,17 +10,17 @@
       window_padding_width = 4;
       enable_audio_bell = "no";
 
-      foreground = colors.ui.darkText;
+      foreground = colors.ui.text;
       background = colors.ui.background;
 
-      selection_foreground = colors.ui.darkText;
+      selection_foreground = colors.ui.text;
       selection_background = colors.ui.backgroundAlt;
 
-      mark1_foreground = colors.ui.darkText;
+      mark1_foreground = colors.ui.text;
       mark1_background = colors.ui.accent;
-      mark2_foreground = colors.ui.darkText;
+      mark2_foreground = colors.ui.text;
       mark2_background = colors.ui.secondaryAccent;
-      mark3_foreground = colors.ui.darkText;
+      mark3_foreground = colors.ui.text;
       mark3_background = colors.ui.tertiaryAccent;
 
       color0 = colors.normal.black;

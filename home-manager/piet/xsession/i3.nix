@@ -1,4 +1,3 @@
-{ wallpaper }:
 { config, pkgs, lib, ... }:
 
 {
@@ -19,9 +18,7 @@
         ws9 = "9";
         ws10 = "10";
       in {
-        "${modifier}+Return" = "exec --no-startup-id kitty";
         "${modifier}+Mod4+q" = "kill";
-        "Mod4+space" = "exec ${pkgs.rofi}/bin/rofi -show drun -modi drun";
 
         # change focus
         "${modifier}+j" = "focus left";
@@ -127,12 +124,6 @@
       };
 
       bars = [];
-
-      startup = [
-        { command = "${pkgs.feh}/bin/feh --bg-fill ~/.background-image.png"; always = true; notification = false; }
-      ];
     };
   };
-
-  home.file.".background-image.png".source = wallpaper;
 }

@@ -13,10 +13,13 @@ let
 in
 {
   imports = [ 
-    (import ./xsession/i3.nix {wallpaper = theme.wallpaper;})
+    ./xsession/sxhkd.nix
+
+    ./xsession/i3.nix
     (import ./xsession/polybar.nix { colors = theme.colors; })
     ./xsession/picom.nix
     ./xsession/rofi.nix
+    (import ./xsession/tint2.nix { colors = theme.colors; })
 
     (import ./programs/vscode.nix theme.vscode)
     (import ./programs/kitty.nix { colors = theme.colors; })
@@ -24,13 +27,18 @@ in
 
   xsession.windowManager.i3.config.startup = [
     { command = "systemctl --user restart polybar"; always = true; notification = false; }
-    { command = "${pkgs.xorg.xmodmap}/bin/xmodmap ${myCustomLayout} &"; always = true; notification = false; }
   ];
 
   xsession = {
     enable = true;
     scriptPath = ".hm-xsession";
+    initExtra = ''
+      ${pkgs.xorg.xmodmap}/bin/xmodmap ${myCustomLayout} &
+      ${pkgs.feh}/bin/feh --bg-fill ~/.background-image.png
+    '';
   };
+
+  home.file.".background-image.png".source = theme.wallpaper;
 
   services.dunst.enable = true;
 
@@ -39,10 +47,11 @@ in
   } // theme.gtk;
 
   home.packages = with pkgs; [ 
-    firefox-bin 
-    spotify 
-    gimp 
+    firefox-bin
+    spotify
+    gimp
     remmina
+    neofetch
 
     # File manager
     xfce.thunar

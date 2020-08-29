@@ -8,4 +8,5 @@ https://github.com/pietdevries94/personal-nix-overlay
 ## Credits
 
 ### Wallpapers
-- horizon | [reddit](https://www.reddit.com/r/WidescreenWallpaper/comments/i0576m/somewhere_in_norway_3440x1440/)
+- horizon light | [reddit](https://www.reddit.com/r/WidescreenWallpaper/comments/i0576m/somewhere_in_norway_3440x1440/)
+- horizon dark | [original](https://www.reddit.com/r/WidescreenWallpaper/comments/idz26y/ariane_5_by_sylvain_sarrailh_3440_x_1440/) | [edit on reddit](https://www.artstation.com/artwork/JleA1z)
