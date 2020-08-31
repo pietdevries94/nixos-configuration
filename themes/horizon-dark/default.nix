@@ -49,6 +49,7 @@ let
       lightText = "#D5D8DA";
       darkText = "#06060C";
       foreground = "#FADAD1";
+      foregroundAlt = "#FDF0ED";
     };
   };
 in {

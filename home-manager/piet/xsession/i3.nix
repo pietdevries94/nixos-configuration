@@ -122,6 +122,10 @@
       };
 
       bars = [];
+
+      startup = [
+        { command = "systemctl --user restart polybar"; always = true; notification = false; }
+      ];
     };
   };
 }

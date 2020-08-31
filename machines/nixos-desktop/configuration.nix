@@ -15,6 +15,7 @@ in {
       ../../services/bluetooth.nix
       ../../services/dconf.nix
       ../../services/fonts.nix
+      ../../services/32bit-support.nix
 
       ../../home-manager/base.nix
     ];

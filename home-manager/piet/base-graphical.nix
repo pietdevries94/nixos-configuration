@@ -18,8 +18,10 @@ in
   services.sxhkd.enable = true;
 
   imports = [
-    ./xsession/i3.nix
-    (import ./xsession/polybar.nix { inherit colors; })
+    # (import ./xsession/polybar.nix { inherit colors; })
+    # ./xsession/i3.nix
+    
+    (import ./xsession/bspwm.nix { inherit colors; })
     ./xsession/picom.nix
     (import ./xsession/rofi.nix { inherit colors; })
     (import ./xsession/tint2.nix { inherit colors; })
@@ -28,9 +30,6 @@ in
     (import ./programs/kitty.nix { inherit colors; })
   ];
 
-  xsession.windowManager.i3.config.startup = [
-    { command = "systemctl --user restart polybar"; always = true; notification = false; }
-  ];
 
   xsession = {
     enable = true;
@@ -55,6 +54,7 @@ in
     gimp
     remmina
     neofetch
+    pciutils
     steam
 
     # File manager

@@ -18,7 +18,7 @@
           backgroundAlt = colors.ui.background;
           foreground = colors.ui.foreground;
           highlight = {
-            background = colors.ui.tertiaryAccent;
+            background = colors.ui.secondaryAccent;
             foreground = colors.ui.darkText;
           };
         };
