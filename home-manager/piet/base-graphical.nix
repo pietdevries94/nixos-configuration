@@ -55,6 +55,7 @@ in
     gimp
     remmina
     neofetch
+    steam
 
     # File manager
     xfce.thunar
