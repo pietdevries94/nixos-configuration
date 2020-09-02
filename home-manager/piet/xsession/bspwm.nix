@@ -32,7 +32,7 @@
 
   services.sxhkd.keybindings = {
     # quit/restart bspwm
-    "mod3 + mod1 + {q,r}" =	"bspc {quit,wm -r}";
+    # "mod3 + mod1 + {q,r}" =	"bspc {quit,wm -r}";
 
     # close and kill
     "mod3 + {_,mod1 + }w" = "bspc node -{c,k}";

@@ -8,6 +8,8 @@
       curie
       siji
       inconsolata-nerdfont
+      font-awesome
+      cantarell-fonts
     ];
   };
 }

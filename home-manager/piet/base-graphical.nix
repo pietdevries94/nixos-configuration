@@ -25,6 +25,7 @@ in
     ./xsession/picom.nix
     (import ./xsession/rofi.nix { inherit colors; })
     (import ./xsession/tint2.nix { inherit colors; })
+    (import ./xsession/dunst.nix { inherit colors; iconTheme = theme.gtk.iconTheme; })
 
     (import ./programs/vscode.nix theme.vscode)
     (import ./programs/kitty.nix { inherit colors; })
@@ -42,8 +43,6 @@ in
 
   home.file.".background-image.png".source = theme.wallpaper;
 
-  services.dunst.enable = true;
-
   gtk = {
     enable = true;
   } // theme.gtk;
@@ -56,11 +55,14 @@ in
     neofetch
     pciutils
     steam
+    discord
+    pavucontrol
 
     # File manager
     xfce.thunar
     xfce.thunar-archive-plugin
     xfce.thunar-volman
+    xfce.tumbler
     gnome3.file-roller
   ];
 }
