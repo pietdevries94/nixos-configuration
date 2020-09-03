@@ -8,13 +8,13 @@ writeText "tint2rc" ''
 # Gradients
 # Gradient 1
 gradient = vertical
-start_color = #63c5ea 100
-end_color = #ac8ef4 100
+start_color = ${colors.ui.tertiaryAccent} 100
+end_color = ${colors.ui.secondaryAccent} 100
 
 # Gradient 2
 gradient = vertical
-start_color = #63c5ea 88
-end_color = #ac8ef4 88
+start_color = ${colors.ui.tertiaryAccent} 88
+end_color = ${colors.ui.secondaryAccent} 88
 
 #-------------------------------------
 # Backgrounds
@@ -24,12 +24,12 @@ border_width = 0
 border_sides = 
 border_content_tint_weight = 0
 background_content_tint_weight = 0
-background_color = #edfefe 100
-border_color = #a1a8b9 40
-background_color_hover = #edfefe 78
-border_color_hover = #a1a8b9 40
-background_color_pressed = #edfefe 100
-border_color_pressed = #a1a8b9 78
+background_color = ${colors.ui.foreground} 100
+border_color = ${colors.ui.foregroundAlt} 40
+background_color_hover = ${colors.ui.foreground} 78
+border_color_hover = ${colors.ui.foregroundAlt} 40
+background_color_pressed = ${colors.ui.foreground} 100
+border_color_pressed = ${colors.ui.foregroundAlt} 78
 
 # Background 2: Default task
 rounded = 6
@@ -37,13 +37,13 @@ border_width = 0
 border_sides = 
 border_content_tint_weight = 0
 background_content_tint_weight = 0
-background_color = #edfefe 39
-border_color = #a1a8b9 40
+background_color = ${colors.ui.foreground} 39
+border_color = ${colors.ui.foregroundAlt} 40
 gradient_id = 0
-background_color_hover = #edfefe 88
-border_color_hover = #a1a8b9 40
-background_color_pressed = #edfefe 39
-border_color_pressed = #a1a8b9 78
+background_color_hover = ${colors.ui.foreground} 88
+border_color_hover = ${colors.ui.foregroundAlt} 40
+background_color_pressed = ${colors.ui.foreground} 39
+border_color_pressed = ${colors.ui.foregroundAlt} 78
 
 # Background 3: Active desktop name, Inactive desktop name, Urgent task
 rounded = 6
@@ -51,13 +51,13 @@ border_width = 0
 border_sides = 
 border_content_tint_weight = 0
 background_content_tint_weight = 0
-background_color = #edfefe 100
-border_color = #a1a8b9 40
+background_color = ${colors.ui.foreground} 100
+border_color = ${colors.ui.foregroundAlt} 40
 gradient_id = 0
-background_color_hover = #edfefe 88
-border_color_hover = #a1a8b9 40
-background_color_pressed = #edfefe 100
-border_color_pressed = #a1a8b9 78
+background_color_hover = ${colors.ui.foreground} 88
+border_color_hover = ${colors.ui.foregroundAlt} 40
+background_color_pressed = ${colors.ui.foreground} 100
+border_color_pressed = ${colors.ui.foregroundAlt} 78
 
 # Background 4: Active taskbar, Clock, Inactive taskbar, Panel
 rounded = 0
@@ -65,12 +65,12 @@ border_width = 0
 border_sides = 
 border_content_tint_weight = 0
 background_content_tint_weight = 0
-background_color = #3b4252 100
-border_color = #000000 0
-background_color_hover = #000000 0
-border_color_hover = #000000 0
-background_color_pressed = #000000 0
-border_color_pressed = #000000 0
+background_color = ${colors.ui.accent} 100
+border_color = ${colors.ui.background} 0
+background_color_hover = ${colors.ui.background} 0
+border_color_hover = ${colors.ui.background} 0
+background_color_pressed = ${colors.ui.background} 0
+border_color_pressed = ${colors.ui.background} 0
 
 # Background 5: 
 rounded = 6
@@ -78,14 +78,14 @@ border_width = 0
 border_sides = 
 border_content_tint_weight = 0
 background_content_tint_weight = 0
-background_color = #edfefe 0
-border_color = #a1a8b9 0
+background_color = ${colors.ui.foreground} 0
+border_color = ${colors.ui.foregroundAlt} 0
 gradient_id = 1
-background_color_hover = #63c5ea 0
-border_color_hover = #a1a8b9 0
+background_color_hover = ${colors.ui.tertiaryAccent} 0
+border_color_hover = ${colors.ui.foregroundAlt} 0
 gradient_id_hover = 2
-background_color_pressed = #63c5ea 0
-border_color_pressed = #a1a8b9 0
+background_color_pressed = ${colors.ui.tertiaryAccent} 0
+border_color_pressed = ${colors.ui.foregroundAlt} 0
 gradient_id_pressed = 1
 
 # Background 6: 
@@ -94,12 +94,12 @@ border_width = 0
 border_sides = 
 border_content_tint_weight = 0
 background_content_tint_weight = 0
-background_color = #edfefe 0
-border_color = #a1a8b9 0
-background_color_hover = #edfefe 10
-border_color_hover = #a1a8b9 0
-background_color_pressed = #edfefe 0
-border_color_pressed = #a1a8b9 0
+background_color = ${colors.ui.foreground} 0
+border_color = ${colors.ui.foregroundAlt} 0
+background_color_hover = ${colors.ui.foreground} 10
+border_color_hover = ${colors.ui.foregroundAlt} 0
+background_color_pressed = ${colors.ui.foreground} 0
+border_color_pressed = ${colors.ui.foregroundAlt} 0
 
 # Background 7: Tooltip
 rounded = 0
@@ -107,12 +107,12 @@ border_width = 0
 border_sides = 
 border_content_tint_weight = 0
 background_content_tint_weight = 0
-background_color = #3b4252 100
-border_color = #000000 0
-background_color_hover = #000000 0
-border_color_hover = #000000 0
-background_color_pressed = #000000 0
-border_color_pressed = #000000 0
+background_color = ${colors.ui.accent} 100
+border_color = ${colors.ui.background} 0
+background_color_hover = ${colors.ui.background} 0
+border_color_hover = ${colors.ui.background} 0
+background_color_pressed = ${colors.ui.background} 0
+border_color_pressed = ${colors.ui.background} 0
 
 # Background 8: Executor, Systray
 rounded = 14
@@ -120,12 +120,12 @@ border_width = 0
 border_sides = 
 border_content_tint_weight = 0
 background_content_tint_weight = 0
-background_color = #434c5e 100
-border_color = #a1a8b9 0
-background_color_hover = #434c5e 100
-border_color_hover = #a1a8b9 0
-background_color_pressed = #434c5e 100
-border_color_pressed = #a1a8b9 0
+background_color = ${colors.ui.background} 100
+border_color = ${colors.ui.foregroundAlt} 0
+background_color_hover = ${colors.ui.background} 100
+border_color_hover = ${colors.ui.foregroundAlt} 0
+background_color_pressed = ${colors.ui.background} 100
+border_color_pressed = ${colors.ui.foregroundAlt} 0
 
 #-------------------------------------
 # Panel
@@ -171,8 +171,8 @@ taskbar_name_padding = 0 0
 taskbar_name_background_id = 3
 taskbar_name_active_background_id = 3
 taskbar_name_font = Iosevka 8
-taskbar_name_font_color = #3b4252 100
-taskbar_name_active_font_color = #3b4252 100
+taskbar_name_font_color = ${colors.ui.accent} 100
+taskbar_name_active_font_color = ${colors.ui.accent} 100
 taskbar_distribute_size = 0
 taskbar_sort_order = title
 task_align = right
@@ -227,7 +227,7 @@ time1_font = Iosevka Bold 15
 time1_timezone = 
 time2_timezone = 
 time2_font = Iosevka Italic 10
-clock_font_color = #edfefe 100
+clock_font_color = ${colors.ui.foreground} 100
 clock_padding = 0 7
 clock_background_id = 4
 clock_tooltip = %A, %d %B %Y
@@ -244,7 +244,7 @@ battery_tooltip = 1
 battery_low_status = 0
 battery_low_cmd = 
 battery_full_cmd = 
-battery_font_color = #000000 100
+battery_font_color = ${colors.ui.background} 100
 bat1_format = 
 bat2_format = 
 battery_padding = 0 0
@@ -274,7 +274,7 @@ execp_mclick_command =
 execp_uwheel_command = ~/.config/tint2/scripts/change-volume.sh up
 execp_dwheel_command = ~/.config/tint2/scripts/change-volume.sh down
 execp_font = Font Awesome 5 Free 12
-execp_font_color = #edfefe 100
+execp_font_color = ${colors.ui.foreground} 100
 execp_padding = 8 0
 execp_background_id = 8
 execp_centered = 1
@@ -297,7 +297,7 @@ execp_mclick_command =
 execp_uwheel_command = 
 execp_dwheel_command = 
 execp_font = Font Awesome 5 Free 12
-execp_font_color = #edfefe 100
+execp_font_color = ${colors.ui.foreground} 100
 execp_padding = 8 0
 execp_background_id = 8
 execp_centered = 1
@@ -310,6 +310,6 @@ tooltip_show_timeout = 0.5
 tooltip_hide_timeout = 0.2
 tooltip_padding = 8 6
 tooltip_background_id = 7
-tooltip_font_color = #edfefe 100
+tooltip_font_color = ${colors.ui.foreground} 100
 tooltip_font = Cantarell 8.5
 ''
