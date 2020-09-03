@@ -36,6 +36,8 @@ in
       "workbench.colorTheme" = themeName;
       "window.menuBarVisibility" = "toggle";
       "editor.tabSize" = 2;
+      "git.allowForcePush" = true;
+      "git.confirmSync" = false;
     };
   };
 }
