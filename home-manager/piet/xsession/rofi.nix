@@ -28,5 +28,6 @@
 
   services.sxhkd.keybindings = {
     "super + space" = "${pkgs.rofi}/bin/rofi -show drun -modi drun -display-drun \"Search\"";
+    "mod1 + Tab" = "${pkgs.rofi}/bin/rofi -show window -modi window -display-window \"Window\"";
   };
 }
