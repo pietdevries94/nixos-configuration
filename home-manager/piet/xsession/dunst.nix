@@ -25,14 +25,14 @@
         padding = 8;
         horizontal_padding = 13;
         frame_width = 8;
-        frame_color = "#3b4252";
-        separator_color = "#404859";
+        frame_color = colors.ui.background;
+        separator_color = colors.ui.accent;
 
         font = "Cantarell 10";
 
         line_height = 0;
         markup = "full";
-        format = "<span size='x-large' font_desc='Cantarell 9' weight='bold' foreground='#edfefe'>%s</span>\\n%b";
+        format = "<span size='large' font_desc='Cantarell 9' weight='bold' foreground='${colors.ui.foreground}'>%s</span>\\n%b";
         alignment = "center";
 
         idle_threshold = 120;
@@ -64,20 +64,20 @@
 
       urgency_low = {
         timeout = 5;
-        background = "#3b4252";
-        foreground = "#edfefe";
+        background = colors.ui.background;
+        foreground = colors.ui.foreground;
       };
 
       urgency_normal = {
         timeout = 10;
-        background = "#3b4252";
-        foreground = "#edfefe";
+        background = colors.ui.background;
+        foreground = colors.ui.foreground;
       };
 
       urgency_critical = {
         timeout = 0;
-        background = "#3b4252";
-        foreground = "#edfefe";
+        background = colors.ui.background;
+        foreground = colors.ui.foreground;
       };
     };
   };
