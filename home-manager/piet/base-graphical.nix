@@ -24,7 +24,7 @@ in
     (import ./xsession/bspwm.nix { inherit colors; })
     ./xsession/picom.nix
     (import ./xsession/rofi.nix { inherit colors; })
-    (import ./xsession/tint2.nix { inherit colors; })
+    (import ./xsession/tint2/default.nix { inherit colors; })
     (import ./xsession/dunst.nix { inherit colors; iconTheme = theme.gtk.iconTheme; })
 
     (import ./programs/vscode.nix theme.vscode)
