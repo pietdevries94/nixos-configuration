@@ -1,7 +1,5 @@
 #!/usr/bin/env bash
 
-icon_name="audio-headset"
-
 # options do be displayed
 option0="0%"
 option1="10%"
@@ -75,4 +73,4 @@ esac
 sudo ddcutil -d 1 setvcp 10 $screen1 &
 sudo ddcutil -d 2 setvcp 10 $screen2 &
 
-~/.config/tint2/scripts/notify-send.sh -i "computer" -t 2000 -r 123 "Screen Brightness" "On level $selected"
+~/.config/tint2/scripts/notify-send.sh -i "computer" -t 2000 -r 124 "Screen Brightness" "On level $selected"

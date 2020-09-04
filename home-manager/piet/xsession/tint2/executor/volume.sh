@@ -5,20 +5,20 @@ function cvol {
 }
 
 function chkmute {
-    amixer get Master | grep '%' | grep -oE '[^ ]+$' | grep off
+    amixer get Master | grep '%' | grep -oE '[^ ]+$' | grep off > /dev/null
 }
 
 v=$(cvol)
 
-if [ $v -gt 40 ]
+if chkmute
+then
+  echo ""
+elif [ $v -gt 40 ]
 then
   echo ""
 elif [ $v -gt 20 ]
 then
   echo ""
-elif [ $v -gt 0 ]
-then
-  echo ""
 else
   echo ""
 fi
