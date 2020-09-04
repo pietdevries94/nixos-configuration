@@ -129,7 +129,7 @@ border_color_pressed = ${colors.ui.foregroundAlt} 0
 
 #-------------------------------------
 # Panel
-panel_items = EEETSC
+panel_items = PEEETSC
 panel_size = 100% 45
 panel_margin = 0 0
 panel_padding = 7 7 7
@@ -326,6 +326,22 @@ execp_background_id = 8
 execp_centered = 1
 execp_icon_w = 0
 execp_icon_h = 0
+
+#-------------------------------------
+# Button 1
+button = new
+button_text = 
+button_lclick_command = ~/.config/tint2/scripts/power-menu.sh
+button_rclick_command = 
+button_mclick_command = 
+button_uwheel_command = 
+button_dwheel_command = 
+button_font = Font Awesome 5 Free 12
+button_font_color = ${colors.ui.foreground} 100
+button_padding = 8 0
+button_background_id = 8
+button_centered = 1
+button_max_icon_size = 0
 
 #-------------------------------------
 # Tooltip

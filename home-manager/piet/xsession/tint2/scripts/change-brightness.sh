@@ -17,7 +17,7 @@ option10="100%"
 # options passed to variable
 options="$option0\n$option1\n$option2\n$option3\n$option4\n$option5\n$option6\n$option7\n$option8\n$option9\n$option10"
 
-selected="$(echo -e "$options" | rofi -lines 11 -dmenu -p "Brightness")"
+selected="$(echo -e "$options" | rofi -width 35 -lines 11 -dmenu -p "Brightness")"
 
 # TODO: Make a mapping for my screens to match actual brightness
 case $selected in
