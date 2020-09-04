@@ -38,6 +38,7 @@ in
       "editor.tabSize" = 2;
       "git.allowForcePush" = true;
       "git.confirmSync" = false;
+      "editor.fontFamily" = "'Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback', 'Font Awesome 5 Free Solid'";
     };
   };
 }

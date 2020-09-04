@@ -20,5 +20,5 @@ elif [ $v -gt 20 ]
 then
   echo ""
 else
-  echo ""
+  echo ""
 fi
