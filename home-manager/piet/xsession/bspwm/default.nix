@@ -47,7 +47,10 @@
     "mod3 + {t,mod1 + t,s,f}" = "bspc node -t {tiled,pseudo_tiled,floating,fullscreen}";
 
     # focus the node in the given direction
-    "mod3 + {_,mod1 + }{h,j,k,l}" = "bspc node -{f,s} {west,south,north,east}";
+    "mod3 + {h,j,k,l}" = "bspc node -f {west,south,north,east}";
+
+    # move the node in the given direction
+    "mod3 + mod1 + {h,j,k,l}" = "${./bspwm_smart_move.sh} {west,south,north,east}";
 
     # focus the node for the given path jump
     "mod3 + {p,b,comma,period}" = "bspc node -f @{parent,brother,first,second}";
@@ -59,7 +62,8 @@
     "mod3 + {grave,Tab}" = "bspc {node,desktop} -f last";
 
     # focus or send to the given desktop
-    "mod3 + {_,mod1 + }{1-9,0}" = "bspc {desktop -f,node -d} '^{1-9,10}'";
+    "mod3 + {1-9,0}" = "bspc desktop -f '^{1-9,10}'";
+    "mod3 + mod1 + {1-9,0}" = "bspc node -d '^{1-9,10}' --follow";
 
     # expand a window by moving one of its side outward
     "mod3 + mod4 + {h,j,k,l}" = "bspc node -z {left -20 0,bottom 0 20,top 0 -20,right 20 0}";

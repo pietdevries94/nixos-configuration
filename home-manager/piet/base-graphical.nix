@@ -21,7 +21,7 @@ in
     # (import ./xsession/polybar.nix { inherit colors; })
     # ./xsession/i3.nix
     
-    (import ./xsession/bspwm.nix { inherit colors; })
+    (import ./xsession/bspwm/default.nix { inherit colors; })
     ./xsession/picom.nix
     (import ./xsession/rofi.nix { inherit colors; })
     (import ./xsession/tint2/default.nix { inherit colors; })
