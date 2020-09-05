@@ -29,6 +29,7 @@ in
 
     (import ./programs/vscode.nix theme.vscode)
     (import ./programs/kitty.nix { inherit colors; })
+    ./programs/spotify.nix
   ];
 
 
@@ -49,7 +50,6 @@ in
 
   home.packages = with pkgs; [ 
     firefox-bin
-    spotify
     gimp
     remmina
     neofetch
