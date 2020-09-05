@@ -15,7 +15,7 @@ case $selected in
     bspc quit
     ;;
   $option1)
-    sudo shutdown now
+    sudo poweroff
     ;;
   $option2)
     sudo reboot
