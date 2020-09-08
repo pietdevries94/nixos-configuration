@@ -1,11 +1,16 @@
 { config, pkgs, lib, ... }:
 
+let
+  spicetify = fetchTarball https://github.com/pietdevries94/spicetify-nix/archive/master.tar.gz;
+in
 {
-  home.packages = [
-    (pkgs.callPackage (import (fetchTarball https://github.com/pietdevries94/spicetify-nix/archive/master.tar.gz)) {
-      inherit pkgs;
-      theme = "Dribbblish";
-      colorScheme = "horizon";
-    })
-  ];
+  imports = [ (import "${spicetify}/module.nix") ];
+
+  programs.spicetify = {
+    enable = true;
+    theme = "Dribbblish";
+    colorScheme = "horizon";
+    enabledCustomApps = ["reddit"];
+    enabledExtensions = ["newRelease.js"];
+  };
 }
