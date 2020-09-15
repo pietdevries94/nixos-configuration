@@ -25,10 +25,15 @@ let
       version = "2.3.0";
       sha256 = "1syzf43ws343z911fnhrlbzbx70gdn930q67yqkf6g0mj8lf2za2";
     }
+    {
+      name = "gitlens";
+      publisher = "eamodio";
+      version = "10.2.2";
+      sha256 = "00fp6pz9jqcr6j6zwr2wpvqazh1ssa48jnk1282gnj5k560vh8mb";
+    }
   ];
 in
 {
-
   programs.vscode = {
     enable = true;
     extensions = extensions;
@@ -39,6 +44,7 @@ in
       "git.allowForcePush" = true;
       "git.confirmSync" = false;
       "editor.fontFamily" = "'Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback', 'Font Awesome 5 Free Solid'";
+      "gitlens.currentLine.enabled" = false;
     };
   };
 }
