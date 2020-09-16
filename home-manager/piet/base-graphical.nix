@@ -21,11 +21,12 @@ in
     # (import ./xsession/polybar.nix { inherit colors; })
     # ./xsession/i3.nix
     
-    (import ./xsession/bspwm/default.nix { inherit colors; })
+    (import ./xsession/bspwm { inherit colors; })
     ./xsession/picom.nix
     (import ./xsession/rofi.nix { inherit colors; })
-    (import ./xsession/tint2/default.nix { inherit colors; })
+    (import ./xsession/tint2 { inherit colors; })
     (import ./xsession/dunst.nix { inherit colors; iconTheme = theme.gtk.iconTheme; })
+    ./xsession/scrot
 
     (import ./programs/vscode.nix theme.vscode)
     (import ./programs/kitty.nix { inherit colors; })
