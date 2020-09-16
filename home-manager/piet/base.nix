@@ -12,5 +12,6 @@
   imports = [ 
     ./terminal/lorri.nix
     ./terminal/zsh.nix
+    ./terminal/ssh.nix
   ];
 }

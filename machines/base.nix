@@ -40,6 +40,9 @@
   };
 
   users.users.piet = {
+    # Password made with mkpasswd -m sha-512
+    hashedPassword = import ../secrets/password-piet.nix;
+
     shell = pkgs.zsh;
     isNormalUser = true;
     extraGroups = [ "wheel" "video" "networkmanager" ];
