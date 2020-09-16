@@ -38,13 +38,14 @@ in
     enable = true;
     extensions = extensions;
     userSettings = {
-      "workbench.colorTheme" = themeName;
-      "window.menuBarVisibility" = "toggle";
+      "editor.fontFamily" = "'Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback', 'Font Awesome 5 Free Solid'";
       "editor.tabSize" = 2;
       "git.allowForcePush" = true;
       "git.confirmSync" = false;
-      "editor.fontFamily" = "'Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback', 'Font Awesome 5 Free Solid'";
+      "git.rebaseWhenSync" = true;
       "gitlens.currentLine.enabled" = false;
+      "window.menuBarVisibility" = "toggle";
+      "workbench.colorTheme" = themeName;
     };
   };
 }
