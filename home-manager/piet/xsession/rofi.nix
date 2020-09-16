@@ -22,6 +22,15 @@
             foreground = colors.ui.darkText;
           };
         };
+        active = {
+          background = colors.ui.background;
+          backgroundAlt = colors.ui.background;
+          foreground = colors.ui.accentAlt;
+          highlight = {
+            background = colors.ui.accentAlt;
+            foreground = colors.ui.foreground;
+          };
+        };
       };
     };
   };
