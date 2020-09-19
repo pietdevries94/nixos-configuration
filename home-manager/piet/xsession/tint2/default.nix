@@ -1,8 +1,8 @@
-{ colors }:
+{ colors, scriptIcons }:
 { config, pkgs, lib, ... }:
 
 let
-  tint2rc = (import ./tint2rc.nix { inherit colors; inherit (pkgs) writeText; });
+  tint2rc = (import ./tint2rc.nix { inherit colors scriptIcons; inherit (pkgs) writeText; });
 in {
   home.packages = with pkgs; [
     tint2

@@ -53,6 +53,8 @@ let
     };
   };
 in {
+  inherit colors;
+
   wallpaper = ./Ariane-5.png;
   vscode = {
     themeExtension = pkgs.vscode-utils.extensionFromVscodeMarketplace {
@@ -70,10 +72,16 @@ in {
       name = "Sweet-mars";
     };
     iconTheme = {
-      package = pkgs.numix-icon-theme;
-      name = "Numix";
+      # package = pkgs.numix-icon-theme;
+      # name = "Numix";
+      package = pkgs.tela-icon-theme;
+      name = "Tela-orange-dark";
     };
   };
 
-  colors = colors;
+  tint2.scriptIcons = {
+    brightness = "default-user-desktop";
+    outputVolume = "audio-headphones";
+    inputVolume = "audio-input-microphone";
+  };
 }

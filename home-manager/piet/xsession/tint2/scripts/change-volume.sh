@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # Audio volume changer using alsa mixer
-icon_name="applications-multimedia"
+icon_name=$2
 
 function cvol {
     amixer get Master | grep '%' | head -n 1 | awk -F'[' '{print $2}' | awk -F'%' '{print $1}'

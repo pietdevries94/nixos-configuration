@@ -7,7 +7,7 @@
 
     iconTheme = {
       inherit (iconTheme) package name;
-      size = "96";
+      size = "scalable";
     };
 
     settings = {
