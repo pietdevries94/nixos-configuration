@@ -27,6 +27,7 @@ in
     (import ./xsession/tint2 { inherit colors; inherit (theme.tint2) scriptIcons; })
     (import ./xsession/dunst.nix { inherit colors; inherit (theme.gtk) iconTheme; })
     ./xsession/scrot
+    # (import ./xsession/screen-locker.nix { inherit colors; })
 
     (import ./programs/vscode.nix theme.vscode)
     (import ./programs/kitty.nix { inherit colors; })

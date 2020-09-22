@@ -72,8 +72,6 @@ in {
       name = "Sweet-mars";
     };
     iconTheme = {
-      # package = pkgs.numix-icon-theme;
-      # name = "Numix";
       package = pkgs.tela-icon-theme;
       name = "Tela-orange-dark";
     };
