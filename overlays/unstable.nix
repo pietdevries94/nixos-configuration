@@ -14,5 +14,6 @@ in with unstable; {
     niv
     sweet
     numix-icon-theme
+    firefox-bin
   ;
 }
