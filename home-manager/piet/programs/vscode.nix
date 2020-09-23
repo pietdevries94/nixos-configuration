@@ -38,7 +38,7 @@ in
     enable = true;
     extensions = extensions;
     userSettings = {
-      "editor.fontFamily" = "'Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback', 'Font Awesome 5 Free Solid'";
+      "editor.fontFamily" = "'Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback', 'Font Awesome 5 Free Solid', 'Inconsolata Nerd Font'";
       "editor.tabSize" = 2;
       "git.allowForcePush" = true;
       "git.confirmSync" = false;
