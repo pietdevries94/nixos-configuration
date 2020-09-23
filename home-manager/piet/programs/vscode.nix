@@ -5,6 +5,8 @@
 let
   extensions = (with pkgs.vscode-extensions; [
       bbenoist.Nix
+      matklad.rust-analyzer
+
       themeExtension
     ]) ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
     {
@@ -30,6 +32,12 @@ let
       publisher = "eamodio";
       version = "10.2.2";
       sha256 = "00fp6pz9jqcr6j6zwr2wpvqazh1ssa48jnk1282gnj5k560vh8mb";
+    }
+    {
+      name = "better-toml";
+      publisher = "bungcip";
+      version = "0.3.2";
+      sha256 = "08lhzhrn6p0xwi0hcyp6lj9bvpfj87vr99klzsiy8ji7621dzql3";
     }
   ];
 in
