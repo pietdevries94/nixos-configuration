@@ -56,8 +56,6 @@ in
     remmina
     neofetch
     pciutils
-    steam
-    discord
     pavucontrol
 
     # File manager
