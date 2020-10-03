@@ -57,6 +57,7 @@ in
     neofetch
     pciutils
     pavucontrol
+    cordium
 
     # File manager
     xfce.thunar
