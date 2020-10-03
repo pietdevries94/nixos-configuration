@@ -6,7 +6,6 @@ let
   };
 in with unstable; {
   inherit
-    spotify
     inconsolata-nerdfont
     siji
     starship
