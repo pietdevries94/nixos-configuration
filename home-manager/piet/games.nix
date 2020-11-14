@@ -5,5 +5,6 @@
     steam
     discord
     minecraft
+    lutris
   ];
 }
