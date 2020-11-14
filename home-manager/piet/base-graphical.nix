@@ -16,7 +16,6 @@ in
 {
   # Imports may provide keybindings for sxhkd
   services.sxhkd.enable = true;
-
   imports = [
     # (import ./xsession/polybar.nix { inherit colors; })
     # ./xsession/i3.nix
@@ -42,6 +41,13 @@ in
       ${pkgs.xorg.xmodmap}/bin/xmodmap ${myCustomLayout} &
       ${pkgs.feh}/bin/feh --bg-fill ~/.background-image.png
     '';
+  };
+
+  # Media controls
+  services.sxhkd.keybindings = {
+    "XF86Audio{Play,Prev,Next}" = "${pkgs.playerctl}/bin/playerctl {play-pause,previous,next}";
+    # TODO: move volume script from Tint2
+    "XF86Audio{LowerVolume,RaiseVolume,Mute}" = "~/.config/tint2/scripts/change-volume.sh {down,up,mute} ${theme.tint2.scriptIcons.outputVolume}";
   };
 
   home.file.".background-image.png".source = theme.wallpaper;
