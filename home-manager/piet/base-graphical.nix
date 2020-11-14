@@ -57,7 +57,8 @@ in
     neofetch
     pciutils
     pavucontrol
-    cordium
+    # TODO: enable cordium after 20.09 fix
+    # cordium
 
     # File manager
     xfce.thunar

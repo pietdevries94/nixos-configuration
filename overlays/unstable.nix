@@ -14,6 +14,7 @@ in with unstable; {
     sweet
     numix-icon-theme
     firefox-bin
+    vscode
     vscode-extensions
     minecraft
   ;

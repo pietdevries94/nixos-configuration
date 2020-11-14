@@ -4,25 +4,27 @@
   services.xserver = {
     enable = true;
     videoDrivers = [ "amdgpu" ];
-    displayManager.sddm = {
-      enable = true;
+    displayManager = {
+      sddm = {
+        enable = true;
+        autoLogin.relogin = true;
+      };
       autoLogin = {
         enable = true;
         user = "piet";
-        relogin = true;
       };
+      defaultSession = "hm-xsession";
+      session = [
+        {
+          manage = "desktop";
+          name = "hm-xsession";
+          start = ''
+            ${pkgs.runtimeShell} $HOME/.hm-xsession &
+            waitPID=$!
+          '';
+        }
+      ];
     };
-    displayManager.defaultSession = "hm-xsession";
-    displayManager.session = [
-      {
-        manage = "desktop";
-        name = "hm-xsession";
-        start = ''
-          ${pkgs.runtimeShell} $HOME/.hm-xsession &
-          waitPID=$!
-        '';
-      }
-    ];
   };
   services.gnome3.glib-networking.enable = true;
 }

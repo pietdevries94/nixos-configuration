@@ -36,8 +36,6 @@ in {
     '';
   };
 
-  services.xserver.desktopManager.wallpaper = "fill";
-
   environment.systemPackages = [ pkgs.radeontop ];
 
   hardware = {
