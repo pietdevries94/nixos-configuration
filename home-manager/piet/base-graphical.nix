@@ -31,6 +31,7 @@ in
     (import ./programs/vscode.nix theme.vscode)
     (import ./programs/kitty.nix { inherit colors; })
     ./programs/spotify.nix
+    ./programs/wtfutil
   ];
 
 
