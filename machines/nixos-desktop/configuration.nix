@@ -67,17 +67,4 @@ in {
       availableKernelModules = [ "cryptd" ];
     };
   };
-
-  networking = {
-    hostName = "nixos-desktop";
-    useDHCP = false;
-    interfaces = {
-      enp10s0.useDHCP = true;
-      wlp9s0.useDHCP = true;
-    };
-    wireless = {
-      enable = true;
-      networks = import ../../secrets/networks.nix;
-    };
-  };
 }
