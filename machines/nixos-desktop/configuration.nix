@@ -42,6 +42,7 @@ in {
     cpu.amd.updateMicrocode = true;
     enableRedistributableFirmware = true;
     enableAllFirmware = true;
+    opengl.extraPackages = [ pkgs.amdvlk ];
   };
 
   boot = {
