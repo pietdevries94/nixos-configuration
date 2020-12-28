@@ -18,8 +18,8 @@ let
     {
       name = "go";
       publisher = "golang";
-      version = "0.15.2";
-      sha256 = "0whd0a97fd9l1rzw93r1ijr2kzmasvals9rrp5lk1j9iybxv4mf2";
+      version = "0.20.0";
+      sha256 = "1gaylvv1rsndhg0mpl3c43x0ky0bg3xsq1b6c1qjzd0jgjsai03y";
     }
     {
       name = "color-highlight";
@@ -30,14 +30,20 @@ let
     {
       name = "gitlens";
       publisher = "eamodio";
-      version = "10.2.2";
-      sha256 = "00fp6pz9jqcr6j6zwr2wpvqazh1ssa48jnk1282gnj5k560vh8mb";
+      version = "11.1.0";
+      sha256 = "1g8ayhsfq6yzbbrvffsdqgms3nsijd5x0x13vdldfqsp6yfkh0f1";
     }
     {
       name = "better-toml";
       publisher = "bungcip";
       version = "0.3.2";
       sha256 = "08lhzhrn6p0xwi0hcyp6lj9bvpfj87vr99klzsiy8ji7621dzql3";
+    }
+    {
+      name = "vetur";
+      publisher = "octref";
+      version = "0.31.3";
+      sha256 = "02fhmmi08335ky4v5ayf4ra0gzrkrpjghrjpd77bxjikjh98wkdz";
     }
   ];
 in
