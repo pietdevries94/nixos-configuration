@@ -20,6 +20,7 @@ in {
       ../../services/dconf.nix
       ../../services/fonts.nix
       ../../services/32bit-support.nix
+      ../../services/virtualbox.nix
 
       ../../home-manager/base.nix
     ];
@@ -28,6 +29,7 @@ in {
     imports = [
       ../../home-manager/piet/base.nix
       (import ../../home-manager/piet/base-graphical.nix graphicalConfig)
+      ../../home-manager/piet/base-work.nix
     ];
   };
 
