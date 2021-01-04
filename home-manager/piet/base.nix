@@ -2,7 +2,6 @@
 
 {
   home.packages = with pkgs; [
-    git
     niq
     niv
     unzip
@@ -13,5 +12,7 @@
     ./terminal/lorri.nix
     ./terminal/zsh.nix
     ./terminal/ssh.nix
+    ./terminal/git.nix
+    ./terminal/gpg-agent.nix
   ];
 }

@@ -41,6 +41,9 @@ in
     initExtra = ''
       ${pkgs.xorg.xmodmap}/bin/xmodmap ${myCustomLayout} &
       ${pkgs.feh}/bin/feh --bg-fill ~/.background-image.png
+      
+      # This is to force the one time setup
+      zsh -c "source .zshrc"
     '';
   };
 
