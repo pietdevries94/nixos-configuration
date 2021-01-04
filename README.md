@@ -9,4 +9,5 @@ https://github.com/pietdevries94/personal-nix-overlay
 
 ### Wallpapers
 - horizon light | [reddit](https://www.reddit.com/r/WidescreenWallpaper/comments/i0576m/somewhere_in_norway_3440x1440/)
-- horizon dark | [original](https://www.reddit.com/r/WidescreenWallpaper/comments/idz26y/ariane_5_by_sylvain_sarrailh_3440_x_1440/) | [edit on reddit](https://www.artstation.com/artwork/JleA1z)
+- horizon dark - Ariane-5.png | [original](https://www.artstation.com/artwork/JleA1z) | [edit on reddit](https://www.reddit.com/r/WidescreenWallpaper/comments/idz26y/ariane_5_by_sylvain_sarrailh_3440_x_1440/)
+- horizon dark - Triple-Tree-Josh-Pierce.png | [original](https://www.artstation.com/artwork/w6Zqk6)

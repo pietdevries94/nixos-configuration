@@ -1,4 +1,4 @@
-{ pkgs }:
+{ pkgs, wallpaper ? ./Ariane-5.png }:
 
 # colors scheme from https://gitlab.com/horizon/horizon-vscode/-/blob/master/source/dark/colors.json
 let
@@ -54,8 +54,8 @@ let
   };
 in {
   inherit colors;
+  inherit wallpaper;
 
-  wallpaper = ./Ariane-5.png;
   vscode = {
     themeExtension = pkgs.vscode-utils.extensionFromVscodeMarketplace {
       name = "horizon-vscode";

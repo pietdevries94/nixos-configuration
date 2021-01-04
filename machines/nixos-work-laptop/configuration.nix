@@ -6,7 +6,10 @@
 
 let
   graphicalConfig = {
-    theme = import ../../themes/horizon-dark { inherit pkgs; };
+    theme = import ../../themes/horizon-dark {
+      inherit pkgs;
+      wallpaper = ../../themes/horizon-dark/Triple-Tree-Josh-Pierce.png;
+    };
   };
 in {
   imports =
