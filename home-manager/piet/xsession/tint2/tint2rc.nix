@@ -129,7 +129,7 @@ border_color_pressed = ${colors.ui.foregroundAlt} 0
 
 #-------------------------------------
 # Panel
-panel_items = PEEEETSC
+panel_items = PEEEETBSC
 panel_size = 100% 45
 panel_margin = 0 0
 panel_padding = 7 7 7
@@ -240,14 +240,16 @@ clock_dwheel_command =
 
 #-------------------------------------
 # Battery
-battery_tooltip = 1
+battery_tooltip = 0
 battery_low_status = 0
 battery_low_cmd = 
 battery_full_cmd = 
-battery_font_color = ${colors.ui.background} 100
-bat1_format = 
+bat1_font = Iosevka 12
+bat2_font = Iosevka 0
+battery_font_color = ${colors.ui.foreground} 100
+bat1_format = %p
 bat2_format = 
-battery_padding = 0 0
+battery_padding = 0 4
 battery_background_id = 0
 battery_hide = 101
 battery_lclick_command = 
