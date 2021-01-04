@@ -37,6 +37,12 @@ in {
   networking.interfaces.wlp4s0.useDHCP = true;
   networking.networkmanager.enable = true;
 
+  hardware = {
+    cpu.amd.updateMicrocode = true;
+    enableRedistributableFirmware = true;
+    enableAllFirmware = true;
+  };
+
   boot = {
     loader = {
       efi.canTouchEfiVariables = true;
