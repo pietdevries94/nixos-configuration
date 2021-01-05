@@ -2,7 +2,7 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ config, pkgs, ... }:
+{ config, pkgs, lib, ... }:
 
 let
   graphicalConfig = {
@@ -75,5 +75,11 @@ in {
   programs.light.enable = true;
   home-manager.users.piet.services.sxhkd.keybindings = {
     "XF86MonBrightness{Down,Up}" = "light {-U,-A} 5";
+  };
+
+  # work specific settings
+  services.gvfs = {
+    enable = true;
+    package = lib.mkForce pkgs.gnome3.gvfs;
   };
 }

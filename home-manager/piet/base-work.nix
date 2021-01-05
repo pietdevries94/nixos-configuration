@@ -5,5 +5,6 @@
       barrier
       ferdi
       networkmanager-fortisslvpn
+      networkmanager-openvpn
     ];
 }
