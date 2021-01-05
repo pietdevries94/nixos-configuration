@@ -29,7 +29,7 @@ in
     # (import ./xsession/screen-locker.nix { inherit colors; })
 
     (import ./programs/vscode.nix theme.vscode)
-    (import ./programs/kitty.nix { inherit colors; })
+    (import ./programs/alacritty.nix { inherit colors; })
     ./programs/spotify.nix
     ./programs/wtfutil
   ];

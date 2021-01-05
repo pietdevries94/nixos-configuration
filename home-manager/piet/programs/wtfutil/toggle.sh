@@ -3,7 +3,7 @@
   
 pids=$(xdotool search --class wtfutilterm)
 if [[ ${#pids[@]} -eq 1 && ${pids[0]} == "" ]]; then
-  kitty --class wtfutilterm wtfutil &
+  alacritty --class wtfutilterm,wtfutilterm --command wtfutil &
   exit 0
 fi
 
