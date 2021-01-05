@@ -36,7 +36,7 @@ in {
     imports = [
       ../../home-manager/piet/base.nix
       (import ../../home-manager/piet/base-graphical.nix graphicalConfig)
-      ../../home-manager/piet/base-work.nix
+      (import ../../home-manager/piet/base-work.nix graphicalConfig)
     ];
   };
 
