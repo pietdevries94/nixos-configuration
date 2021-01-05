@@ -25,6 +25,10 @@ in {
       ../../services/32bit-support.nix
       ../../services/virtualbox.nix
 
+      ../../services/containers
+      ../../services/containers/mssql-2017.nix
+      ../../services/containers/mssql-2019.nix
+
       ../../home-manager/base.nix
     ];
 

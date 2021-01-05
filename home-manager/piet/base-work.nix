@@ -6,5 +6,6 @@
       ferdi
       networkmanager-fortisslvpn
       networkmanager-openvpn
+      azuredatastudio
     ];
 }

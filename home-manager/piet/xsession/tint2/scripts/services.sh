@@ -3,7 +3,7 @@
 
 # Freely add services here. If they don't exist they will be hidden
 user_services=()
-system_services=()
+system_services=(podman-mssql-2017 podman-mssql-2019)
 
 NL=$'\n'
 
