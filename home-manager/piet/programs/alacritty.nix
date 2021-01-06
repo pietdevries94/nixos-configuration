@@ -5,12 +5,15 @@
   programs.alacritty = {
     enable = true;
     settings = {
+      env = {
+        WINIT_X11_SCALE_FACTOR = "1";
+      };
       window.padding = {
         x = 6;
         y = 3;
       };
       font = {
-        size = 9.0;
+        size = 10.0;
       };
 
       colors = {
