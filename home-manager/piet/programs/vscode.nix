@@ -13,6 +13,7 @@
       bungcip.better-toml
       eamodio.gitlens
       naumovs.color-highlight
+      gruntfuggly.todo-tree
 
       # Nix
       bbenoist.Nix
@@ -25,6 +26,7 @@
       
       # Vue
       octref.vetur
+      dbaeumer.vscode-eslint
     ]);
     userSettings = {
       "editor.fontFamily" = "'Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback', 'Font Awesome 5 Free Solid', 'Inconsolata Nerd Font'";
