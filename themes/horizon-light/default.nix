@@ -55,12 +55,7 @@ let
 in {
   wallpaper = ./Norway.png;
   vscode = {
-    themeExtension = pkgs.vscode-utils.extensionFromVscodeMarketplace {
-      name = "horizon-vscode";
-      publisher = "Bauke";
-      version = "3.0.3";
-      sha256 = "0njdlmvrb8pdk81bv92dppvn3jgqhfc7zx6f349f11yxwgs9hwsr";
-    };
+    themeExtension = pkgs.extra-vscode-extensions.Bauke.horizon-vscode;
     themeName = "Horizon Light";
   };
 

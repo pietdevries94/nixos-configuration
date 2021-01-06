@@ -7,6 +7,7 @@
       (import ../overlays/unstable.nix)
       (import ../overlays/personal.nix)
       (import ../overlays/wietsedv.nix)
+      (import ../overlays/extra-vscode-extensions.nix)
     ];
   };
 
