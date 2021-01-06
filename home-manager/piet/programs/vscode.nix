@@ -3,6 +3,7 @@
 { config, pkgs, lib, ... }:
 
 let
+  # TODO: auto-update the extensions here
   extensions = (with pkgs.vscode-extensions; [
       bbenoist.Nix
       matklad.rust-analyzer
@@ -50,7 +51,7 @@ in
 {
   programs.vscode = {
     enable = true;
-    extensions = extensions;
+    inherit extensions;
     userSettings = {
       "editor.fontFamily" = "'Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback', 'Font Awesome 5 Free Solid', 'Inconsolata Nerd Font'";
       "editor.tabSize" = 2;
@@ -60,6 +61,13 @@ in
       "gitlens.currentLine.enabled" = false;
       "window.menuBarVisibility" = "toggle";
       "workbench.colorTheme" = themeName;
+      "git.autofetch" = true;
     };
+    keybindings = [
+      {
+        key = "f13";
+        command = "workbench.action.showCommands";
+      }
+    ];
   };
 }
