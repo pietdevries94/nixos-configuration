@@ -86,5 +86,5 @@ in {
     enable = true;
     package = lib.mkForce pkgs.gnome3.gvfs;
   };
-  home-manager.users.piet.services.git.userEmail = "piet@compenda.nl";
+  home-manager.users.piet.programs.git.userEmail = "piet@compenda.nl";
 }
