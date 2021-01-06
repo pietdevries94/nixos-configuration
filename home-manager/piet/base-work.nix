@@ -4,6 +4,7 @@
 {
   imports = [
     (import ./xsession/screen-locker.nix { colors = theme.colors; })
+    ./services/mailhog.nix
   ];
 
   home.packages = with pkgs; [ 
