@@ -16,6 +16,9 @@ in {
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
 
+      # Load non-public settings
+      ../../secrets
+
       ../base.nix
       ../../services/xserver.nix
       ../../services/pulseaudio.nix
