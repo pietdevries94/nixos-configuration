@@ -24,6 +24,10 @@
       normal_border_color = colors.ui.tertiaryAccent;
       active_border_color = colors.ui.secondaryAccentAlt;
       focused_border_color = colors.ui.secondaryAccent;
+
+      # needed for monitor change
+      remove_disabled_monitors = true;
+      remove_unplugged_monitors = true;
     };
 
     startupPrograms = [
