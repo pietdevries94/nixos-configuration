@@ -52,6 +52,7 @@ in {
     cpu.amd.updateMicrocode = true;
     enableRedistributableFirmware = true;
     enableAllFirmware = true;
+    facetimehd.enable = true;
   };
 
   boot = {
