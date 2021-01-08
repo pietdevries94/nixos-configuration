@@ -8,6 +8,7 @@ in {
   imports =
     [
       ./hardware-configuration.nix
+      ./autorandr-profiles.nix
       ../base.nix
 
       ../../services/xserver.nix
@@ -25,8 +26,6 @@ in {
   
   home-manager.users.piet = {
     imports = [
-      ./autorandr-profiles.nix
-
       ../../home-manager/piet/base.nix
       (import ../../home-manager/piet/base-graphical.nix graphicalConfig)
       ../../home-manager/piet/games.nix

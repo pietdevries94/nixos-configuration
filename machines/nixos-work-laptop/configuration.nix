@@ -15,6 +15,7 @@ in {
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
+      ./autorandr-profiles.nix
 
       # Load non-public settings
       ../../secrets
@@ -37,8 +38,6 @@ in {
 
   home-manager.users.piet = {
     imports = [
-      ./autorandr-profiles.nix
-      
       ../../home-manager/piet/base.nix
       (import ../../home-manager/piet/base-graphical.nix graphicalConfig)
       (import ../../home-manager/piet/base-work.nix graphicalConfig)
