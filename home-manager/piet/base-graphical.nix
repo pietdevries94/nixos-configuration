@@ -76,5 +76,8 @@ in
     xfce.thunar-volman
     xfce.tumbler
     gnome3.file-roller
+
+    # Basic utils
+    gnome3.gnome-calculator
   ];
 }

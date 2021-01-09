@@ -13,5 +13,7 @@
     networkmanager-fortisslvpn
     networkmanager-openvpn
     azuredatastudio
+    teams
+    google-chrome
   ];
 }
