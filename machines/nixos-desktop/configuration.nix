@@ -70,4 +70,6 @@ in {
       availableKernelModules = [ "cryptd" ];
     };
   };
+
+  home-manager.users.piet.programs.git.signing.key = "81A9A2B8CB8BA05E";
 }
