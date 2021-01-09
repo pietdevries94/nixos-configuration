@@ -11,12 +11,13 @@ let
         };
       };
       grid = {
-        columns = [38 38 38];
-        rows = [12 4 10 4 4];
+        columns = [40 40 40 40 40 90];
+        rows = [10 10 4 10 4 90];
       };
       refreshInterval = 1;
       mods = {
         resourceusage = {
+          title = "Resource usage";
           cpuCombined = false;
           enabled = true;
           position = {
@@ -31,6 +32,7 @@ let
           showSwp = true;
         };
         cmdrunner_df = {
+          title = "Disk usage";
           args = ["-h"];
           cmd = "df";
           enabled = true;
@@ -44,16 +46,32 @@ let
           type = "cmdrunner";
         };
         cmdrunner_uptime = {
+          title = "Uptime";
           cmd = "uptime";
           enabled = true;
           type = "cmdrunner";
           position = {
-            top = 1;
-            left = 1;
+            top = 2;
+            left = 0;
             height = 1;
             width = 2;
           };
           refreshInterval = 30;
+        };
+        feedreader = {
+          title = "Blogs";
+          enabled = true;
+          feeds = [
+            "https://www.pine64.org/feed/"
+          ];
+          feedLimit = 10;
+          refreshInterval = 1800;
+          position = {
+            top = 0;
+            left = 3;
+            height = 2;
+            width = 3;
+          };
         };
       };
     };
