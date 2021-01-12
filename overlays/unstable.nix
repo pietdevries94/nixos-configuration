@@ -17,5 +17,6 @@ in with unstable; {
     vscode
     vscode-extensions
     minecraft
+    insomnia
   ;
 }

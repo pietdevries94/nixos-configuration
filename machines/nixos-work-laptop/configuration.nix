@@ -48,6 +48,11 @@ in {
   networking.interfaces.wlp4s0.useDHCP = true;
   networking.networkmanager.enable = true;
 
+  networking.firewall.allowedTCPPorts = [
+    # Port for barrier
+    24800
+  ];
+
   hardware = {
     cpu.amd.updateMicrocode = true;
     enableRedistributableFirmware = true;
@@ -95,4 +100,6 @@ in {
     userEmail = "piet@compenda.nl";
     signing.key = "EEB06101168F6A0F";
   };
+  programs.adb.enable = true;
+  users.users.piet.extraGroups = ["adbusers"];
 }

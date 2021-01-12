@@ -15,5 +15,7 @@
     azuredatastudio
     teams
     google-chrome
+    libreoffice
+    insomnia
   ];
 }
