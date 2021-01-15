@@ -16,7 +16,7 @@
         class = "dunst";
         monitor = 0;
         follow = "mouse";
-        geometry = "350x6-24+24";
+        geometry = "350x6+53+8";
         indicate_hidden = "yes";
         shrink = "yes";
 

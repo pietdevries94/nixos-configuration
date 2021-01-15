@@ -60,6 +60,13 @@ in
     enable = true;
   } // theme.gtk;
 
+  xdg.mimeApps = {
+    enable = true;
+    defaultApplications = {
+      "inode/directory" = [ "thunar.desktop" ];
+    };
+  };
+
   home.packages = with pkgs; [ 
     firefox-bin
     gimp

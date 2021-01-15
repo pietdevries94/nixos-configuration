@@ -25,6 +25,23 @@ let
           };
         };
       };
+      "work-monitor-closed" = {
+        fingerprint = {
+          "DisplayPort-0" = dpLGWork;
+        };
+        config = {
+          "eDP".enable = false;
+          "DisplayPort-1".enable = false;
+          "HDPI-0".enable = false;
+
+          "DisplayPort-0" = {
+              enable = true;
+              primary = true;
+              mode = "3440x1440";
+              rate = "59.97";
+          };
+        };
+      };
       "stand-alone" = {
         fingerprint = {
           "eDP" = eDP;

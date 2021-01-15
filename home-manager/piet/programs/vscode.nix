@@ -30,14 +30,15 @@
     ]);
     userSettings = {
       "editor.fontFamily" = "'Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback', 'Font Awesome 5 Free Solid', 'Inconsolata Nerd Font'";
+      "editor.formatOnSave" = true;
       "editor.tabSize" = 2;
       "git.allowForcePush" = true;
+      "git.autofetch" = true;
       "git.confirmSync" = false;
       "git.rebaseWhenSync" = true;
       "gitlens.currentLine.enabled" = false;
       "window.menuBarVisibility" = "toggle";
       "workbench.colorTheme" = themeName;
-      "git.autofetch" = true;
     };
     keybindings = [
       {

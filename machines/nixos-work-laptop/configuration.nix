@@ -51,6 +51,10 @@ in {
   networking.firewall.allowedTCPPorts = [
     # Port for barrier
     24800
+
+    # Webdev stuff
+    8080
+    18081
   ];
 
   hardware = {
