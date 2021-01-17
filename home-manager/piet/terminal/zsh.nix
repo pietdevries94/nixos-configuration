@@ -6,6 +6,10 @@
     enableAutosuggestions = true;
     enableCompletion = true;
     initExtra = ''
+      function nix-tmp() {                                                                                                                       ~
+        nix-shell -p $@ --run zsh
+      }
+
       zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
       bindkey "$terminfo[kcuu1]" history-substring-search-up
       bindkey "$terminfo[kcud1]" history-substring-search-down

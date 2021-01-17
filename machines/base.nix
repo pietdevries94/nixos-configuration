@@ -29,6 +29,12 @@
   nix = {
     binaryCaches = [ "https://pietdevries94.cachix.org" ];
     binaryCachePublicKeys = [ "pietdevries94.cachix.org-1:EmL0bay0YH7tI9SU3sLeyhBR5QYx+Zg6vMvBOmZ6MMQ=" ];
+
+    # Support flakes
+    package = pkgs.nixFlakes;
+    extraOptions = ''
+      experimental-features = nix-command flakes
+    '';
   };
 
   boot.cleanTmpDir = true;

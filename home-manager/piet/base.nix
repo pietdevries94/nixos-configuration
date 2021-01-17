@@ -9,7 +9,7 @@
   ];
 
   imports = [ 
-    ./terminal/lorri.nix
+    ./terminal/direnv.nix
     ./terminal/zsh.nix
     ./terminal/ssh.nix
     ./terminal/git.nix
