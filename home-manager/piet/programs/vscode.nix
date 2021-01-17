@@ -27,6 +27,9 @@
       # Vue
       octref.vetur
       dbaeumer.vscode-eslint
+      znck.vue-language-features
+      bradlc.vscode-tailwindcss
+      graphql.vscode-graphql
     ]);
     userSettings = {
       "editor.fontFamily" = "'Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback', 'Font Awesome 5 Free Solid', 'Inconsolata Nerd Font'";
