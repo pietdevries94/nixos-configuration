@@ -48,6 +48,10 @@
         key = "f13";
         command = "workbench.action.showCommands";
       }
+      {
+        key = "f14";
+        command = "workbench.action.quickOpen";
+      }
     ];
   };
 }

@@ -67,7 +67,7 @@ in {
           preLVM = true;
         };
       };
-      availableKernelModules = [ "cryptd" ];
+      availableKernelModules = [ "cryptd" "aes_x86_64" ];
     };
   };
 
