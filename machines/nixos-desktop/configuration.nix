@@ -29,6 +29,8 @@ in {
       ../../home-manager/piet/base.nix
       (import ../../home-manager/piet/base-graphical.nix graphicalConfig)
       ../../home-manager/piet/games.nix
+    
+      ../../home-manager/piet/programs/3DPrinting.nix
     ];
 
 

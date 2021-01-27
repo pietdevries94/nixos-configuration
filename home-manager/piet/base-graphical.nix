@@ -65,8 +65,12 @@ in
     defaultApplications = {
       "inode/directory" = [ "thunar.desktop" ];
     };
+    associations.added = {
+      "model/stl" = [ "meshlab.desktop" "cura.desktop" "PrusaSlicer.desktop" ];
+      "image/jpeg" = [ "org.gnome.eog.desktop" ];
+    };
   };
-
+  
   home.packages = with pkgs; [ 
     firefox-bin
     gimp
@@ -86,5 +90,6 @@ in
 
     # Basic utils
     gnome3.gnome-calculator
+    gnome3.eog
   ];
 }

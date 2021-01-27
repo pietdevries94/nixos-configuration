@@ -1,4 +1,4 @@
-{ config, pkgs, options, ... }:
+{ config, pkgs, options, lib, ... }:
 
 {
   nixpkgs = {
@@ -45,6 +45,11 @@
 
   programs = {
     zsh.enable = true;
+  };
+
+  services.gvfs = {
+    enable = true;
+    package = lib.mkForce pkgs.gnome3.gvfs;
   };
 
   users.users.piet = {
