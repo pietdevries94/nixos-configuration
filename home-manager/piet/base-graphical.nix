@@ -59,17 +59,6 @@ in
   gtk = {
     enable = true;
   } // theme.gtk;
-
-  xdg.mimeApps = {
-    enable = true;
-    defaultApplications = {
-      "inode/directory" = [ "thunar.desktop" ];
-    };
-    associations.added = {
-      "model/stl" = [ "meshlab.desktop" "cura.desktop" "PrusaSlicer.desktop" ];
-      "image/jpeg" = [ "org.gnome.eog.desktop" ];
-    };
-  };
   
   home.packages = with pkgs; [ 
     firefox-bin
