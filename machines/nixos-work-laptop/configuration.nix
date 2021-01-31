@@ -8,7 +8,7 @@ let
   graphicalConfig = {
     theme = import ../../themes/horizon-dark {
       inherit pkgs;
-      wallpaper = ../../themes/horizon-dark/Triple-Tree-Josh-Pierce.png;
+      wallpaper = ../../themes/horizon-dark/Stay-on-track.png;
     };
   };
 in {
