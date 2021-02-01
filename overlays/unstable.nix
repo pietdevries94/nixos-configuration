@@ -18,5 +18,6 @@ in with unstable; {
     vscode-extensions
     minecraft
     insomnia
+    prusa-slicer
   ;
 }
