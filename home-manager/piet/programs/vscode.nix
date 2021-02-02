@@ -42,6 +42,7 @@
       "gitlens.currentLine.enabled" = false;
       "window.menuBarVisibility" = "toggle";
       "workbench.colorTheme" = themeName;
+      "go.formatTool" = "goimports";
     };
     keybindings = [
       {
