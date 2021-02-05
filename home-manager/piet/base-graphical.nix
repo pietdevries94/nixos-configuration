@@ -44,6 +44,9 @@ in
       
       # This is to force the one time setup
       zsh -c "source .zshrc"
+
+      # Clean Download folder
+      find /home/piet/Downloads -maxdepth 1 -mtime +14 -exec rm -rf {} \;
     '';
   };
 
