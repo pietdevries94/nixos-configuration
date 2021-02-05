@@ -17,5 +17,8 @@
     google-chrome
     libreoffice
     insomnia
+    standardnotes
+    kazam
+    handbrake
   ];
 }
