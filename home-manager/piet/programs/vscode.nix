@@ -14,6 +14,7 @@
       eamodio.gitlens
       naumovs.color-highlight
       gruntfuggly.todo-tree
+      editorconfig.editorconfig
 
       # Nix
       bbenoist.Nix
