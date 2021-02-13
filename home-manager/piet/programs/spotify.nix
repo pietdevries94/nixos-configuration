@@ -10,7 +10,5 @@ in
     enable = true;
     theme = "Dribbblish";
     colorScheme = "horizon";
-    enabledCustomApps = ["reddit"];
-    enabledExtensions = ["newRelease.js"];
   };
 }
