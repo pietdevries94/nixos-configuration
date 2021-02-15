@@ -88,6 +88,8 @@ in {
     };
   };
 
+  services.logind.extraConfig = "RuntimeDirectorySize = 40%";
+
   # laptop specific settings
   services.xserver.libinput.enable = true;
   programs.light.enable = true;
