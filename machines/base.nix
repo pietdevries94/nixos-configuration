@@ -8,6 +8,7 @@
       (import ../overlays/personal.nix)
       (import ../overlays/wietsedv.nix)
       (import ../overlays/extra-vscode-extensions.nix)
+      (import ../overlays/pull-requests.nix)
     ];
   };
 
