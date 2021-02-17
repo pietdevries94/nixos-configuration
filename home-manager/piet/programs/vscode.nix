@@ -15,6 +15,7 @@
       naumovs.color-highlight
       gruntfuggly.todo-tree
       editorconfig.editorconfig
+      emeraldwalk.runonsave
 
       # Nix
       bbenoist.Nix
