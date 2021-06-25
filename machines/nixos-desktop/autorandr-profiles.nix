@@ -49,7 +49,7 @@ in
                 enable = true;
                 primary = true;
                 mode = "3440x1440";
-                position = "1080x0";
+                position = "1920x0";
                 rate = "59.97";
             };
 
@@ -58,7 +58,7 @@ in
                 mode = "1920x1080";
                 position = "0x0";
                 rate = "60.00";
-                rotate = "left";
+                # rotate = "left";
             };
           };
         };

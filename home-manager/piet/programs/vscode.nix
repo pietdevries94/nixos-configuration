@@ -16,6 +16,7 @@
       gruntfuggly.todo-tree
       editorconfig.editorconfig
       emeraldwalk.runonsave
+      pkgs.vscode-extensions.ms-vsliveshare.vsliveshare
 
       # Nix
       bbenoist.Nix

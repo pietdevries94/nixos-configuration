@@ -12,7 +12,7 @@
     ];
   };
 
-  system.stateVersion = "20.09";
+  system.stateVersion = "21.05";
   system.autoUpgrade.enable = true;
 
   # needed for ddcutil
@@ -50,7 +50,7 @@
 
   services.gvfs = {
     enable = true;
-    package = lib.mkForce pkgs.gnome3.gvfs;
+    package = lib.mkForce pkgs.gnome.gvfs;
   };
 
   users.users.piet = {

@@ -78,10 +78,10 @@ in
     xfce.thunar-archive-plugin
     xfce.thunar-volman
     xfce.tumbler
-    gnome3.file-roller
+    gnome.file-roller
 
     # Basic utils
-    gnome3.gnome-calculator
-    gnome3.eog
+    gnome.gnome-calculator
+    gnome.eog
   ];
 }

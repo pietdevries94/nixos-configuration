@@ -25,6 +25,6 @@
       ];
     };
   };
-  services.gnome3.glib-networking.enable = true;
+  services.gnome.glib-networking.enable = true;
   programs.nm-applet.enable = true;
 }
