@@ -6,7 +6,7 @@
     vSync = true;
     experimentalBackends = true;
 
-    inactiveOpacity = "0.85";
+    inactiveOpacity = "0.90";
     
     fade = true;
     fadeDelta = 2;

@@ -27,4 +27,5 @@
   };
   services.gnome.glib-networking.enable = true;
   programs.nm-applet.enable = true;
+  services.xserver.libinput.enable = true; # I use an external trackpad
 }

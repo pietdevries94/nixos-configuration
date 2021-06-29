@@ -65,7 +65,7 @@ border_width = 0
 border_sides = 
 border_content_tint_weight = 0
 background_content_tint_weight = 0
-background_color = ${colors.ui.accent} 100
+background_color = ${colors.ui.backgroundAlt} 100
 border_color = ${colors.ui.background} 0
 background_color_hover = ${colors.ui.background} 0
 border_color_hover = ${colors.ui.background} 0
@@ -129,7 +129,7 @@ border_color_pressed = ${colors.ui.foregroundAlt} 0
 
 #-------------------------------------
 # Panel
-panel_items = PPEEEETBSC
+panel_items = PPEEEEPTBSC
 panel_size = 100% 45
 panel_margin = 0 0
 panel_padding = 7 7 7
@@ -204,7 +204,7 @@ systray_padding = 8 0 10
 systray_background_id = 8
 systray_sort = ascending
 systray_icon_size = 16
-systray_icon_asb = 100 0 10
+systray_icon_asb = 100 0 0
 systray_monitor = 1
 systray_name_filter = 
 
@@ -374,6 +374,22 @@ button = new
 button_text = 
 button_lclick_command = ~/.config/tint2/scripts/services.sh
 button_rclick_command = 
+button_mclick_command = 
+button_uwheel_command = 
+button_dwheel_command = 
+button_font = Font Awesome 5 Free 12
+button_font_color = ${colors.ui.foreground} 100
+button_padding = 8 0
+button_background_id = 8
+button_centered = 1
+button_max_icon_size = 0
+
+#-------------------------------------
+# Button 3
+button = new
+button_text = 
+button_lclick_command = ~/.config/tint2/scripts/lock-windows.sh
+button_rclick_command = ~/.config/tint2/scripts/unlock-windows.sh
 button_mclick_command = 
 button_uwheel_command = 
 button_dwheel_command = 

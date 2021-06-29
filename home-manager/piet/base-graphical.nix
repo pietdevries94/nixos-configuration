@@ -30,7 +30,7 @@ in
 
     (import ./programs/vscode.nix theme.vscode)
     (import ./programs/alacritty.nix { inherit colors; })
-    ./programs/spotify.nix
+    (import ./programs/spotify.nix theme.spotify)
     ./programs/wtfutil
   ];
 

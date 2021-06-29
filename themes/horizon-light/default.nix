@@ -1,4 +1,4 @@
-{ pkgs }:
+{ pkgs, wallpaper ? ./peaches.jpg }:
 
 # colors scheme from https://gitlab.com/horizon/horizon-vscode/-/blob/master/source/light/colors.json
 let
@@ -53,7 +53,9 @@ let
     };
   };
 in {
-  wallpaper = ./Norway.png;
+  inherit colors;
+  inherit wallpaper;
+
   vscode = {
     themeExtension = pkgs.extra-vscode-extensions.Bauke.horizon-vscode;
     themeName = "Horizon Light";
@@ -70,5 +72,15 @@ in {
     };
   };
 
-  colors = colors;
+  tint2 = {
+    scriptIcons = {
+      brightness = "default-user-desktop";
+      outputVolume = "audio-headphones";
+      inputVolume = "audio-input-microphone";
+    };
+  };
+
+  spotify = {
+    colorScheme = "white";
+  };
 }

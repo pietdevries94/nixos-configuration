@@ -77,4 +77,6 @@ in {
     outputVolume = "audio-headphones";
     inputVolume = "audio-input-microphone";
   };
+
+  spotify = "horizon";
 }

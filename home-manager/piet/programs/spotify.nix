@@ -1,3 +1,5 @@
+{ colorScheme }:
+
 { config, pkgs, lib, ... }:
 
 let
@@ -9,6 +11,6 @@ in
   programs.spicetify = {
     enable = true;
     theme = "Dribbblish";
-    colorScheme = "horizon";
+    inherit colorScheme;
   };
 }
