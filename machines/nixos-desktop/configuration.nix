@@ -61,6 +61,7 @@ in {
         useOSProber = true;
         gfxmodeEfi = "1920x1080";
       };
+      timeout = -1;
     };
     initrd = {
       luks.devices = {
