@@ -91,7 +91,6 @@ in {
   services.logind.extraConfig = "RuntimeDirectorySize = 40%";
 
   # laptop specific settings
-  services.xserver.libinput.enable = true;
   programs.light.enable = true;
   home-manager.users.piet.services.sxhkd.keybindings = {
     "XF86MonBrightness{Down,Up}" = "light {-U,-A} 5";

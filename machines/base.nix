@@ -59,7 +59,7 @@
 
     shell = pkgs.zsh;
     isNormalUser = true;
-    extraGroups = [ "wheel" "video" "networkmanager" ];
+    extraGroups = [ "wheel" "video" "networkmanager" "input" ];
   };
 
   security.sudo.enable = true;
