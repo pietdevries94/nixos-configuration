@@ -31,8 +31,13 @@
       octref.vetur
       dbaeumer.vscode-eslint
       znck.vue-language-features
-      bradlc.vscode-tailwindcss
       graphql.vscode-graphql
+
+      # Svelte
+      svelte.svelte-vscode
+
+      # General Web
+      voorjaar.windicss-intellisense
     ]);
     userSettings = {
       "editor.fontFamily" = "'Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback', 'Font Awesome 5 Free Solid', 'Inconsolata Nerd Font'";
