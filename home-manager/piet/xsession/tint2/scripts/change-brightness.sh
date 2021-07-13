@@ -70,7 +70,38 @@ case $selected in
   ;;
 esac
 
-sudo ddcutil -d 1 setvcp 10 $screen1 &
-sudo ddcutil -d 2 setvcp 10 $screen2 &
-
 ~/.config/tint2/scripts/notify-send.sh -i "$1" -t 2000 -r 124 "Screen Brightness" "On level $selected"
+
+
+i=0
+
+while [[ $i -lt 5 ]]
+do
+  sudo ddcutil -d 1 setvcp 10 $screen1
+
+  v=$(sudo ddcutil -d 1 getvcp 10 | sed -n "s/.*current value = *\([^']*\), max value =   100.*/\1/p")
+  if [[ $v -eq $screen1 ]]; then
+    break
+  fi
+
+  ((i++))
+done
+
+
+if sudo ddcutil detect | grep -q "Display 2"; then
+
+  i=0
+
+  while [[ $i -lt 5 ]]
+  do
+    sudo ddcutil -d 2 setvcp 10 $screen2
+
+    v=$(sudo ddcutil -d 2 getvcp 10 | sed -n "s/.*current value = *\([^']*\), max value =   100.*/\1/p")
+    if [[ $v -eq $screen2 ]]; then
+      break
+    fi
+
+    ((i++))
+  done
+
+fi
