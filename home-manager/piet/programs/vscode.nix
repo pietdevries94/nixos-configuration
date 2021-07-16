@@ -17,6 +17,7 @@
       editorconfig.editorconfig
       emeraldwalk.runonsave
       pkgs.vscode-extensions.ms-vsliveshare.vsliveshare
+      # vscode-icons-team.vscode-icons needs to be installed manually
 
       # Nix
       bbenoist.Nix
@@ -50,6 +51,7 @@
       "gitlens.currentLine.enabled" = false;
       "window.menuBarVisibility" = "toggle";
       "workbench.colorTheme" = themeName;
+      "workbench.iconTheme" = "vscode-icons";
       "go.formatTool" = "goimports";
     };
     keybindings = [
@@ -60,6 +62,14 @@
       {
         key = "f14";
         command = "workbench.action.quickOpen";
+      }
+      {
+        key = "alt+left";
+        command = "workbench.action.navigateBack";
+      }
+      {
+        key = "alt+right";
+        command = "workbench.action.navigateForward";
       }
     ];
   };

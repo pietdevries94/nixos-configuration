@@ -63,6 +63,9 @@ in
   gtk = {
     enable = true;
   } // theme.gtk;
+
+  # Enable the keyring
+  services.gnome-keyring.enable = true;
   
   home.packages = with pkgs; [ 
     firefox-bin
@@ -84,5 +87,6 @@ in
     # Basic utils
     gnome.gnome-calculator
     gnome.eog
+    gnome.seahorse
   ];
 }
