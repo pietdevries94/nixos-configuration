@@ -19,6 +19,11 @@
       pkgs.vscode-extensions.ms-vsliveshare.vsliveshare
       # vscode-icons-team.vscode-icons needs to be installed manually
 
+      # Git
+      cschleiden.vscode-github-actions
+      github.vscode-pull-request-github
+      GitLab.gitlab-workflow
+
       # Nix
       bbenoist.Nix
       
