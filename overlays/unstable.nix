@@ -19,5 +19,6 @@ in with unstable; {
     minecraft
     insomnia
     prusa-slicer
+    glab
   ;
 }

@@ -48,6 +48,15 @@ in
 
       # Clean Download folder
       find /home/piet/Downloads -maxdepth 1 -mtime +14 -exec rm -rf {} \;
+
+      mkdir -p /home/piet/Archive/week
+      mkdir -p /home/piet/Archive/month
+      mkdir -p /home/piet/Archive/6months
+      mkdir -p /home/piet/Archive/year
+      find /home/piet/Archive/week -maxdepth 1 -mtime +7 -exec rm -rf {} \;
+      find /home/piet/Archive/month -maxdepth 1 -mtime +31 -exec rm -rf {} \;
+      find /home/piet/Archive/6months -maxdepth 1 -mtime +183 -exec rm -rf {} \;
+      find /home/piet/Archive/year -maxdepth 1 -mtime +365 -exec rm -rf {} \;
     '';
   };
 
@@ -74,6 +83,7 @@ in
     neofetch
     pciutils
     pavucontrol
+    vlc
     # TODO: enable cordium after 20.09 fix
     # cordium
 

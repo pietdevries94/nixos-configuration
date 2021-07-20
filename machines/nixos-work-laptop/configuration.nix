@@ -6,9 +6,8 @@
 
 let
   graphicalConfig = {
-    theme = import ../../themes/horizon-dark {
+    theme = import ../../themes/horizon-light{
       inherit pkgs;
-      wallpaper = ../../themes/horizon-dark/Stay-on-track.png;
     };
   };
 in {
@@ -55,6 +54,7 @@ in {
     # Webdev stuff
     8080
     18081
+    18881
   ];
 
   hardware = {

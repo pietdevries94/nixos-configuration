@@ -13,6 +13,8 @@
       zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
       bindkey "$terminfo[kcuu1]" history-substring-search-up
       bindkey "$terminfo[kcud1]" history-substring-search-down
+
+      export PATH=$PATH:$HOME/go/bin
     '';
     plugins = [
       {

@@ -20,5 +20,6 @@
     standardnotes
     kazam
     handbrake
+    glab
   ];
 }
