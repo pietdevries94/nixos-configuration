@@ -53,6 +53,14 @@
     package = lib.mkForce pkgs.gnome.gvfs;
   };
 
+  networking.firewall.allowedTCPPortRanges = [
+    # KDE Connect
+    {
+      from = 1714;
+      to = 1764;
+    }
+  ];
+
   users.users.piet = {
     # Password made with mkpasswd -m sha-512
     hashedPassword = import ../secrets/password-piet.nix;

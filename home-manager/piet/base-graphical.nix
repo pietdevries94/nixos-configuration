@@ -75,6 +75,12 @@ in
 
   # Enable the keyring
   services.gnome-keyring.enable = true;
+
+  # Enable KDE-connect
+  services.kdeconnect = {
+    enable = true;
+    indicator = true;
+  };
   
   home.packages = with pkgs; [ 
     firefox-bin
