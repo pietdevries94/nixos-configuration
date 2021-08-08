@@ -20,5 +20,6 @@ in with unstable; {
     insomnia
     prusa-slicer
     glab
+    cura
   ;
 }

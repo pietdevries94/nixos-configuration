@@ -50,7 +50,6 @@
 
   services.gvfs = {
     enable = true;
-    package = lib.mkForce pkgs.gnome.gvfs;
   };
 
   networking.firewall.allowedTCPPortRanges = [

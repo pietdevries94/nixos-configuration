@@ -11,6 +11,9 @@ in {
       ./autorandr-profiles.nix
       ../base.nix
 
+      # Load non-public settings
+      ../../secrets
+
       ../../services/xserver.nix
       ../../services/pulseaudio.nix
       ../../services/bluetooth.nix
@@ -21,7 +24,6 @@ in {
       ../../home-manager/base.nix
     ];
 
-  
   services.xserver.videoDrivers = [ "amdgpu" ];
   
   home-manager.users.piet = {
@@ -46,7 +48,8 @@ in {
     cpu.amd.updateMicrocode = true;
     enableRedistributableFirmware = true;
     enableAllFirmware = true;
-    opengl.extraPackages = [ pkgs.amdvlk ];
+    opengl.driSupport = true;
+    # opengl.extraPackages = [ pkgs.amdvlk ];
   };
 
   boot = {
@@ -75,4 +78,6 @@ in {
   };
 
   home-manager.users.piet.programs.git.signing.key = "81A9A2B8CB8BA05E";
+
+  programs.steam.enable = true;
 }
