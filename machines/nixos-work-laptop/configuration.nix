@@ -7,4 +7,8 @@
 
     ../../templates/graphical.nix
   ];
+
+  custom.user.services = {
+    mailhog.enable = true;
+  };
 }

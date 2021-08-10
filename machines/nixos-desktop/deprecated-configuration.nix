@@ -80,8 +80,6 @@ in {
   programs.steam.enable = true;
 
   custom.user.programs = {
-    setup3dprinting.enable = true;
-
     # TODO: make themes set themselves up
     alacritty.colors = graphicalConfig.theme.colors;
   };

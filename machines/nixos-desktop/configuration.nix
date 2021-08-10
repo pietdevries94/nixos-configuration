@@ -7,4 +7,8 @@
 
     ../../templates/graphical.nix
   ];
+
+  custom.user.programs = {
+    setup3dprinting.enable = true;
+  };
 }
