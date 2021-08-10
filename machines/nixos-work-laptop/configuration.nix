@@ -14,6 +14,11 @@
 
   custom.user.programs = {
     virtualbox.enable = true;
+    vscode.languages = {
+      golang = true;
+      vue = true;
+      web = true;
+    };
   };
 
   custom.containers = {

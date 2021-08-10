@@ -7,6 +7,7 @@
     ./user/programs/alacritty
     ./user/programs/setup3dprinting
     ./user/programs/virtualbox
+    ./user/programs/vscode
     ./user/services/mailhog
   ];
 }

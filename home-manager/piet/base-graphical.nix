@@ -29,7 +29,6 @@ in
     ./xsession/libinput-gestures.nix
     # (import ./xsession/screen-locker.nix { inherit colors; })
 
-    (import ./programs/vscode.nix theme.vscode)
     (import ./programs/spotify.nix theme.spotify)
     ./programs/wtfutil
   ];

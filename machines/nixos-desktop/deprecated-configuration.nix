@@ -79,5 +79,9 @@ in {
   custom.user.programs = {
     # TODO: make themes set themselves up
     alacritty.colors = graphicalConfig.theme.colors;
+    vscode.theme = {
+      name = graphicalConfig.theme.vscode.themeName;
+      extension = graphicalConfig.theme.vscode.themeExtension;
+    };
   };
 }
