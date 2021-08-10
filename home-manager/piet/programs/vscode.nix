@@ -25,7 +25,7 @@
       GitLab.gitlab-workflow
 
       # Nix
-      bbenoist.Nix
+      jnoortheen.nix-ide
       
       # Golang
       golang.go
@@ -58,6 +58,7 @@
       "workbench.colorTheme" = themeName;
       "workbench.iconTheme" = "vscode-icons";
       "go.formatTool" = "goimports";
+      "nix.enableLanguageServer" = true;
     };
     keybindings = [
       {
