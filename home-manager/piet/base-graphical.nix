@@ -30,7 +30,6 @@ in
     # (import ./xsession/screen-locker.nix { inherit colors; })
 
     (import ./programs/vscode.nix theme.vscode)
-    (import ./programs/alacritty.nix { inherit colors; })
     (import ./programs/spotify.nix theme.spotify)
     ./programs/wtfutil
   ];
