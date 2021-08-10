@@ -11,4 +11,9 @@
   custom.user.programs = {
     setup3dprinting.enable = true;
   };
+
+  custom.hardware = {
+    bluetooth.enable = true;
+    audio.enable = true;
+  };
 }

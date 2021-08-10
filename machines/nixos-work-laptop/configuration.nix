@@ -16,4 +16,9 @@
     mssql-2017.enable = true;
     mssql-2019.enable = true;
   }
+
+  custom.hardware = {
+    bluetooth.enable = true;
+    audio.enable = true;
+  };
 }

@@ -1,4 +1,4 @@
-sync:
+sync: generate-custom-modules-index
 	@scripts/sync-config.sh
 
 preview-custom-modules-index:

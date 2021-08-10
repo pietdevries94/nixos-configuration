@@ -21,8 +21,6 @@ in {
 
       ../deprecated-base.nix
       ../../services/xserver.nix
-      ../../services/pulseaudio.nix
-      ../../services/bluetooth.nix
       ../../services/dconf.nix
       ../../services/fonts.nix
       ../../services/32bit-support.nix
