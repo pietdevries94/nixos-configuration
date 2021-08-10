@@ -11,4 +11,9 @@
   custom.user.services = {
     mailhog.enable = true;
   };
+
+  custom.containers = {
+    mssql-2017.enable = true;
+    mssql-2019.enable = true;
+  }
 }
