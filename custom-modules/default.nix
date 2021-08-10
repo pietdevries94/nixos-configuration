@@ -6,6 +6,7 @@
     ./hardware/bluetooth
     ./user/programs/alacritty
     ./user/programs/setup3dprinting
+    ./user/programs/virtualbox
     ./user/services/mailhog
   ];
 }

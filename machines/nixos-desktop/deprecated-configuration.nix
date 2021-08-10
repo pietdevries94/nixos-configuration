@@ -15,7 +15,6 @@ in {
       ../../secrets
 
       ../../services/xserver.nix
-      ../../services/dconf.nix
       ../../services/fonts.nix
       ../../services/32bit-support.nix
 

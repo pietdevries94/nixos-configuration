@@ -21,10 +21,8 @@ in {
 
       ../deprecated-base.nix
       ../../services/xserver.nix
-      ../../services/dconf.nix
       ../../services/fonts.nix
       ../../services/32bit-support.nix
-      ../../services/virtualbox.nix
 
       ../../services/containers
       ../../services/containers/mssql-2017.nix
