@@ -2,7 +2,7 @@
 
 let 
   graphicalConfig = {
-    theme = import ../../themes/horizon-light { inherit pkgs; };
+    theme = import ../../deprecated-themes/horizon-light { inherit pkgs; };
   };
 in {
   imports =
@@ -75,13 +75,4 @@ in {
   home-manager.users.piet.programs.git.signing.key = "81A9A2B8CB8BA05E";
 
   programs.steam.enable = true;
-
-  custom.user.programs = {
-    # TODO: make themes set themselves up
-    alacritty.colors = graphicalConfig.theme.colors;
-    vscode.theme = {
-      name = graphicalConfig.theme.vscode.themeName;
-      extension = graphicalConfig.theme.vscode.themeExtension;
-    };
-  };
 }

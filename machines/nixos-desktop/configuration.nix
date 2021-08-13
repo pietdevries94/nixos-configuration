@@ -8,19 +8,23 @@
     ../../templates/graphical.nix
   ];
 
-  custom.user.programs = {
-    setup3dprinting.enable = true;
-    vscode.languages = {
-      golang = true;
-      rust = true;
-      vue = true;
-      svelte = true;
-      web = true;
-    };
-  };
+  custom = {
+    themes.horizon-light.enable = true;
 
-  custom.hardware = {
-    bluetooth.enable = true;
-    audio.enable = true;
+    user.programs = {
+      setup3dprinting.enable = true;
+      vscode.languages = {
+        golang = true;
+        rust = true;
+        vue = true;
+        svelte = true;
+        web = true;
+      };
+    };
+
+    hardware = {
+      bluetooth.enable = true;
+      audio.enable = true;
+    };
   };
 }

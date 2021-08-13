@@ -8,26 +8,30 @@
     ../../templates/graphical.nix
   ];
 
-  custom.user.services = {
-    mailhog.enable = true;
-  };
+  custom = {
+    themes.horizon-light.enable = true;
 
-  custom.user.programs = {
-    virtualbox.enable = true;
-    vscode.languages = {
-      golang = true;
-      vue = true;
-      web = true;
+    user.services = {
+      mailhog.enable = true;
     };
-  };
 
-  custom.containers = {
-    mssql-2017.enable = true;
-    mssql-2019.enable = true;
-  }
+    user.programs = {
+      virtualbox.enable = true;
+      vscode.languages = {
+        golang = true;
+        vue = true;
+        web = true;
+      };
+    };
 
-  custom.hardware = {
-    bluetooth.enable = true;
-    audio.enable = true;
+    containers = {
+      mssql-2017.enable = true;
+      mssql-2019.enable = true;
+    };
+
+    hardware = {
+      bluetooth.enable = true;
+      audio.enable = true;
+    };
   };
 }

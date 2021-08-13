@@ -6,7 +6,7 @@
 
 let
   graphicalConfig = {
-    theme = import ../../themes/horizon-light{
+    theme = import ../../deprecated-themes/horizon-light{
       inherit pkgs;
     };
   };
@@ -99,14 +99,4 @@ in {
   };
   programs.adb.enable = true;
   users.users.piet.extraGroups = ["adbusers"];
-
-
-  custom.user.programs = {
-    # TODO: make themes set themselves up
-    alacritty.colors = graphicalConfig.theme.colors;
-    vscode.theme = {
-      name = graphicalConfig.theme.vscode.themeName;
-      extension = graphicalConfig.theme.vscode.themeExtension;
-    };
-  };
 }
