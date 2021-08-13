@@ -11,6 +11,7 @@
     ./themes/horizon-light
     ./user/programs/alacritty
     ./user/programs/shell
+    ./user/programs/spotify
     ./user/programs/virtualbox
     ./user/programs/vscode
     ./user/services/mailhog

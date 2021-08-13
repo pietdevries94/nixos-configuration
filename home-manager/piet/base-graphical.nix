@@ -28,9 +28,6 @@ in
     ./xsession/scrot
     ./xsession/libinput-gestures.nix
     # (import ./xsession/screen-locker.nix { inherit colors; })
-
-    (import ./programs/spotify.nix theme.spotify)
-    ./programs/wtfutil
   ];
 
 

@@ -72,6 +72,7 @@ in {
           extension = pkgs.extra-vscode-extensions.Bauke.horizon-vscode;
           name = "Horizon Dark";
         };
+        spotify.colorScheme = "horizon";
       };
       xsession = {
         screen-locker.colors = colors;

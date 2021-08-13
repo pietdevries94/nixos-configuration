@@ -9,6 +9,7 @@
     user.programs = {
       alacritty.enable = true;
       vscode.enable = true;
+      spotify.enable = true;
     };
 
     user.xsession.screen-locker.enable = true;
