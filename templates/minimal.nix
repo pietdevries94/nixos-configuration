@@ -7,11 +7,15 @@ in {
     ../custom-modules
     (import "${hmTarball}/nixos")
   ];
-  
+
   home-manager.useUserPackages = true;
   home-manager.useGlobalPkgs = true;
 
   virtualisation.oci-containers = {
     backend = "podman";
+  };
+
+  custom.user.programs = {
+    shell.enable = true;
   };
 }
