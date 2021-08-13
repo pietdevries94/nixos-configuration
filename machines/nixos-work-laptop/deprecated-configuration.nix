@@ -23,12 +23,6 @@ in {
       ../../services/xserver.nix
       ../../services/fonts.nix
       ../../services/32bit-support.nix
-
-      ../../services/containers
-      ../../services/containers/mssql-2017.nix
-      ../../services/containers/mssql-2019.nix
-
-      ../../home-manager/base.nix
     ];
 
   home-manager.users.piet = {
