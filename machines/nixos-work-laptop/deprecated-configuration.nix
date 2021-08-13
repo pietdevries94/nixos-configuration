@@ -22,14 +22,12 @@ in {
       ../deprecated-base.nix
       ../../services/xserver.nix
       ../../services/fonts.nix
-      ../../services/32bit-support.nix
     ];
 
   home-manager.users.piet = {
     imports = [
       ../../home-manager/piet/base.nix
       (import ../../home-manager/piet/base-graphical.nix graphicalConfig)
-      (import ../../home-manager/piet/base-work.nix graphicalConfig)
     ];
   };
 

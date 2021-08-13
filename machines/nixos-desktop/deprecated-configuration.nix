@@ -16,7 +16,6 @@ in {
 
       ../../services/xserver.nix
       ../../services/fonts.nix
-      ../../services/32bit-support.nix
     ];
 
   services.xserver.videoDrivers = [ "amdgpu" ];

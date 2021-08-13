@@ -1,9 +1,9 @@
 { lib, pkgs, config, ... }:
 with lib;
 let
-  cfg = config.custom.user.programs.setup3dprinting;
+  cfg = config.custom.setups.printing3d;
 in {
-  options.custom.user.programs.setup3dprinting = {
+  options.custom.setups.printing3d = {
     enable = mkEnableOption "3D printing software";
   };
 

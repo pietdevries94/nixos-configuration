@@ -11,6 +11,8 @@
   custom = {
     themes.horizon-light.enable = true;
 
+    setups.work.enable = true;
+
     user.services = {
       mailhog.enable = true;
     };

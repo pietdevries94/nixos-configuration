@@ -11,8 +11,12 @@
   custom = {
     themes.horizon-light.enable = true;
 
+    setups = {
+      printing3d.enable = true;
+      gaming.enable = true;
+    };
+
     user.programs = {
-      setup3dprinting.enable = true;
       vscode.languages = {
         golang = true;
         rust = true;

@@ -4,10 +4,12 @@
     ./containers/mssql-2019
     ./hardware/audio
     ./hardware/bluetooth
+    ./setups/gaming
+    ./setups/printing3d
+    ./setups/work
     ./themes/horizon-dark
     ./themes/horizon-light
     ./user/programs/alacritty
-    ./user/programs/setup3dprinting
     ./user/programs/shell
     ./user/programs/virtualbox
     ./user/programs/vscode
