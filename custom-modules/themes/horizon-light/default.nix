@@ -65,11 +65,16 @@ in {
   };
 
   config = mkIf cfg.enable {
-    custom.user.programs = {
-      alacritty.colors = colors;
-      vscode.theme = {
-        extension = pkgs.extra-vscode-extensions.Bauke.horizon-vscode;
-        name = "Horizon Light";
+    custom.user = {
+      programs = {
+        alacritty.colors = colors;
+        vscode.theme = {
+          extension = pkgs.extra-vscode-extensions.Bauke.horizon-vscode;
+          name = "Horizon Light";
+        };
+      };
+      xsession = {
+        screen-locker.colors = colors;
       };
     };
   };

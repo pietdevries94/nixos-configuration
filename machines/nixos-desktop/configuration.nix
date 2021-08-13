@@ -1,4 +1,4 @@
-{ ... }:
+{ lib, ... }:
 
 {
   imports = [ 
@@ -21,6 +21,8 @@
         web = true;
       };
     };
+
+    user.xsession.screen-locker.enable = lib.mkForce false;
 
     hardware = {
       bluetooth.enable = true;
