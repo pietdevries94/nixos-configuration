@@ -18,10 +18,6 @@ in {
     ];
   };
 
-  networking.useDHCP = false;
-  networking.interfaces.wlp4s0.useDHCP = true;
-  networking.networkmanager.enable = true;
-
   networking.firewall.allowedTCPPorts = [
     # Port for barrier
     24800
@@ -33,12 +29,6 @@ in {
   ];
 
   services.logind.extraConfig = "RuntimeDirectorySize = 40%";
-
-  # laptop specific settings
-  programs.light.enable = true;
-  home-manager.users.piet.services.sxhkd.keybindings = {
-    "XF86MonBrightness{Down,Up}" = "light {-U,-A} 5";
-  };
 
   # work specific settings
   home-manager.users.piet.programs.git = {

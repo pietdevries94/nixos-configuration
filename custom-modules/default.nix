@@ -4,6 +4,7 @@
     ./containers/mssql-2019
     ./hardware/audio
     ./hardware/bluetooth
+    ./hardware/screen
     ./services/xserver
     ./setups/fonts
     ./setups/gaming

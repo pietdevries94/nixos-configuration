@@ -21,6 +21,10 @@
     facetimehd.enable = true;
   };
 
+  networking.useDHCP = false;
+  networking.interfaces.wlp4s0.useDHCP = true;
+  networking.networkmanager.enable = true;
+
   boot = {
     loader = {
       efi.canTouchEfiVariables = true;
@@ -71,6 +75,7 @@
     hardware = {
       bluetooth.enable = true;
       audio.enable = true;
+      screen.enable = true;
     };
   };
 }
