@@ -11,15 +11,6 @@ let
     };
   };
 in {
-  imports =
-    [
-      # Load non-public settings
-      ../../secrets
-
-      ../../services/xserver.nix
-      ../../services/fonts.nix
-    ];
-
   home-manager.users.piet = {
     imports = [
       ../../home-manager/piet/base.nix

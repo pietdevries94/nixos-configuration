@@ -4,18 +4,7 @@ let
   graphicalConfig = {
     theme = import ../../deprecated-themes/horizon-light { inherit pkgs; };
   };
-in {
-  imports =
-    [
-      # Load non-public settings
-      ../../secrets
-
-      ../../services/xserver.nix
-      ../../services/fonts.nix
-    ];
-
-  
-  
+in {  
   home-manager.users.piet = {
     imports = [
       ../../home-manager/piet/base.nix

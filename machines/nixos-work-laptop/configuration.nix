@@ -5,6 +5,9 @@
     ./hardware-configuration.nix
     ./autorandr-profiles.nix
 
+    # Load non-public settings
+    ../../secrets
+
     # TODO remove this import when configuration is completely ported
     ./deprecated-configuration.nix
 

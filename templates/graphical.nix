@@ -6,6 +6,10 @@
   programs.dconf.enable = true;
 
   custom = {
+    services.xserver.enable = true;
+
+    setups.fonts.enable = true;
+
     user.programs = {
       alacritty.enable = true;
       vscode.enable = true;
