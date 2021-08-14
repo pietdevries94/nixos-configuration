@@ -12,10 +12,7 @@ let
   };
 in {
   imports =
-    [ # Include the results of the hardware scan.
-      ./hardware-configuration.nix
-      ./autorandr-profiles.nix
-
+    [
       # Load non-public settings
       ../../secrets
 
@@ -44,37 +41,6 @@ in {
     18081
     18881
   ];
-
-  hardware = {
-    cpu.amd.updateMicrocode = true;
-    enableRedistributableFirmware = true;
-    enableAllFirmware = true;
-    facetimehd.enable = true;
-  };
-
-  boot = {
-    loader = {
-      efi.canTouchEfiVariables = true;
-      grub = {
-        enable = true;
-        version = 2;
-        device = "nodev";
-        efiSupport = true;
-        enableCryptodisk = true;
-        useOSProber = true;
-        gfxmodeEfi = "1920x1080";
-      };
-    };
-    initrd = {
-      luks.devices = {
-        root = {
-          device = "/dev/disk/by-uuid/607667ad-06be-497e-9063-20790b6067a5";
-          preLVM = true;
-        };
-      };
-      availableKernelModules = [ "cryptd" ]; # "aes_x86_64"
-    };
-  };
 
   services.logind.extraConfig = "RuntimeDirectorySize = 40%";
 
