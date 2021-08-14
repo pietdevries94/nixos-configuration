@@ -1,7 +1,10 @@
-{ theme }:
 { config, pkgs, lib, ... }:
 
 let
+  theme = import ../../deprecated-themes/horizon-light{
+    inherit pkgs;
+  };
+
   inherit (theme) colors;
 
   myCustomLayout = pkgs.writeText "xkb-layout" ''

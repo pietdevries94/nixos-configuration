@@ -1,15 +1,20 @@
 { lib, ... }:
 
 {
+  # TODO remove this import when configuration is completely ported
+  home-manager.users.piet = {
+    imports = [
+      ../../home-manager/piet/base-graphical.nix
+    ];
+  };
+  #################################################################
+
   imports = [
     ./hardware-configuration.nix
     ./autorandr-profiles.nix
 
     # Load non-public settings
     ../../secrets
-
-    # TODO remove this import when configuration is completely ported
-    ./deprecated-configuration.nix
 
     ../../templates/graphical.nix
   ];
