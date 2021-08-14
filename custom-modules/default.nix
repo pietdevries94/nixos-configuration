@@ -14,6 +14,7 @@
     ./user/programs/spotify
     ./user/programs/virtualbox
     ./user/programs/vscode
+    ./user/services/kdeconnect
     ./user/services/mailhog
     ./user/xsession/screen-locker
   ];

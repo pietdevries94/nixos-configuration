@@ -7,8 +7,6 @@ let
 in {
   imports =
     [
-      ../deprecated-base.nix
-
       # Load non-public settings
       ../../secrets
 

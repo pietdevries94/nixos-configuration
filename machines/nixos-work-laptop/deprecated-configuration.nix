@@ -16,7 +16,6 @@ in {
       # Load non-public settings
       ../../secrets
 
-      ../deprecated-base.nix
       ../../services/xserver.nix
       ../../services/fonts.nix
     ];
