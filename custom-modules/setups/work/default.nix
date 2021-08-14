@@ -8,6 +8,18 @@ in {
   };
 
   config = mkIf cfg.enable {
+    networking.firewall.allowedTCPPorts = [
+      # Webdev stuff
+      8080
+      18081
+      18881
+    ];
+
+    services.logind.extraConfig = "RuntimeDirectorySize = 40%";
+
+    programs.adb.enable = true;
+    users.users.piet.extraGroups = ["adbusers"];
+    
     home-manager.users.piet = {
       home.packages = with pkgs; [
         ferdi
