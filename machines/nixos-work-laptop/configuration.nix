@@ -65,6 +65,10 @@
         vue = true;
         web = true;
       };
+      git = {
+        userEmail = "piet@compenda.nl";
+        signingKey = "EEB06101168F6A0F";
+      };
     };
 
     containers = {

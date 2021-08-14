@@ -85,5 +85,8 @@ in {
 
   custom.user.programs = {
     shell.enable = true;
+    git.enable = true;
+    gpg-agent.enable = true;
+    ssh.enable = true;
   };
 }

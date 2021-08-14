@@ -13,7 +13,6 @@ let
 in {
   home-manager.users.piet = {
     imports = [
-      ../../home-manager/piet/base.nix
       (import ../../home-manager/piet/base-graphical.nix graphicalConfig)
     ];
   };
@@ -30,11 +29,6 @@ in {
 
   services.logind.extraConfig = "RuntimeDirectorySize = 40%";
 
-  # work specific settings
-  home-manager.users.piet.programs.git = {
-    userEmail = "piet@compenda.nl";
-    signing.key = "EEB06101168F6A0F";
-  };
   programs.adb.enable = true;
   users.users.piet.extraGroups = ["adbusers"];
 }

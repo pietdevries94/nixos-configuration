@@ -13,8 +13,11 @@
     ./themes/horizon-dark
     ./themes/horizon-light
     ./user/programs/alacritty
+    ./user/programs/git
+    ./user/programs/gpg-agent
     ./user/programs/shell
     ./user/programs/spotify
+    ./user/programs/ssh
     ./user/programs/virtualbox
     ./user/programs/vscode
     ./user/services/kdeconnect
