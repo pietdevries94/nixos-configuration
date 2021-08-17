@@ -129,7 +129,7 @@ border_color_pressed = ${colors.ui.foregroundAlt} 0
 
 #-------------------------------------
 # Panel
-panel_items = PPEEEEPTBSC
+panel_items = PPEEEEEPTBSC
 panel_size = 100% 45
 panel_margin = 0 0
 panel_padding = 7 7 7
@@ -341,6 +341,29 @@ execp_markup = 0
 execp_tooltip = 
 execp_lclick_command = ~/.config/tint2/scripts/toggle-headphones.sh
 execp_rclick_command = 
+execp_mclick_command = 
+execp_uwheel_command = 
+execp_dwheel_command = 
+execp_font = Font Awesome 5 Free 12
+execp_font_color = ${colors.ui.foreground} 100
+execp_padding = 8 0
+execp_background_id = 8
+execp_centered = 1
+execp_icon_w = 0
+execp_icon_h = 0
+
+#-------------------------------------
+# Executor 5
+execp = new
+execp_command = ~/.config/tint2/executor/vm-status.sh
+execp_interval = 10
+execp_has_icon = 0
+execp_cache_icon = 0
+execp_continuous = 0
+execp_markup = 0
+execp_tooltip = 
+execp_lclick_command = ~/.config/tint2/scripts/vm-start-or-open.sh
+execp_rclick_command = ~/.config/tint2/scripts/vm-stop.sh
 execp_mclick_command = 
 execp_uwheel_command = 
 execp_dwheel_command = 
