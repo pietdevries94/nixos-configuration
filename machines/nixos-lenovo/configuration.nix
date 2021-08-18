@@ -85,7 +85,10 @@
 
     containers = {
       mssql-2017.enable = true;
-      mssql-2019.enable = true;
+      mssql-2019 = {
+        enable = true;
+        autoStart = true;
+      };
     };
 
     hardware = {
