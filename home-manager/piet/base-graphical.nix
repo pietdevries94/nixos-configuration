@@ -102,5 +102,6 @@ in
     gnome.gnome-calculator
     gnome.eog
     gnome.seahorse
+    gnome.gnome-system-monitor
   ];
 }
