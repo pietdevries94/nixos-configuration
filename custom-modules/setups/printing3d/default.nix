@@ -14,6 +14,7 @@ in {
         prusa-slicer
         meshlab
         blender
+        freecad
       ];
     };
   };
