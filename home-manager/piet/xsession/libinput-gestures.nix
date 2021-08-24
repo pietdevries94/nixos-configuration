@@ -11,8 +11,10 @@ gesture swipe left	3 xdotool key alt+Right
 gesture swipe right	3 xdotool key alt+Left
 
 # Notifications
-gesture swipe up	4 xdotool key ctrl+space
+gesture swipe up	  4 xdotool key ctrl+space
 gesture swipe down	4 xdotool key ctrl+Escape
+gesture swipe left	4 xdotool key ctrl+Right
+gesture swipe right	4 xdotool key ctrl+Left
 
 # Zoom in and out
 gesture pinch in	xdotool key ctrl+equal

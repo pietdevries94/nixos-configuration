@@ -8,7 +8,7 @@
     monitors = {
       HDMI-A-0 = [ "1" "2" "3" "4" "5" "6" "7" ];
       HDMI-0 = [ "8" "9" "0" ];
-      eDP = [ "1" "2" "3" "4" "5" "6" "7" ];
+      eDP = [ "1" "2" "3" "4" "5" "6" "7" "8" "9" "0" ];
       DVI-D-0 = [ "8" "9" "0"];
       DisplayPort-0 = [ "1" "2" "3" "4" "5" "6" "7" "8" "9" "0" ];
     };
@@ -80,5 +80,8 @@
 
     # move a floating window
     "mod3 + {Left,Down,Up,Right}" =	"bspc node -v {-20 0,0 20,0 -20,20 0}";
+
+    # Goto next workspace
+    "ctrl + {Left,Right}" =	"bspc desktop -f {prev,next}";
   };
 }
