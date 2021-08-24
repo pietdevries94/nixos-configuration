@@ -65,13 +65,13 @@
     themes.horizon-light.enable = true;
 
     setups.work.enable = true;
+    setups.gaming.enable = true;
 
     user.services = {
       mailhog.enable = true;
     };
 
     user.programs = {
-      virtualbox.enable = true;
       vscode.languages = {
         golang = true;
         vue = true;
@@ -100,7 +100,6 @@
 
   environment.systemPackages = with pkgs; [
     virtmanager
-    lxqt.lxqt-policykit
   ];
 
   virtualisation.libvirtd = {
@@ -120,7 +119,6 @@
       home = {
         path = "/home/piet";
         browseable = "yes";
-        # "valid users" = "piet";
         "read only" = "no";
         "guest ok" = "no";
         "create mask" = "0640";
@@ -135,6 +133,8 @@
   };
 
   security.sudo.extraConfig = ''
-    %wheel      ALL=(ALL:ALL) NOPASSWD: ${pkgs.libvirt}/bin/virsh
+    %wheel      ALL=(ALL:ALL) NOPASSWD: ${pkgs.libvirt}/bin/virsh domstate --domain win10
+    %wheel      ALL=(ALL:ALL) NOPASSWD: ${pkgs.libvirt}/bin/virsh start win10
+    %wheel      ALL=(ALL:ALL) NOPASSWD: ${pkgs.libvirt}/bin/virsh shutdown win10
   '';
 }
