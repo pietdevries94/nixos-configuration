@@ -15,7 +15,7 @@
 
     settings = {
       # gaps
-      window_gap = 24;
+      window_gap = 20;
 
       # pointer settings
       focus_follows_pointer = true;
