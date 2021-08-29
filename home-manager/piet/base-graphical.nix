@@ -14,11 +14,6 @@ let
     keycode 66 = Hyper_L
     add mod3 = Hyper_L
     add mod4 = Super_L Super_R
-
-    keycode 65 = Hyper_R
-    add Control = Hyper_R
-
-    keycode 255 = space
   '';
 in
 {
@@ -44,7 +39,7 @@ in
     scriptPath = ".hm-xsession";
     initExtra = ''
       ${pkgs.xorg.xmodmap}/bin/xmodmap ${myCustomLayout} &
-      ${pkgs.xcape}/bin/xcape -e 'Shift_L=Shift_L|9;Shift_R=Shift_L|0;Hyper_R=space'
+      ${pkgs.xcape}/bin/xcape -e 'Shift_L=Shift_L|9;Shift_R=Shift_L|0'
 
       ${pkgs.feh}/bin/feh --bg-fill ~/.background-image.png
       
