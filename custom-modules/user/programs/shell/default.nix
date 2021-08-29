@@ -24,6 +24,9 @@ in {
 
           export PATH=$PATH:$HOME/go/bin
         '';
+        shellAliases = {
+          tmp = "pushd && cd $(mktemp -d)";
+        };
         plugins = [
           {
             name = "zsh-history-substring-search";
