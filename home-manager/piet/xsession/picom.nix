@@ -4,12 +4,12 @@
   services.picom = {
     enable = true;
     package = pkgs.picom.overrideAttrs (oldAttrs: rec {
-      # created with nix-prefetch-github --nix --rev next yshui picom
+      # created with nix-prefetch-github --nix --rev fix-shadow-clean s0nny7 picom
       src = pkgs.fetchFromGitHub {
-        owner = "yshui";
+        owner = "s0nny7";
         repo = "picom";
-        rev = "78e8666498490ae25349a44f156d0811b30abb70";
-        sha256 = "k39uebbqSUOxke2BjaIxgccJNz+mhlhAtTtmxhIHo1M=";
+        rev = "d74c099083487783af7254cb55780ffb20100e53";
+        sha256 = "F4yhKHbkqtZeo94Yhac3BhX9ZpSXe1TjKZeWkfwQlFI=";
         fetchSubmodules = true;
       };
     });
@@ -22,6 +22,9 @@
     fadeDelta = 2;
     fadeExclude =  [ "class_g = 'firefox' && window_type = 'utility'" ];
     shadow = true;
+    shadowExclude = [
+      "bounding_shaped && !rounded_corners"
+    ];
 
     extraOptions = ''
       blur-method = "dual_kawase";
@@ -31,6 +34,14 @@
         "window_type = 'desktop'",
         "_GTK_FRAME_EXTENTS@:c",
       ];
+      corner-radius = 10;
+      round-borders = 10;
+      rounded-corners-exclude = [
+        "window_type = 'dock'",
+        "window_type = 'desktop'",
+        "_GTK_FRAME_EXTENTS@:c",
+      ];
+      xinerama-shadow-crop = true;
     '';
   };
 }
