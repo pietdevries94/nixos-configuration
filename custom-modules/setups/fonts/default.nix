@@ -12,11 +12,12 @@ in {
       fontconfig.allowBitmaps = true;
       enableDefaultFonts = true;
       fonts = with pkgs; [
-        curie
-        siji
-        inconsolata-nerdfont
-        font-awesome
         cantarell-fonts
+        corefonts
+        curie
+        font-awesome
+        inconsolata-nerdfont
+        siji
       ];
     };
   };
