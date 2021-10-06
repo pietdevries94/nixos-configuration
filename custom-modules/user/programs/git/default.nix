@@ -22,6 +22,7 @@ in {
         userEmail = cfg.userEmail;
         extraConfig= {
           pull.rebase = true;
+          init.defaultBranch = "main";
         };
 
         signing = {
