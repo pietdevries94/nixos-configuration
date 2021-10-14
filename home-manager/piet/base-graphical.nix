@@ -26,7 +26,6 @@ in
     (import ./xsession/bspwm { inherit colors; })
     ./xsession/picom.nix
     (import ./xsession/rofi.nix { inherit colors; })
-    (import ./xsession/tint2 { inherit colors; inherit (theme.tint2) scriptIcons; })
     (import ./xsession/dunst.nix { inherit colors; inherit (theme.gtk) iconTheme; })
     ./xsession/scrot
     ./xsession/libinput-gestures.nix

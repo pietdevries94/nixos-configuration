@@ -18,6 +18,9 @@
 
     user.services.kdeconnect.enable = true;
 
-    user.xsession.screen-locker.enable = true;
+    user.xsession = {
+      screen-locker.enable = true;
+      tint2.enable = true;
+    };
   };
 }

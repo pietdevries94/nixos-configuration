@@ -23,5 +23,6 @@
     ./user/services/kdeconnect
     ./user/services/mailhog
     ./user/xsession/screen-locker
+    ./user/xsession/tint2
   ];
 }

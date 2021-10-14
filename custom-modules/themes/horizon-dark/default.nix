@@ -76,6 +76,14 @@ in {
       };
       xsession = {
         screen-locker.colors = colors;
+        tint2 = {
+          inherit colors;
+          scriptIcons = {
+            brightness = "default-user-desktop";
+            outputVolume = "audio-headphones";
+            inputVolume = "audio-input-microphone";
+          };
+        };
       };
     };
   };
