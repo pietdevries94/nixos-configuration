@@ -79,6 +79,7 @@
     hardware = {
       bluetooth.enable = true;
       audio.enable = true;
+      moonlander.enable = true;
     };
   };
 }
