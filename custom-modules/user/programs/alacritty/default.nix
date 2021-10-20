@@ -42,6 +42,7 @@ in {
       # TODO: only enable this if sxhkd is enabled
       services.sxhkd.keybindings = {
         "mod3 + Return" = "alacritty";
+        "mod1 + Return" = "alacritty";
       };
     };
   };

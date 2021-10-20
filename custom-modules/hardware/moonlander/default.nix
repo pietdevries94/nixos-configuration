@@ -18,5 +18,10 @@ in {
       groups.plugdev = {};
       users.piet.extraGroups = [ "plugdev" ];
     };
+    home-manager.users.piet = {
+      home.packages = with pkgs; [
+        wally-cli
+      ];
+    };
   };
 }

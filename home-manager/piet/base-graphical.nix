@@ -83,6 +83,7 @@ in
   
   home.packages = with pkgs; [ 
     firefox-bin
+    chromium
     gimp
     remmina
     neofetch
