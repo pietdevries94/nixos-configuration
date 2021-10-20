@@ -22,7 +22,7 @@ in {
           bindkey "$terminfo[kcuu1]" history-substring-search-up
           bindkey "$terminfo[kcud1]" history-substring-search-down
 
-          export PATH=$PATH:$HOME/go/bin
+          export PATH=$PATH:$HOME/go/bin:$HOME/.local/bin
         '';
         shellAliases = {
           tmp = "pushd && cd $(mktemp -d)";
