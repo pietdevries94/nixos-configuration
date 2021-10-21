@@ -6,7 +6,7 @@ function chkwin {
 
 if chkwin
 then
-  remmina -c ~/.local/share/remmina/group_rdp_vm_192-168-122-161.remmina
+  remmina -c ~/.local/share/remmina/vm_rdp_win10_192-168-122-161.remmina
 else
   sudo virsh start win10
 fi

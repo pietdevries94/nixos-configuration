@@ -141,4 +141,9 @@
     %wheel      ALL=(ALL:ALL) NOPASSWD: ${pkgs.libvirt}/bin/virsh start macOS
     %wheel      ALL=(ALL:ALL) NOPASSWD: ${pkgs.libvirt}/bin/virsh shutdown macOS
   '';
+
+  networking.hosts = {
+    "192.168.122.186" = [ "macOS" ];
+    "192.168.122.161" = [ "win10" ];
+  };
 }
