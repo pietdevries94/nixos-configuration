@@ -137,5 +137,8 @@
     %wheel      ALL=(ALL:ALL) NOPASSWD: ${pkgs.libvirt}/bin/virsh domstate --domain win10
     %wheel      ALL=(ALL:ALL) NOPASSWD: ${pkgs.libvirt}/bin/virsh start win10
     %wheel      ALL=(ALL:ALL) NOPASSWD: ${pkgs.libvirt}/bin/virsh shutdown win10
+    %wheel      ALL=(ALL:ALL) NOPASSWD: ${pkgs.libvirt}/bin/virsh domstate --domain macOS
+    %wheel      ALL=(ALL:ALL) NOPASSWD: ${pkgs.libvirt}/bin/virsh start macOS
+    %wheel      ALL=(ALL:ALL) NOPASSWD: ${pkgs.libvirt}/bin/virsh shutdown macOS
   '';
 }
