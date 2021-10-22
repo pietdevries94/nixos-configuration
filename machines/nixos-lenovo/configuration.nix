@@ -99,6 +99,8 @@
     };
   };
 
+  # Everything below is for virtualisation and should be moved to a module in the future
+
   environment.systemPackages = with pkgs; [
     virtmanager
   ];
@@ -145,5 +147,28 @@
   networking.hosts = {
     "192.168.122.186" = [ "macOS" ];
     "192.168.122.161" = [ "win10" ];
+  };
+
+  systemd.services.libvirt-macOS-clean-shutdown = {
+    after = [ "libvirt-guests.service" ];
+    requires = [ "libvirt-guests.service" ];
+    wantedBy = [ "multi-user.target" ];
+
+    serviceConfig = {
+      Type = "oneshot";
+      RemainAfterExit = true;
+      ExecStop = 
+      let stopScript = pkgs.writeScript "stopScript" ''#!${pkgs.bash}/bin/bash
+          function chkwin {
+              ${pkgs.libvirt}/bin/virsh domstate --domain macOS | grep 'running' > /dev/null
+          }
+
+          if chkwin
+          then
+            ${pkgs.sshpass}/bin/sshpass -p systemd ${pkgs.openssh}/bin/ssh shutdown@192.168.122.186 "sudo shutdown -h now" || true
+          fi
+          ''; 
+      in "${stopScript}";
+    };
   };
 }
