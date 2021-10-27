@@ -95,7 +95,7 @@
       bluetooth.enable = true;
       audio.enable = true;
       screen.enable = true;
-      keyboard.enable = true;
+      input.enable = true;
     };
   };
 

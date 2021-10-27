@@ -1,7 +1,7 @@
 { lib, pkgs, config, ... }:
 with lib;
 let
-  cfg = config.custom.hardware.keyboard;
+  cfg = config.custom.hardware.input;
 
   myCustomLayout = pkgs.writeText "xkb-layout" ''
     clear lock
@@ -30,8 +30,8 @@ let
     done
   '';
 in {
-  options.custom.hardware.keyboard = {
-    enable = mkEnableOption "Keyboard";
+  options.custom.hardware.input = {
+    enable = mkEnableOption "Keyboard, touchpad and mouse settings";
   };
 
   config = mkIf cfg.enable {

@@ -79,7 +79,7 @@
     hardware = {
       bluetooth.enable = true;
       audio.enable = true;
-      keyboard.enable = true;
+      input.enable = true;
     };
   };
 }
