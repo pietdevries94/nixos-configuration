@@ -14,7 +14,7 @@ in {
         enableAutosuggestions = true;
         enableCompletion = true;
         initExtra = ''
-          function nix-tmp() {                                                                                                                       ~
+          function nix-tmp() {
             nix-shell -p $@ --run zsh
           }
 

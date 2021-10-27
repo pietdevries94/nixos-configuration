@@ -38,5 +38,12 @@ in {
     };
     services.gnome.glib-networking.enable = true;
     programs.nm-applet.enable = true;
+
+    home-manager.users.piet.services.redshift = {
+      enable = true;
+      tray = true;
+      latitude = "52.992752";
+      longitude = "6.564228";
+    };
   };
 }
