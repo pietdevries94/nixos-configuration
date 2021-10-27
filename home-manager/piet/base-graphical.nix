@@ -37,7 +37,6 @@ in
     enable = true;
     scriptPath = ".hm-xsession";
     initExtra = ''
-      ${pkgs.xorg.xmodmap}/bin/xmodmap ${myCustomLayout} &
       ${pkgs.xcape}/bin/xcape -e 'Shift_L=Shift_L|9;Shift_R=Shift_L|0'
 
       ${pkgs.feh}/bin/feh --bg-fill ~/.background-image.png
