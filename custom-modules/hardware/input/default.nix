@@ -17,17 +17,30 @@ let
   '';
 
   restartXmodmapService = pkgs.writeScript "restartXmodmapService.sh" ''#!${pkgs.bash}/bin/bash
-    echo "" > /tmp/reload-keyboard-piet.lock
-    chown piet /tmp/reload-keyboard-piet.lock
+    mkdir -p /tmp/reload-locks
+    echo "" > /tmp/reload-locks/reload-keyboard-piet.lock
+    chown -R piet /tmp/reload-locks
+  '';
+
+  restartLibinputGesturesService = pkgs.writeScript "restartLibinputGesturesService.sh" ''#!${pkgs.bash}/bin/bash
+    mkdir -p /tmp/reload-locks
+    echo "" > /tmp/reload-locks/reload-libinput-gestures-piet.lock
+    chown -R piet /tmp/reload-locks
   '';
 
   watchReloadFiles = pkgs.writeScript "watchReloadFiles.sh" ''#!${pkgs.bash}/bin/bash
-    ${pkgs.inotify-tools}/bin/inotifywait -m /tmp -e create -e moved_to |
+    mkdir -p /tmp/reload-locks
+    ${pkgs.inotify-tools}/bin/inotifywait -m /tmp/reload-locks -e create -e moved_to |
     while read path action file; do
         if [[ "$file" = "reload-keyboard-piet.lock" ]]; then
             sleep 1
             systemctl --user restart xmodmap.service
-            rm -f /tmp/reload-keyboard-piet.lock
+            rm -f /tmp/reload-locks/reload-keyboard-piet.lock
+        fi
+        if [[ "$file" = "reload-libinput-gestures-piet.lock" ]]; then
+            sleep 1
+            systemctl --user restart libinput-gestures.service
+            rm -f /tmp/reload-locks/reload-libinput-gestures-piet.lock
         fi
     done
   '';
@@ -48,6 +61,9 @@ in {
 
       # Moonlander connect event
       ACTION=="add", SUBSYSTEM=="usb", ATTR{idVendor}=="3297", ATTR{idProduct}=="1969", RUN+="${restartXmodmapService}"
+      
+      # Magic Trackpad connect event
+      ACTION=="add", SUBSYSTEM=="usb", ATTR{idVendor}=="05ac", ATTR{idProduct}=="0265", RUN+="${restartLibinputGesturesService}"
     '';
 
     # Needed for live training
@@ -114,9 +130,9 @@ gesture pinch out	xdotool key ctrl+minus
       '';
 
       home.packages = with pkgs; [
+        xdotool
         # Flash tool for moonlander
         wally-cli
-        xdotool
       ];
       programs.zsh.initExtra = ''
         mnfl () { wally-cli $1 && rm $1 }
