@@ -3,7 +3,7 @@ with lib;
 let
   cfg = config.custom.hardware.input;
 
-  myCustomLayout = pkgs.writeText "xkb-layout" ''
+  xmodmap-layout = pkgs.writeText "xmodmap-layout" ''
     clear lock
     clear mod3
     clear mod4
@@ -11,21 +11,23 @@ let
     add mod3 = Hyper_L
     add mod4 = Super_L Super_R
   '';
-  
-  restartXmodmapService = pkgs.writeScript "restartXmodmapService.sh" ''#!${pkgs.bash}/bin/bash
-    echo "" > /tmp/keyboard-piet.lock
-    chown piet /tmp/keyboard-piet.lock
-  '';
+
   xmodmapExecStart = pkgs.writeScript "xmodmapExecStart.sh" ''#!${pkgs.bash}/bin/bash
-    ${pkgs.xorg.xmodmap}/bin/xmodmap ${myCustomLayout} &
+    ${pkgs.xorg.xmodmap}/bin/xmodmap ${xmodmap-layout} &
   '';
-  xsessionInitKeyboardScript = pkgs.writeScript "xsessionInitKeyboard.sh" ''#!${pkgs.bash}/bin/bash
+
+  restartXmodmapService = pkgs.writeScript "restartXmodmapService.sh" ''#!${pkgs.bash}/bin/bash
+    echo "" > /tmp/reload-keyboard-piet.lock
+    chown piet /tmp/reload-keyboard-piet.lock
+  '';
+
+  watchReloadFiles = pkgs.writeScript "watchReloadFiles.sh" ''#!${pkgs.bash}/bin/bash
     ${pkgs.inotify-tools}/bin/inotifywait -m /tmp -e create -e moved_to |
     while read path action file; do
-        if [[ "$file" = "keyboard-piet.lock" ]]; then
+        if [[ "$file" = "reload-keyboard-piet.lock" ]]; then
             sleep 1
             systemctl --user restart xmodmap.service
-            rm -f /tmp/keyboard-piet.lock
+            rm -f /tmp/reload-keyboard-piet.lock
         fi
     done
   '';
@@ -55,30 +57,66 @@ in {
     };
 
     home-manager.users.piet = {
-      systemd.user.services.xmodmap = {
-        Unit = {
-          Description = "Set xmodmap oneshot service";
-          After = [ "graphical-session-pre.target" ];
-          PartOf = [ "graphical-session.target" ];
+      systemd.user.services = {
+        xmodmap = {
+          Unit = {
+            Description = "Set xmodmap oneshot service";
+            After = [ "graphical-session-pre.target" ];
+            PartOf = [ "graphical-session.target" ];
+          };
+
+          Install = { WantedBy = [ "graphical-session.target" ]; };
+
+          Service = {
+            Type = "oneshot";
+            Environment = "DISPLAY=:0";
+            RemainAfterExit = "yes";
+            ExecStart = "${xmodmapExecStart}";
+          };
         };
+        libinput-gestures = {
+          Unit = {
+            Description = "Set libinput-gestures service";
+            After = [ "graphical-session-pre.target" ];
+            PartOf = [ "graphical-session.target" ];
+          };
 
-        Install = { WantedBy = [ "graphical-session.target" ]; };
+          Install = { WantedBy = [ "graphical-session.target" ]; };
 
-        Service = {
-          Type = "oneshot";
-          Environment = "DISPLAY=:0";
-          RemainAfterExit = "yes";
-          ExecStart = "${xmodmapExecStart}";
+          Service = {
+            Type = "simple";
+            RemainAfterExit = "yes";
+            ExecStart = "${pkgs.libinput-gestures}/bin/libinput-gestures";
+          };
         };
       };
 
+      home.file.".config/libinput-gestures.conf".source = pkgs.writeText "libinput-gestures.conf" ''
+gesture swipe down	3 xdotool key ctrl+r
+
+# Front and back
+gesture swipe left	3 xdotool key alt+Right
+gesture swipe right	3 xdotool key alt+Left
+
+# Notifications
+gesture swipe up	  4 xdotool key ctrl+space
+gesture swipe down	4 xdotool key ctrl+Escape
+gesture swipe left	4 xdotool key ctrl+Right
+gesture swipe right	4 xdotool key ctrl+Left
+
+# Zoom in and out
+gesture pinch in	xdotool key ctrl+equal
+gesture pinch out	xdotool key ctrl+minus
+'';
+
       xsession.initExtra = ''
-        ${xsessionInitKeyboardScript} &
+        ${watchReloadFiles} &
       '';
 
-      # Flash tool for moonlander
       home.packages = with pkgs; [
+        # Flash tool for moonlander
         wally-cli
+        xdotool
       ];
       programs.zsh.initExtra = ''
         mnfl () { wally-cli $1 && rm $1 }

@@ -28,7 +28,6 @@ in
     (import ./xsession/rofi.nix { inherit colors; })
     (import ./xsession/dunst.nix { inherit colors; inherit (theme.gtk) iconTheme; })
     ./xsession/scrot
-    ./xsession/libinput-gestures.nix
     # (import ./xsession/screen-locker.nix { inherit colors; })
   ];
 
