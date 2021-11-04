@@ -11,6 +11,7 @@
 
   imports = [
     ./hardware-configuration.nix
+    ./autorandr-profiles.nix
 
     # Load non-public settings
     ../../secrets

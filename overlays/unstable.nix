@@ -21,5 +21,6 @@ in with unstable; {
     prusa-slicer
     glab
     cura
+    nix_2_4
   ;
 }
