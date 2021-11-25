@@ -1,7 +1,7 @@
 { config, pkgs, lib, ... }:
 
 let
-  theme = import ../../deprecated-themes/horizon-light{
+  theme = import ../../deprecated-themes/horizon-dark{
     inherit pkgs;
   };
 

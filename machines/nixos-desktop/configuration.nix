@@ -37,7 +37,7 @@
         efiSupport = true;
         enableCryptodisk = true;
         useOSProber = true;
-        gfxmodeEfi = "1920x1080";
+        gfxmodeEfi = "2560x1440";
       };
       timeout = -1;
     };
@@ -55,7 +55,7 @@
   services.xserver.videoDrivers = [ "amdgpu" ];
 
   custom = {
-    themes.horizon-light.enable = true;
+    themes.horizon-dark.enable = true;
 
     setups = {
       printing3d.enable = true;

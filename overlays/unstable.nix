@@ -17,10 +17,12 @@ in with unstable; {
     vscode
     vscode-extensions
     minecraft
+    multimc
     insomnia
     prusa-slicer
     glab
     cura
     nix_2_4
+    tela-icon-theme
   ;
 }

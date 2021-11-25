@@ -69,8 +69,8 @@ in {
       programs = {
         alacritty.colors = colors;
         vscode.theme = {
-          extension = pkgs.extra-vscode-extensions.Bauke.horizon-vscode;
-          name = "Horizon Light";
+          extension = pkgs.extra-vscode-extensions.LanceWilhelm.horizon-extended;
+          name = "Horizon Extended Light";
         };
         spotify.colorScheme = "white";
       };

@@ -11,8 +11,8 @@ in {
     nixpkgs = {
     config.allowUnfree = true;
     overlays = [
-      (import ../overlays/unstable.nix)
       (import ../overlays/personal.nix)
+      (import ../overlays/unstable.nix)
       (import ../overlays/wietsedv.nix)
       (import ../overlays/extra-vscode-extensions.nix)
       (import ../overlays/pull-requests.nix)

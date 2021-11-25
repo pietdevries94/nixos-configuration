@@ -16,6 +16,7 @@ in {
         discord
         betterdiscordctl
         minecraft
+        multimc
         lutris
       ];
     };
