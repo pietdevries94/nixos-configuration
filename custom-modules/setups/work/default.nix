@@ -16,6 +16,7 @@ in {
     ];
 
     services.logind.extraConfig = "RuntimeDirectorySize = 40%";
+    services.teamviewer.enable = true;
 
     programs.adb.enable = true;
     users.users.piet.extraGroups = ["adbusers"];

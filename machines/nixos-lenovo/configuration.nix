@@ -77,6 +77,7 @@
         golang = true;
         vue = true;
         web = true;
+        svelte = true;
       };
       git = {
         userEmail = "piet@compenda.nl";
