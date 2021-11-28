@@ -23,7 +23,7 @@ in {
             y = 3;
           };
           font = {
-            size = 8.0;
+            size = 9.0;
           };
 
           colors = {

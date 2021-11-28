@@ -63,7 +63,7 @@
   services.logind.lidSwitch = "hibernate";
 
   custom = {
-    themes.horizon-light.enable = true;
+    themes.horizon-dark.enable = true;
 
     setups.work.enable = true;
     setups.gaming.enable = true;

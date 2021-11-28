@@ -57,8 +57,8 @@ in {
   inherit wallpaper;
 
   vscode = {
-    themeExtension = pkgs.extra-vscode-extensions.LanceWilhelm.horizon-extended;
-    themeName = "Horizon Extended";
+    themeExtension = pkgs.extra-vscode-extensions.lakshits11.horizon-legacy;
+    themeName = "Horizon Legacy";
   };
 
   gtk = {
