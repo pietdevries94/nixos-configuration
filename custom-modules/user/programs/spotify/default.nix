@@ -14,13 +14,16 @@ in {
 
   config = mkIf cfg.enable {
     home-manager.users.piet = {
-      imports = [ (import "${spicetify}/module.nix") ];
+      # imports = [ (import "${spicetify}/module.nix") ];
 
-      programs.spicetify = {
-        enable = true;
-        theme = "Dribbblish";
-        colorScheme = cfg.colorScheme;
-      };
+      # programs.spicetify = {
+      #   enable = true;
+      #   theme = "Dribbblish";
+      #   colorScheme = cfg.colorScheme;
+      # };
+      home.packages = with pkgs; [
+        spotify
+      ];
     };
   };
 }

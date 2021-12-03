@@ -1,7 +1,7 @@
 { pkgs, ... }:
 
 let
-  hmTarball = fetchTarball https://github.com/nix-community/home-manager/archive/release-20.09.tar.gz;
+  hmTarball = fetchTarball https://github.com/nix-community/home-manager/archive/release-21.11.tar.gz;
 in {
   imports = [ 
     ../custom-modules
@@ -19,8 +19,9 @@ in {
     ];
   };
 
-  system.stateVersion = "21.05";
+  system.stateVersion = "21.11";
   system.autoUpgrade.enable = true;
+  system.autoUpgrade.allowReboot = false;
 
   # needed for ddcutil
   boot.kernelModules = [ "i2c-dev" ];

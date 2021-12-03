@@ -4,36 +4,7 @@
 {
   programs.rofi = {
     enable = true;
-    separator = "solid";
-    colors = {
-      window = {
-        background = colors.ui.background;
-        border = colors.ui.tertiaryAccent;
-        separator = colors.ui.tertiaryAccent;
-      };
-
-      rows = {
-        normal = {
-          background = colors.ui.background;
-          backgroundAlt = colors.ui.background;
-          foreground = colors.ui.foreground;
-          highlight = {
-            background = colors.ui.secondaryAccent;
-            foreground = colors.ui.darkText;
-          };
-        };
-        active = {
-          background = colors.ui.background;
-          backgroundAlt = colors.ui.background;
-          foreground = colors.ui.accentAlt;
-          highlight = {
-            background = colors.ui.accentAlt;
-            foreground = colors.ui.foreground;
-          };
-        };
-      };
-    };
-    scrollbar = false;
+    theme = "Arc-Dark";
   };
 
   services.sxhkd.keybindings = {
