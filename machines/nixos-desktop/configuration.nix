@@ -47,7 +47,7 @@
   services.xserver.videoDrivers = [ "amdgpu" ];
 
   custom = {
-    themes.horizon-light.enable = true;
+    themes.serendipity-morning.enable = true;
 
     setups = {
       gaming.enable = true;

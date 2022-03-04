@@ -14,6 +14,7 @@
     ./setups/work
     ./themes/horizon-dark
     ./themes/horizon-light
+    ./themes/serendipity-morning
     ./user/programs/alacritty
     ./user/programs/git
     ./user/programs/gpg-agent

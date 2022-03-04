@@ -5,13 +5,17 @@ let
 in {
   options.custom.user.xsession.rofi = {
     enable = mkEnableOption "Rofi for xsession";
+    theme = mkOption {
+      type = types.str;
+      default = "Arc-Dark";
+    };
   };
 
   config = mkIf cfg.enable {
     home-manager.users.piet = {
       programs.rofi = {
         enable = true;
-        theme = "Arc-Dark";
+        theme = cfg.theme;
       };
 
       services.sxhkd.keybindings = {

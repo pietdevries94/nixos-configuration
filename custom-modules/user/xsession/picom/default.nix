@@ -5,6 +5,10 @@ let
 in {
   options.custom.user.xsession.picom = {
     enable = mkEnableOption "Picom compositor for xsession";
+    inactiveOpacity = mkOption {
+      type = types.str;
+      default = "0.85";
+    };
   };
 
   config = mkIf cfg.enable {
@@ -24,7 +28,7 @@ in {
         vSync = true;
         experimentalBackends = true;
 
-        inactiveOpacity = "0.85";
+        inactiveOpacity = cfg.inactiveOpacity;
         
         fade = true;
         fadeDelta = 2;
