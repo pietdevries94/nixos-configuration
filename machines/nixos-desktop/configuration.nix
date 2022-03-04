@@ -1,4 +1,4 @@
-{ lib, ... }:
+{ lib, pkgs, ... }:
 
 {
   # TODO remove this import when configuration is completely ported
@@ -10,6 +10,8 @@
   #################################################################
 
   imports = [
+    /home/piet/Projects/Nix/nixos-modded-minecraft/debug.nix
+
     ./hardware-configuration.nix
     ./autorandr-profiles.nix
 
@@ -55,17 +57,15 @@
   services.xserver.videoDrivers = [ "amdgpu" ];
 
   custom = {
-    themes.horizon-dark.enable = true;
+    themes.horizon-light.enable = true;
 
     setups = {
-      printing3d.enable = true;
       gaming.enable = true;
     };
 
     user.programs = {
       vscode.languages = {
         golang = true;
-        rust = true;
         vue = true;
         svelte = true;
         web = true;

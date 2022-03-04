@@ -15,8 +15,6 @@ in {
       home.packages = with pkgs; [
         discord
         betterdiscordctl
-        minecraft
-        multimc
         lutris
       ];
     };
