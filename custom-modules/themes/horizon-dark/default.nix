@@ -54,11 +54,16 @@ let
     };
   };
 
+  iconTheme = {
+    package = pkgs.tela-icon-theme;
+    name = "Tela-orange-dark";
+  };
+
   cfg = config.custom.themes.horizon-dark;
 in {
   options.custom.themes.horizon-dark = {
     enable = mkEnableOption "Horizon Dark Theme";
-    name = mkOption {
+    wallpaper = mkOption {
       type = types.path;
       default = ./Ariane-5.png;
     };
@@ -75,7 +80,22 @@ in {
         spotify.colorScheme = "horizon";
       };
       xsession = {
+        base = {
+          wallpaper = cfg.wallpaper;
+          volumeIcon = "audio-headphones";
+          gtkTheme = {
+            inherit iconTheme;
+            theme = {
+              package = pkgs.sweet;
+              name = "Sweet-mars";
+            };
+          };
+        };
+        bspwm.colors = colors;
         screen-locker.colors = colors;
+        dunst = {
+          inherit colors iconTheme;
+        };
         tint2 = {
           inherit colors;
           scriptIcons = {

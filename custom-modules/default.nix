@@ -7,6 +7,7 @@
     ./hardware/input
     ./hardware/screen
     ./services/xserver
+    ./setups/base
     ./setups/fonts
     ./setups/gaming
     ./setups/printing3d
@@ -23,7 +24,13 @@
     ./user/programs/vscode
     ./user/services/kdeconnect
     ./user/services/mailhog
+    ./user/xsession/base
+    ./user/xsession/bspwm
+    ./user/xsession/dunst
+    ./user/xsession/picom
+    ./user/xsession/rofi
     ./user/xsession/screen-locker
+    ./user/xsession/scrot
     ./user/xsession/tint2
   ];
 }

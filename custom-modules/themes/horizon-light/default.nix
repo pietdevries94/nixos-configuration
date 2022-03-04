@@ -54,11 +54,16 @@ let
     };
   };
 
+  iconTheme = {
+    package = pkgs.qogir-icon-theme;
+    name = "Qogir";
+  };
+
   cfg = config.custom.themes.horizon-light;
 in {
   options.custom.themes.horizon-light = {
     enable = mkEnableOption "Horizon Light Theme";
-    name = mkOption {
+    wallpaper = mkOption {
       type = types.path;
       default = ./sky.jpg;
     };
@@ -75,7 +80,22 @@ in {
         spotify.colorScheme = "white";
       };
       xsession = {
+        base = {
+          wallpaper = cfg.wallpaper;
+          volumeIcon = "audio-headphones";
+          gtkTheme = {
+            inherit iconTheme;
+            theme = {
+              package = pkgs.qogir-theme;
+              name = "Qogir Light";
+            };
+          };
+        };
+        bspwm.colors = colors;
         screen-locker.colors = colors;
+        dunst = {
+          inherit colors iconTheme;
+        };
         tint2 = {
           inherit colors;
           scriptIcons = {

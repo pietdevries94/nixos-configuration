@@ -1,14 +1,6 @@
 { config, pkgs, ... }:
 
 {
-  # TODO remove this import when configuration is completely ported
-  home-manager.users.piet = {
-    imports = [
-      ../../home-manager/piet/base-graphical.nix
-    ];
-  };
-  #################################################################
-
   imports = [
     ./hardware-configuration.nix
     ./autorandr-profiles.nix
