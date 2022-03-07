@@ -90,6 +90,7 @@ let
     hooks = {
       postswitch = {
         "fix-background" = "${pkgs.feh}/bin/feh --bg-fill /home/piet/.background-image.png";
+        "bspwm restart" = "${pkgs.bspwm}/bin/bspc wm --restart";
       };
     };
   };

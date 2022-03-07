@@ -8,6 +8,10 @@ in {
     colors = mkOption {
       type = types.anything;
     };
+    windowGap = mkOption {
+      type = types.int;
+      default = 20;
+    };
   };
 
   config = mkIf cfg.enable {
@@ -25,7 +29,7 @@ in {
 
         settings = {
           # gaps
-          window_gap = 20;
+          window_gap = cfg.windowGap;
 
           # pointer settings
           focus_follows_pointer = true;

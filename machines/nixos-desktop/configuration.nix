@@ -65,6 +65,7 @@
     };
 
     user.xsession.screen-locker.enable = lib.mkForce false;
+    user.xsession.bspwm.windowGap = 30;
 
     hardware = {
       bluetooth.enable = true;
