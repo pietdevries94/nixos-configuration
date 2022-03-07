@@ -11,6 +11,14 @@ in {
     scriptIcons = mkOption {
       type = types.anything;
     };
+    winVM = mkOption {
+      type = types.bool;
+      default = false;
+    };
+    macVM = mkOption {
+      type = types.bool;
+      default = false;
+    };
   };
 
   config = mkIf cfg.enable {
@@ -19,7 +27,7 @@ in {
         tint2
       ];
 
-      home.file.".config/tint2/tint2rc".source = (import ./tint2rc.nix { colors = cfg.colors; scriptIcons = cfg.scriptIcons; inherit (pkgs) writeText; });
+      home.file.".config/tint2/tint2rc".source = (import ./tint2rc.nix { inherit (cfg) colors scriptIcons winVM macVM; inherit (pkgs) writeText; });
       home.file.".config/tint2/scripts".source = ./scripts;
       home.file.".config/tint2/executor".source = ./executor;
 

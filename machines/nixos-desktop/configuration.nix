@@ -64,8 +64,10 @@
       git.signingKey = "81A9A2B8CB8BA05E";
     };
 
-    user.xsession.screen-locker.enable = lib.mkForce false;
-    user.xsession.bspwm.windowGap = 30;
+    user.xsession = {
+      screen-locker.enable = lib.mkForce false;
+      bspwm.windowGap = 30;
+    };
 
     hardware = {
       bluetooth.enable = true;

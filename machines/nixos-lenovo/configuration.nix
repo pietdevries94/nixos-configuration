@@ -91,6 +91,11 @@
       screen.enable = true;
       input.enable = true;
     };
+
+    user.xsession.tint2 = {
+      winVM = true;
+      macVM = true;
+    };
   };
 
   # Everything below is for virtualisation and should be moved to a module in the future
