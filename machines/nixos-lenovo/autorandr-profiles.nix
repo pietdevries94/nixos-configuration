@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, lib, config, ... }:
 
 let
   eDP = "00ffffffffffff000e6f011600000000001e0104a522167803ee95a3544c99260f505400000001010101010101010101010101010101ffd700a0a0405e603020360059d710000018000000fd003078cbcb37010a202020202020000000fe0043534f542054330a2020202020000000fe004d4e473030374441312d320a200042";
@@ -79,13 +79,13 @@ let
           "eDP" = {
             enable = true;
             mode = "2560x1600";
-            position = "0x0";
+            position = "3440x0";
             rate = "120.01";
           };
           "DisplayPort-0" = {
             enable = true;
             primary = true;
-            position = "2560x0";
+            position = "0x0";
             mode = "3440x1440";
             rate = "49.99";
           };
@@ -160,7 +160,7 @@ let
     hooks = {
       postswitch = {
         "fix-background" = "${pkgs.feh}/bin/feh --bg-fill /home/piet/.background-image.png";
-        "bspwm restart" = "${pkgs.bspwm}/bin/bspc wm --restart";
+        "bspwm restart" = lib.mkIf config.custom.user.xsession.bspwm.enable "${pkgs.bspwm}/bin/bspc wm --restart";
       };
     };
   };
