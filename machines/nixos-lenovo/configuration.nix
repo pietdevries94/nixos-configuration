@@ -34,7 +34,6 @@
     kernelModules = [ "kvm-amd" "vfio_virqfd" "vfio_pci" "vfio_iommu_type1" "vfio" ];
     blacklistedKernelModules = [ "nvidia" "nouveau" ];
     extraModprobeConfig = "options vfio-pci ids=10de:25a2";
-    extraModulePackages = [ config.boot.kernelPackages.rtw89 ];
 
     
     loader = {
@@ -55,7 +54,7 @@
   services.logind.lidSwitch = "hibernate";
 
   custom = {
-    themes.horizon-dark.enable = true;
+    themes.serendipity-morning.enable = true;
 
     setups.work.enable = true;
     setups.gaming.enable = true;
@@ -146,6 +145,7 @@
   networking.hosts = {
     "192.168.122.186" = [ "macOS" ];
     "192.168.122.161" = [ "win10" ];
+    "192.168.122.47" = [ "rancher.cloud" ];
   };
 
   systemd.services.libvirt-macOS-clean-shutdown = {

@@ -17,7 +17,6 @@ in with unstable; {
     vscode
     vscode-extensions
     minecraft
-    multimc
     insomnia
     prusa-slicer
     glab
