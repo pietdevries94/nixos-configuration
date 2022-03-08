@@ -79,13 +79,13 @@ let
           "eDP" = {
             enable = true;
             mode = "2560x1600";
-            position = "3440x0";
+            position = "0x0";
             rate = "120.01";
           };
           "DisplayPort-0" = {
             enable = true;
             primary = true;
-            position = "0x0";
+            position = "2560x0";
             mode = "3440x1440";
             rate = "49.99";
           };
