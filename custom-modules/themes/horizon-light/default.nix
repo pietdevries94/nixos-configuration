@@ -92,6 +92,7 @@ in {
           };
         };
         bspwm.colors = colors;
+        awesome.colors = colors;
         screen-locker.colors = colors;
         dunst = {
           inherit colors iconTheme;

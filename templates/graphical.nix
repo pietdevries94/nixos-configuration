@@ -23,13 +23,12 @@
 
     user.xsession = {
       base.enable = true;
-      bspwm.enable = true;
+      awesome.enable = true;
       dunst.enable = true;
       picom.enable = true;
       rofi.enable = true;
       screen-locker.enable = true;
       scrot.enable = true;
-      tint2.enable = true;
     };
   };
 }
