@@ -4,7 +4,7 @@ let
   cfg = config.custom.user.xsession.bspwm;
 in {
   options.custom.user.xsession.bspwm = {
-    enable = mkEnableOption "Screen locker for xsession";
+    enable = mkEnableOption "Window manager for xsession";
     colors = mkOption {
       type = types.anything;
     };
