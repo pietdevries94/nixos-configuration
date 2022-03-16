@@ -7,45 +7,32 @@ local dpi = xresources.apply_dpi
 
 Q.panel = {}
 
+local actions = wibox.widget {
+  {
+    require("ui.panel.volume"),
+    require("ui.panel.buttons"),
+    layout = wibox.layout.fixed.vertical,
+    spacing = dpi(16),
+  },
+  widget = wibox.container.margin,
+}
+
 local panel = awful.popup {
   widget = {
+    widget = wibox.container.margin,
+    margins = dpi(16),
+    forced_width = dpi(352),
     {
-        {
-          {
-            text   = 'foobar',
-            widget = wibox.widget.textbox
-          },
-          {
-            bar_shape           = gears.shape.rounded_rect,
-            bar_height          = 3,
-            bar_color           = beautiful.border_color,
-            handle_color        = beautiful.bg_normal,
-            handle_shape        = gears.shape.circle,
-            handle_border_color = beautiful.border_color,
-            handle_border_width = 1,
-            value               = 25,
-            widget              = wibox.widget.slider,
-          },      
-          {
-            text   = 'foobar',
-            widget = wibox.widget.textbox
-          },
-          layout = wibox.layout.align.vertical,
-        },
-        layout = wibox.layout.align.vertical,
+      layout = wibox.layout.fixed.vertical,
+      actions,
     },
-    margins = 10,
-    forced_width = dpi(355),
-    widget  = wibox.container.margin
   },
   placement = function(c)
     (awful.placement.right + awful.placement.maximize_vertically)(c)
   end,
-  shape        = gears.shape.rectangle,
-  height       = 1500,
-  width        = 1500,
-  visible      = false,
-  ontop        = true,
+  ontop = true,
+  visible = false,
+  bg = beautiful.bg_normal,
 }
 
 Q.panel.toggle = function()

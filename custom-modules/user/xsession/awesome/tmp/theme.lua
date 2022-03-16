@@ -28,6 +28,7 @@ theme.fg_normal     = variables.colors.foreground
 theme.fg_focus      = variables.colors.foregroundAlt
 theme.fg_urgent     = variables.colors.foregroundAlt
 theme.fg_minimize   = variables.colors.foregroundAlt
+theme.fg_accent     = variables.colors.accentAlt
 
 theme.useless_gap   = dpi(8)
 theme.border_width  = dpi(0)
@@ -142,13 +143,22 @@ theme.awesome_icon = theme_assets.awesome_icon(
 theme.icon_theme = nil
 
 -- bling tag preview
-theme.tag_preview_widget_border_radius = 10
-theme.tag_preview_client_border_radius = 10
 theme.tag_preview_client_opacity = 1
 theme.tag_preview_client_bg = variables.colors.background
 theme.tag_preview_widget_border_color = variables.colors.backgroundAlt
 theme.tag_preview_widget_border_width = 0
 theme.tag_preview_client_border_width = 0
+theme.tag_preview_widget_bg = variables.colors.backgroundAlt
+
+-- sliders
+theme.slider_bar_border_width = 0
+theme.slider_handle_border_width = 0
+theme.slider_handle_width = dpi(14)
+theme.slider_handle_shape = gears.shape.circle
+theme.slider_handle_color = variables.colors.accent
+theme.slider_bar_shape = gears.shape.rounded_rect
+theme.slider_bar_height = dpi(2)
+theme.slider_bar_color = variables.colors.accentAlt
 
 return theme
 
