@@ -4,9 +4,10 @@ local wibox = require("wibox")
 local beautiful = require("beautiful")
 local xresources = require("beautiful.xresources")
 local dpi = xresources.apply_dpi
+local helpers = require("helpers")
 
-local speaker_svg = gears.filesystem.get_configuration_dir() .. "icons/speaker.svg"
-local speaker_mute_svg = gears.filesystem.get_configuration_dir() .. "icons/speaker-mute.svg"
+local speaker_svg = helpers.get_icon("speaker")
+local speaker_mute_svg = helpers.get_icon("speaker-mute")
 
 local slider = wibox.widget {
   value = 0,
@@ -22,6 +23,9 @@ local icon = wibox.widget {
   buttons = gears.table.join(
     awful.button({ }, 1, function ()
       slider:emit_signal("mute::toggle")
+    end),
+    awful.button({ }, 3, function ()
+      io.popen("pavucontrol")
     end)
   )
 }

@@ -34,5 +34,5 @@ Q = {}
 require("conf")
 
 require("ui.bar")
-require("ui.titlebar")
 require("ui.panel")
+require("ui.titlebar")

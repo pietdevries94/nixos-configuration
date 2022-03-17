@@ -5,6 +5,7 @@ local wibox = require("wibox")
 local xresources = require("beautiful.xresources")
 local dpi = xresources.apply_dpi
 local tag_preview = require("modules.bling.widget.tag_preview")
+local helpers = require("helpers")
 
 -- Create a wibox for each screen and add it
 local taglist_buttons = gears.table.join(
@@ -105,6 +106,29 @@ local time = wibox.widget {
   },
 }
 
+local panel_btn = wibox.widget {
+  {
+    {
+      image = helpers.get_icon("sliders-horizontal"),
+      forced_height = dpi(16),
+      forced_width = dpi(16),
+      widget = wibox.widget.imagebox,
+    },
+    margins = dpi(3),
+    widget = wibox.container.margin,
+  },
+  widget = wibox.container.background,
+  shape = function(cr, width, height)
+    gears.shape.rounded_rect(cr, width, height, 5)
+  end,
+  bg = beautiful.bg_subtle,
+  buttons = gears.table.join(
+    awful.button({ }, 1, function ()
+      Q.panel.toggle()
+    end)
+  )
+}
+
 local time_t = awful.tooltip {
   objects = { time },
   delay_show = 1,
@@ -158,6 +182,8 @@ awful.screen.connect_for_each_screen(function(s)
         {
           tray,
           time,
+          panel_btn,
+          spacing = dpi(5),
           layout = wibox.layout.fixed.vertical,
         },
       }

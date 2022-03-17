@@ -7,14 +7,28 @@ local dpi = xresources.apply_dpi
 
 Q.panel = {}
 
-local actions = wibox.widget {
-  {
-    require("ui.panel.volume"),
-    require("ui.panel.buttons"),
-    layout = wibox.layout.fixed.vertical,
-    spacing = dpi(16),
-  },
-  widget = wibox.container.margin,
+local top_actions = wibox.widget {
+  require("ui.panel.volume"),
+  layout = wibox.layout.fixed.vertical,
+  spacing = dpi(16),
+}
+
+gears.timer.delayed_call(function ()
+  local number_of_displays = tonumber(io.popen("sudo ddcutil detect | grep -c \"Display\""):read("*all"))
+  local create_brightness_slider_monitor = require("ui.panel.brightness")
+  top_actions:add(create_brightness_slider_monitor(1))
+  top_actions:add(create_brightness_slider_monitor(2))
+end)
+
+local middle_actions = wibox.widget {
+  layout = wibox.layout.fixed.vertical,
+  spacing = dpi(16),
+}
+
+local bottom_actions = wibox.widget {
+  require("ui.panel.buttons"),
+  layout = wibox.layout.fixed.vertical,
+  spacing = dpi(16),
 }
 
 local panel = awful.popup {
@@ -23,8 +37,10 @@ local panel = awful.popup {
     margins = dpi(16),
     forced_width = dpi(352),
     {
-      layout = wibox.layout.fixed.vertical,
-      actions,
+      top_actions,
+      middle_actions,
+      bottom_actions,
+      layout = wibox.layout.align.vertical,
     },
   },
   placement = function(c)
