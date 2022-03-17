@@ -4,16 +4,13 @@ local beautiful = require("beautiful")
 local wibox = require("wibox")
 local xresources = require("beautiful.xresources")
 local dpi = xresources.apply_dpi
-
-local get_icon = function(name)
-  return gears.filesystem.get_configuration_dir() .. "icons/" .. name .. ".svg"
-end
+local helpers = require("helpers")
 
 local create_icon_button = function(name, fn)
   return wibox.widget {
     {
       {
-        image = get_icon(name),
+        image = helpers.get_icon(name),
         forced_height = dpi(24),
         forced_width = dpi(24),
         widget = wibox.widget.imagebox,
@@ -54,9 +51,13 @@ local sign_out = create_icon_button(
 )
 
 return wibox.widget {
-  shutdown,
-  reboot,
-  sign_out,
-  layout = wibox.layout.fixed.horizontal,
-  spacing = dpi(10),
+  {
+    shutdown,
+    reboot,
+    sign_out,
+    layout = wibox.layout.fixed.horizontal,
+    spacing = dpi(40),
+  },
+  halign = "center",
+  widget = wibox.container.place
 }
