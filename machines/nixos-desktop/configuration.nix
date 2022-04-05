@@ -33,15 +33,6 @@
       };
       timeout = -1;
     };
-    initrd = {
-      luks.devices = {
-        root = {
-          device = "/dev/disk/by-uuid/6f71e24b-4258-44e7-8ef0-75a1ee7a762e";
-          preLVM = true;
-        };
-      };
-      availableKernelModules = [ "cryptd" ]; # "aes_x86_64"
-    };
   };
 
   services.xserver.videoDrivers = [ "amdgpu" ];
