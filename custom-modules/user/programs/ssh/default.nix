@@ -11,5 +11,8 @@ in {
     home-manager.users.piet = {
       programs.ssh.enable = true;
     };
+    custom.impermanence.userDirectories = [
+      { directory = ".ssh"; mode = "0700"; user = "piet"; }
+    ];
   };
 }

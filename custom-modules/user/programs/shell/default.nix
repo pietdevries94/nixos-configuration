@@ -72,5 +72,14 @@ in {
         '';
       };
     };
+
+    custom.impermanence = {
+      userDirectories = [
+        { directory = ".local/share/direnv"; user = "piet"; }
+      ];
+      userFiles = [
+        ".zsh_history"
+      ];
+    };
   };
 }

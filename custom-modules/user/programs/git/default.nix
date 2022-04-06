@@ -11,6 +11,7 @@ in {
     };
     signingKey = mkOption {
       type = types.str;
+      default = "";
     };
   };
 
@@ -26,7 +27,7 @@ in {
         };
 
         signing = {
-          signByDefault = true;
+          signByDefault = (cfg.signingKey != "");
           key = cfg.signingKey;
         };
       };

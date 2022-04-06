@@ -29,6 +29,7 @@
     { device = "/dev/disk/by-uuid/77c1079e-0ba7-44b0-993e-81d0a2c4a6b0";
       fsType = "btrfs";
       options = [ "subvol=persist" "compress=zstd" "noatime" ];
+      neededForBoot = true;
     };
 
   fileSystems."/var/log" =
@@ -41,12 +42,6 @@
   fileSystems."/boot" =
     { device = "/dev/disk/by-uuid/2EEA-F23C";
       fsType = "vfat";
-    };
-
-  fileSystems."/etc/nixos" =
-    { device = "/persist/etc/nixos";
-      fsType = "none";
-      options = [ "bind" ];
     };
 
   swapDevices = [ ];

@@ -6,6 +6,7 @@
     ./hardware/bluetooth
     ./hardware/input
     ./hardware/screen
+    ./impermanence
     ./services/xserver
     ./setups/base
     ./setups/fonts

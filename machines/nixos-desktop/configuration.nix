@@ -38,6 +38,8 @@
   services.xserver.videoDrivers = [ "amdgpu" ];
 
   custom = {
+    impermanence.enable = true;
+
     themes.serendipity-morning.enable = true;
 
     setups = {
@@ -51,8 +53,6 @@
         svelte = true;
         web = true;
       };
-
-      git.signingKey = "81A9A2B8CB8BA05E";
     };
 
     user.xsession = {
