@@ -33,7 +33,10 @@
     kernelParams = [ "amdgpu.backlight=0" "acpi_backlight=none" "amd_iommu=on" "pcie_aspm=off" ];
     kernelModules = [ "kvm-amd" "vfio_virqfd" "vfio_pci" "vfio_iommu_type1" "vfio" ];
     blacklistedKernelModules = [ "nvidia" "nouveau" ];
-    extraModprobeConfig = "options vfio-pci ids=10de:25a2";
+    extraModprobeConfig = ''
+      options vfio-pci ids=10de:25a2
+      options kvm_amd nested=1
+    '';
 
     
     loader = {

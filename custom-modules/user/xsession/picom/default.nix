@@ -9,6 +9,10 @@ in {
       type = types.str;
       default = "0.85";
     };
+    cornerRadius = mkOption {
+      type = types.str;
+      default = "10";
+    };
   };
 
   config = mkIf cfg.enable {
@@ -29,13 +33,14 @@ in {
         experimentalBackends = true;
 
         inactiveOpacity = cfg.inactiveOpacity;
+        opacityRule = [ "100:class_g ?= 'awesome'" ];
         
         fade = true;
         fadeDelta = 2;
         fadeExclude =  [ "class_g = 'firefox' && window_type = 'utility'" ];
         shadow = true;
         shadowExclude = [
-          "bounding_shaped && !rounded_corners"
+          # "bounding_shaped && !rounded_corners"
         ];
 
         extraOptions = ''
@@ -46,12 +51,13 @@ in {
             "window_type = 'desktop'",
             "_GTK_FRAME_EXTENTS@:c",
           ];
-          corner-radius = 10;
-          round-borders = 10;
+          corner-radius = ${cfg.cornerRadius};
+          round-borders = ${cfg.cornerRadius};
           rounded-corners-exclude = [
             "window_type = 'dock'",
             "window_type = 'desktop'",
             "_GTK_FRAME_EXTENTS@:c",
+            "class_g = 'awesome'"
           ];
           xinerama-shadow-crop = true;
         '';

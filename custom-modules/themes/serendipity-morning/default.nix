@@ -28,7 +28,7 @@ let
       shadow = "#8388AD";
       border = "#5F6488";
       background = "#FDFDFE";
-      backgroundAlt = "#FDFDFE";
+      backgroundAlt = "#F1F1F4";
       accent = "#D26A5D";
       accentAlt = "#F19A8E";
       secondaryAccent = "#886CDB";
@@ -83,6 +83,7 @@ in {
           };
         };
         bspwm.colors = colors;
+        awesome.colors = colors;
         rofi.theme = "Arc";
         screen-locker.colors = colors;
         picom.inactiveOpacity = "0.8";

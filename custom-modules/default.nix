@@ -25,6 +25,7 @@
     ./user/programs/vscode
     ./user/services/kdeconnect
     ./user/services/mailhog
+    ./user/xsession/awesome
     ./user/xsession/base
     ./user/xsession/bspwm
     ./user/xsession/dunst

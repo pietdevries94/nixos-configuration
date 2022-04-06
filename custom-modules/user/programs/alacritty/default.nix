@@ -16,6 +16,7 @@ in {
         enable = true;
         settings = {
           env = {
+            # WINIT_X11_SCALE_FACTOR = "1.25";
             TERM = "xterm-256color";
           };
           window.padding = {
