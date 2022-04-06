@@ -18,6 +18,15 @@ in {
         enable = true;
       };
 
+      home.file.".config/awesome/" = {
+        source = ./conf;
+        recursive = true;
+      };
+
+      home.file.".config/awesome/modules/bling" = {
+        source = (fetchTarball https://github.com/BlingCorp/bling/archive/master.tar.gz);
+      };
+
       home.file.".config/awesome/variables.lua".text = ''
 local colors = {}
 colors.accent = "${ui.accent}"
