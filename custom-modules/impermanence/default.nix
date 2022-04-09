@@ -2,6 +2,7 @@
 with lib;
 let
   cfg = config.custom.impermanence;
+  check-persist = (import ./check-persist.nix) {inherit pkgs;};
 in {
   options.custom.impermanence = {
     enable = mkEnableOption "Impermanence";
@@ -45,6 +46,18 @@ in {
         ] ++ cfg.userDirectories;
         files = [] ++ cfg.userFiles;
       };
+    };
+
+    security.sudo.extraConfig = ''
+      %wheel      ALL=(ALL:ALL) NOPASSWD: ${check-persist}/bin/check-persist
+    '';
+
+    home-manager.users.piet = {
+      home.packages = [ check-persist ];
+
+      xsession.initExtra = ''
+        sudo check-persist &
+      '';
     };
   };
 }
