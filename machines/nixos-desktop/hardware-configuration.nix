@@ -39,12 +39,22 @@
       neededForBoot = true;
     };
 
+  fileSystems."/swap" =
+    { device = "/dev/disk/by-uuid/77c1079e-0ba7-44b0-993e-81d0a2c4a6b0";
+      fsType = "btrfs";
+      options = [ "subvol=swap" "compress=zstd" "noatime" ];
+      neededForBoot = true;
+    };
+
   fileSystems."/boot" =
     { device = "/dev/disk/by-uuid/2EEA-F23C";
       fsType = "vfat";
     };
 
-  swapDevices = [ ];
+  swapDevices = [{
+    device = "/swap/swapfile";
+    size = (1024 * 16) + (1024 * 2); # RAM size + 2 GB
+  }];
 
   hardware.cpu.amd.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
   # high-resolution display
