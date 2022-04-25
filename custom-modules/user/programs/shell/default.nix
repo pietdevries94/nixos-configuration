@@ -13,6 +13,7 @@ in {
         enable = true;
         enableAutosuggestions = true;
         enableCompletion = true;
+        history.path = ".zsh_history/history";
         initExtra = ''
           function nix-tmp() {
             nix-shell -p $@ --run zsh
@@ -76,9 +77,7 @@ in {
     custom.impermanence = {
       userDirectories = [
         { directory = ".local/share/direnv"; user = "piet"; }
-      ];
-      userFiles = [
-        ".zsh_history"
+        { directory = ".zsh_history"; mode = "0700"; user = "piet"; }
       ];
     };
   };

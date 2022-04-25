@@ -325,6 +325,7 @@ awful.rules.rules = {
           "pinentry",
         },
         class = {
+          "1Password",
           "Arandr",
           "Blueman-manager",
           "Gpick",

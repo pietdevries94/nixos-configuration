@@ -31,7 +31,6 @@ in {
   environment.systemPackages = with pkgs; [
     htop
     killall
-    cachix
     lm_sensors
     ddcutil
   ];

@@ -12,10 +12,14 @@ in {
       # Enable the keyring
       services.gnome-keyring.enable = true;
 
+      nixpkgs.config = { allowUnfree = true; };
+      xdg.configFile."nixpkgs/config.nix".source = pkgs.writeText "config.nix" ''
+        { allowUnfree = true; }
+      '';
+
       home.packages = with pkgs; [
-        firefox-bin
         chromium
-        gimp
+        gimp-with-plugins
         remmina
         neofetch
         pciutils
@@ -34,6 +38,7 @@ in {
         gnome.eog
         gnome.seahorse
         gnome.gnome-system-monitor
+        gnome.gnome-keyring
       ];
     };
   };

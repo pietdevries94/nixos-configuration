@@ -16,7 +16,9 @@
     user.programs = {
       alacritty.enable = true;
       vscode.enable = true;
+      firefox.enable = true;
       spotify.enable = true;
+      _1password.enable = true;
     };
 
     user.services.kdeconnect.enable = true;

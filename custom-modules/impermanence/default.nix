@@ -55,6 +55,8 @@ in {
     home-manager.users.piet = {
       home.packages = [ check-persist ];
 
+      xdg.mimeApps.enable = true;
+
       xsession.initExtra = ''
         sudo check-persist &
       '';

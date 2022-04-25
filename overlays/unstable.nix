@@ -9,7 +9,6 @@ in with unstable; {
     inconsolata-nerdfont
     siji
     starship
-    picom
     niv
     sweet
     numix-icon-theme

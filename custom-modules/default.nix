@@ -16,7 +16,9 @@
     ./themes/horizon-dark
     ./themes/horizon-light
     ./themes/serendipity-morning
+    ./user/programs/1password
     ./user/programs/alacritty
+    ./user/programs/firefox
     ./user/programs/git
     ./user/programs/gpg-agent
     ./user/programs/shell

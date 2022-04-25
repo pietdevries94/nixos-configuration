@@ -5,7 +5,7 @@ in
 {
   home-manager.users.piet = {
     xsession.profileExtra = ''
-      autorandr --change
+      autorandr --force default
     '';
     programs.autorandr = {
       enable = true;
