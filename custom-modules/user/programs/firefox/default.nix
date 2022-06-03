@@ -42,6 +42,7 @@ in {
         extensions = with firefoxAddons; [
           https-everywhere
           onepassword-password-manager
+          ghostery
         ];
       };
 
@@ -50,9 +51,8 @@ in {
         associations.added = mimeTypes;
       };
     };
-    custom.impermanence.userFiles = [
-      { file = ".mozilla/firefox/piet/extensions.json"; parentDirectory = {mode = "0700"; user = "piet"; }; }
-      { file = ".mozilla/firefox/piet/extension-preferences.json"; parentDirectory = {mode = "0700"; user = "piet"; }; }
+    custom.impermanence.userDirectories = [
+      { directory = ".mozilla/firefox/piet"; mode = "0700"; user = "piet"; }
     ];
   };
 }

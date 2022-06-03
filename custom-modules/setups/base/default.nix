@@ -16,6 +16,10 @@ in {
       xdg.configFile."nixpkgs/config.nix".source = pkgs.writeText "config.nix" ''
         { allowUnfree = true; }
       '';
+      xdg.configFile."nix/nix.conf".source = pkgs.writeText "nix.conf" ''
+        experimental-features = nix-command
+        experimental-features = nix-command flakes
+      '';
 
       home.packages = with pkgs; [
         chromium

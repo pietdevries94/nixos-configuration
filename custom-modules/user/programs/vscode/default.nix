@@ -39,6 +39,10 @@ in {
   };
 
   config = mkIf cfg.enable {
+    custom.impermanence.userDirectories = [
+      { directory = ".config/Code"; mode = "0700"; user = "piet"; }
+    ];
+
     home-manager.users.piet = {
       programs.vscode = mkMerge [
         {
@@ -52,7 +56,6 @@ in {
             gruntfuggly.todo-tree
             editorconfig.editorconfig
             emeraldwalk.runonsave
-            pkgs.vscode-extensions.ms-vsliveshare.vsliveshare
             # vscode-icons-team.vscode-icons needs to be installed manually
 
             # Git

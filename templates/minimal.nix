@@ -41,8 +41,9 @@ in {
     binaryCachePublicKeys = [ "pietdevries94.cachix.org-1:EmL0bay0YH7tI9SU3sLeyhBR5QYx+Zg6vMvBOmZ6MMQ=" ];
 
     # Support flakes
-    package = pkgs.nix_2_4;
+    package = pkgs.nixFlakes;
     extraOptions = ''
+      experimental-features = nix-command
       experimental-features = nix-command flakes
     '';
   };

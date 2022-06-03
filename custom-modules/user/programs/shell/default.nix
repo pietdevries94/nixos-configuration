@@ -15,8 +15,8 @@ in {
         enableCompletion = true;
         history.path = ".zsh_history/history";
         initExtra = ''
-          function nix-tmp() {
-            nix-shell -p $@ --run zsh
+          function c() {
+            pushd && cd $@ && code . && popd
           }
 
           zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
@@ -27,6 +27,8 @@ in {
         '';
         shellAliases = {
           tmp = "pushd && cd $(mktemp -d)";
+          l = "ls -lah";
+          xm = "systemctl --user restart xmodmap.service && exit";
         };
         plugins = [
           {
