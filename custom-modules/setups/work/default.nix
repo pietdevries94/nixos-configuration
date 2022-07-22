@@ -30,7 +30,7 @@ in {
         teams
         google-chrome
         libreoffice
-        insomnia
+        postman
         standardnotes
         glab
       ];

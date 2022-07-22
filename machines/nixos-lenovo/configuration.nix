@@ -67,6 +67,7 @@
     };
 
     user.programs = {
+      virtualbox.enable = true;
       vscode.languages = {
         golang = true;
         vue = true;
@@ -108,7 +109,7 @@
 
   virtualisation.libvirtd = {
     enable = true;
-    qemuOvmf = true;
+    qemu.ovmf.enable = true;
     onBoot = "ignore";
     # suspending is not an option with pci passtrough
     onShutdown = "shutdown";
@@ -148,8 +149,23 @@
   networking.hosts = {
     "192.168.122.186" = [ "macOS" ];
     "192.168.122.161" = [ "win10" ];
-    "192.168.122.47" = [ "rancher.cloud" ];
+    "172.23.0.25" = [ "taiga.compenda.nl" ];
   };
+
+  services.dnsmasq = {
+    enable = true;
+    extraConfig = ''
+    address=/.compenda-app.local/192.168.122.42
+    '';
+    servers = [
+      "172.22.0.201"
+      "172.22.0.202"
+      "8.8.8.8"
+      "8.8.4.4"
+    ];
+  };
+  networking.networkmanager.dns = "dnsmasq";
+  security.pki.certificates = [ "/home/piet/.office-addin-dev-certs/ca.crt" ];
 
   systemd.services.libvirt-macOS-clean-shutdown = {
     after = [ "libvirt-guests.service" ];

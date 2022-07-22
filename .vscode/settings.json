@@ -1,3 +1,4 @@
 {
-  "nixEnvSelector.nixFile": "NOT_MODIFIED_ENV"
+  "nixEnvSelector.nixFile": "NOT_MODIFIED_ENV",
+  "editor.fontWeight": "500"
 }
