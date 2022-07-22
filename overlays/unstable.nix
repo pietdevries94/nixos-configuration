@@ -9,7 +9,6 @@ in with unstable; {
     inconsolata-nerdfont
     siji
     starship
-    picom
     niv
     sweet
     numix-icon-theme
@@ -21,7 +20,7 @@ in with unstable; {
     prusa-slicer
     glab
     cura
-    nix_2_4
+    nixFlakes
     tela-icon-theme
   ;
 }

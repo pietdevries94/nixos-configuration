@@ -40,6 +40,7 @@ in {
 
   config = mkIf cfg.enable {
     home-manager.users.piet = {
+      home.packages = [pkgs.victor-mono];
       programs.vscode = mkMerge [
         {
           enable = true;
@@ -76,6 +77,11 @@ in {
             "workbench.colorTheme" = cfg.theme.name;
             "workbench.iconTheme" = "vscode-icons";
             "nix.enableLanguageServer" = true;
+            "editor.fontLigatures" = true;
+
+            # "editor.fontFamily" = "'Victor Mono', 'monospace', monospace, 'Font Awesome 5 Free Solid', 'Inconsolata Nerd Font'";
+            # "editor.fontSize" = 16;
+            # "editor.fontWeight" = 500;
           };
 
           keybindings = [
