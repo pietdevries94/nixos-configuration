@@ -4,26 +4,38 @@ local beautiful = require("beautiful")
 local wibox = require("wibox")
 local xresources = require("beautiful.xresources")
 local dpi = xresources.apply_dpi
+local variables = require("variables")
+local features = variables.features
 
 Q.panel = {}
 
 local top_actions = wibox.widget {
+  require("ui.panel.network"),
   require("ui.panel.volume"),
   layout = wibox.layout.fixed.vertical,
   spacing = dpi(16),
 }
 
-gears.timer.delayed_call(function ()
-  local number_of_displays = tonumber(io.popen("sudo ddcutil detect | grep -c \"Display\""):read("*all"))
-  local create_brightness_slider_monitor = require("ui.panel.brightness")
-  top_actions:add(create_brightness_slider_monitor(1))
-  top_actions:add(create_brightness_slider_monitor(2))
-end)
-
 local middle_actions = wibox.widget {
-  layout = wibox.layout.fixed.vertical,
-  spacing = dpi(16),
+  {
+    require("ui.panel.vm"),
+    layout = wibox.layout.fixed.vertical,
+    spacing = dpi(16),
+  },
+  widget = wibox.container.margin,
+  top = dpi(16),
 }
+
+if (features.laptopBrightness) then
+  top_actions:add(require("ui.panel.laptopBrightness"))
+end
+
+awful.spawn.easy_async_with_shell("sudo ddcutil detect | grep -c \"Display\"", function(stdout)
+  local create_brightness_slider_monitor = require("ui.panel.brightness")
+  for i = 1, tonumber(stdout), 1 do
+    top_actions:add(create_brightness_slider_monitor(1))
+  end
+end)
 
 local bottom_actions = wibox.widget {
   require("ui.panel.buttons"),

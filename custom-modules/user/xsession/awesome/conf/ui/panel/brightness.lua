@@ -62,9 +62,13 @@ local create_brightness_slider_monitor = function(display_number)
     if (debounce > 0) then
       return
     end
-    local v = io.popen("sudo ddcutil -d "..dn.." getvcp 10 | sed -n \"s/.*current value = *\\([^']*\\), max value =   100.*/\\1/p\""):read("*all")
-    prev_value = tonumber(v)
-    s.value = prev_value
+    awful.spawn.easy_async_with_shell("sudo ddcutil -d "..dn.." getvcp 10 | sed -n \"s/.*current value = *\\([^']*\\), max value =   100.*/\\1/p\"", function (stdout)
+      prev_value = tonumber(stdout)
+      if (prev_value == nil) then
+        prev_value = 0
+      end
+      s.value = prev_value
+    end)
   end
 
   pollBrightness(slider)
@@ -73,23 +77,10 @@ local create_brightness_slider_monitor = function(display_number)
   bt:connect_signal("timeout", function () pollBrightness(slider) end)
   bt:start()
 
-  return wibox.widget {
-    {
-      {
-        icon,
-        slider,
-        layout = wibox.layout.fixed.horizontal,
-        spacing = dpi(10),
-      },
-      margins = dpi(20),
-      widget = wibox.container.margin,
-    },
-    widget = wibox.container.background,
-    shape = function(cr, width, height)
-      gears.shape.rounded_rect(cr, width, height, 5)
-    end,
-    bg = beautiful.bg_subtle,
-  }
+  return require("ui.panel.components.block")({
+    icon,
+    slider,
+  })
 end
 
 return create_brightness_slider_monitor

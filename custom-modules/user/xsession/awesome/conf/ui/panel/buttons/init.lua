@@ -9,12 +9,7 @@ local helpers = require("helpers")
 local create_icon_button = function(name, fn)
   return wibox.widget {
     {
-      {
-        image = helpers.get_icon(name),
-        forced_height = dpi(24),
-        forced_width = dpi(24),
-        widget = wibox.widget.imagebox,
-      },
+      require("ui.panel.components.icon")(name),
       margins = dpi(16),
       widget = wibox.container.margin,
     },
