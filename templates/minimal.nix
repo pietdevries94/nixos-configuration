@@ -1,7 +1,7 @@
 { pkgs, ... }:
 
 let
-  hmTarball = fetchTarball https://github.com/nix-community/home-manager/archive/release-21.11.tar.gz;
+  hmTarball = fetchTarball https://github.com/nix-community/home-manager/archive/release-22.05.tar.gz;
   impermanenceTarball = fetchTarball https://github.com/nix-community/impermanence/archive/refs/heads/master.tar.gz;
 in {
   imports = [ 
@@ -21,7 +21,7 @@ in {
     ];
   };
 
-  system.stateVersion = "21.11";
+  system.stateVersion = "22.05";
   system.autoUpgrade.enable = true;
   system.autoUpgrade.allowReboot = false;
 
