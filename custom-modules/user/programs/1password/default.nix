@@ -12,8 +12,13 @@ in {
       { directory = ".config/1Password"; mode = "0700"; user = "piet"; }
     ];
 
+    programs._1password-gui = {
+      enable = true;
+      gid = 5000;
+      polkitPolicyOwners = ["piet"];
+    };
+
     home-manager.users.piet = {
-      home.packages = [pkgs._1password-gui];
       xsession.initExtra = ''
         1password --silent &
       '';
