@@ -149,7 +149,6 @@
   networking.hosts = {
     "192.168.122.186" = [ "macOS" ];
     "192.168.122.161" = [ "win10" ];
-    "172.23.0.25" = [ "taiga.compenda.nl" ];
   };
 
   services.dnsmasq = {

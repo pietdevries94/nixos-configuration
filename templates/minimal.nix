@@ -17,7 +17,6 @@ in {
       (import ../overlays/unstable.nix)
       (import ../overlays/wietsedv.nix)
       (import ../overlays/extra-vscode-extensions.nix)
-      (import ../overlays/pull-requests.nix)
     ];
   };
 
@@ -92,5 +91,12 @@ in {
     git.enable = true;
     gpg-agent.enable = true;
     ssh.enable = true;
+  };
+
+  boot.loader.grub = {
+    theme = pkgs.fetchzip {
+      url = "https://github.com/Jacksaur/CRT-Amber-GRUB-Theme/releases/download/1.1/crt-amber-theme.zip";
+      sha256 = "sha256-MyEnjcqysdOsxYQ2zHQGRVfa9JNXE4C8oUj/vyc6LIE=";
+    };
   };
 }
