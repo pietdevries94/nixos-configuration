@@ -16,7 +16,7 @@ in {
         history.path = ".zsh_history/history";
         initExtra = ''
           function c() {
-            pushd && cd $@ && code . && popd
+            cd $@ && code . && exit 0
           }
 
           zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'

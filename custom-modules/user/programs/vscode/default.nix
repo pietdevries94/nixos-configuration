@@ -104,6 +104,14 @@ in {
               key = "alt+right";
               command = "workbench.action.navigateForward";
             }
+            {
+              key = "f15";
+              command = "nx.run";
+            }
+            {
+              key = "f16";
+              command = "nx.generate";
+            }
           ];
         }
 
