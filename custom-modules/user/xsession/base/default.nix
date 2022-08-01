@@ -49,7 +49,7 @@ in {
       services.sxhkd.keybindings = {
         "XF86Audio{Play,Prev,Next}" = "${pkgs.playerctl}/bin/playerctl {play-pause,previous,next}";
         # TODO: move volume script from Tint2
-        "XF86Audio{LowerVolume,RaiseVolume,Mute}" = "~/.config/tint2/scripts/change-volume.sh {down,up,mute} ${cfg.volumeIcon}";
+        "XF86Audio{LowerVolume,RaiseVolume,Mute}" = "${../tint2/scripts/change-volume.sh} {down,up,mute} ${cfg.volumeIcon}";
       };
 
       gtk = {

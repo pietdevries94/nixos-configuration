@@ -106,7 +106,7 @@ in {
             }
             {
               key = "f15";
-              command = "nx.run";
+              command = "nx.run.target";
             }
             {
               key = "f16";
