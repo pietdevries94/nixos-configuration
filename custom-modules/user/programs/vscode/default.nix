@@ -81,6 +81,8 @@ in {
             "workbench.iconTheme" = "vscode-icons";
             "nix.enableLanguageServer" = true;
             "editor.fontLigatures" = true;
+            "terminal.integrated.defaultProfile.linux" = "zsh";
+            "terminal.integrated.shellIntegration.enabled" = false;
 
             # "editor.fontFamily" = "'Victor Mono', 'monospace', monospace, 'Font Awesome 5 Free Solid', 'Inconsolata Nerd Font'";
             # "editor.fontSize" = 16;
@@ -110,7 +112,7 @@ in {
             }
             {
               key = "f16";
-              command = "nx.generate";
+              command = "nx.generate.ui.fileexplorer";
             }
           ];
         }

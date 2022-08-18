@@ -22,5 +22,6 @@ in with unstable; {
     cura
     nixFlakes
     tela-icon-theme
+    ferdium
   ;
 }

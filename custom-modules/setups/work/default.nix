@@ -23,7 +23,7 @@ in {
     
     home-manager.users.piet = {
       home.packages = with pkgs; [
-        ferdi
+        ferdium
         networkmanager-fortisslvpn
         networkmanager-openvpn
         azuredatastudio

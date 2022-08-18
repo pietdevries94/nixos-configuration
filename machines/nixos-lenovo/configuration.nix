@@ -166,6 +166,8 @@
   networking.networkmanager.dns = "dnsmasq";
   security.pki.certificates = [ "/home/piet/.office-addin-dev-certs/ca.crt" ];
 
+  services.xserver.libinput.enable = true;
+
   systemd.services.libvirt-macOS-clean-shutdown = {
     after = [ "libvirt-guests.service" ];
     requires = [ "libvirt-guests.service" ];
