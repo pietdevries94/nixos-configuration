@@ -29,20 +29,6 @@ in {
         pciutils
         pavucontrol
         vlc
-
-        # File manager
-        xfce.thunar
-        xfce.thunar-archive-plugin
-        xfce.thunar-volman
-        xfce.tumbler
-        gnome.file-roller
-
-        # Basic utils
-        gnome.gnome-calculator
-        gnome.eog
-        gnome.seahorse
-        gnome.gnome-system-monitor
-        gnome.gnome-keyring
       ];
     };
   };

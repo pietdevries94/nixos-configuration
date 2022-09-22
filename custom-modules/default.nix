@@ -13,11 +13,7 @@
     ./setups/gaming
     ./setups/printing3d
     ./setups/work
-    ./themes/horizon-dark
-    ./themes/horizon-light
-    ./themes/serendipity-morning
     ./user/programs/1password
-    ./user/programs/alacritty
     ./user/programs/firefox
     ./user/programs/git
     ./user/programs/gpg-agent
@@ -26,16 +22,6 @@
     ./user/programs/ssh
     ./user/programs/virtualbox
     ./user/programs/vscode
-    ./user/services/kdeconnect
     ./user/services/mailhog
-    ./user/xsession/awesome
-    ./user/xsession/base
-    ./user/xsession/bspwm
-    ./user/xsession/dunst
-    ./user/xsession/picom
-    ./user/xsession/rofi
-    ./user/xsession/screen-locker
-    ./user/xsession/scrot
-    ./user/xsession/tint2
   ];
 }

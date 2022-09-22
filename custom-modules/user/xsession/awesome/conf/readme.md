@@ -1,1 +1,0 @@
-icons phosphor thin

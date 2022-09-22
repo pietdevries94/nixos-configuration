@@ -3,7 +3,6 @@
 {
   imports = [
     ./hardware-configuration.nix
-    ./autorandr-profiles.nix
 
     # Load non-public settings
     ../../secrets
@@ -58,8 +57,6 @@
   custom = {
     impermanence.enable = true;
 
-    themes.serendipity-morning.enable = true;
-
     setups = {
       gaming.enable = true;
     };
@@ -71,11 +68,6 @@
         svelte = true;
         web = true;
       };
-    };
-
-    user.xsession = {
-      screen-locker.enable = lib.mkForce false;
-      bspwm.windowGap = 30;
     };
 
     hardware = {

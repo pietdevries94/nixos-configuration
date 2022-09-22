@@ -9,17 +9,11 @@ in {
 
   config = mkIf cfg.enable {
     services.xserver = {
+      desktopManager.gnome.enable = true;
+      
       enable = true;
       displayManager = {
-        sddm = {
-          enable = true;
-          autoLogin.relogin = true;
-        };
-        autoLogin = {
-          enable = true;
-          user = "piet";
-        };
-        defaultSession = "hm-xsession";
+        gdm.enable = true;
         session = [
           {
             manage = "desktop";
@@ -35,15 +29,6 @@ in {
         enable = true;
         touchpad.naturalScrolling = true;
       };
-    };
-    services.gnome.glib-networking.enable = true;
-    programs.nm-applet.enable = true;
-
-    home-manager.users.piet.services.redshift = {
-      enable = true;
-      tray = true;
-      latitude = "52.992752";
-      longitude = "6.564228";
     };
   };
 }

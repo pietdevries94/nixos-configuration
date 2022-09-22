@@ -5,15 +5,6 @@ let
 in {
   options.custom.user.programs.vscode = {
     enable = mkEnableOption "VS Code";
-    theme = {
-      name = mkOption {
-        type = types.str;
-      };
-      extension = mkOption {
-        type = types.package;
-        default = null;
-      };
-    };
     languages = {
       golang = mkOption {
         type = types.bool;
@@ -77,7 +68,6 @@ in {
             "git.rebaseWhenSync" = true;
             "gitlens.currentLine.enabled" = false;
             "window.menuBarVisibility" = "toggle";
-            "workbench.colorTheme" = cfg.theme.name;
             "workbench.iconTheme" = "vscode-icons";
             "nix.enableLanguageServer" = true;
             "editor.fontLigatures" = true;
@@ -114,10 +104,6 @@ in {
             }
           ];
         }
-
-        (mkIf (cfg.theme.extension != null) {
-          extensions = [ cfg.theme.extension ];
-        })
 
         (mkIf cfg.languages.golang {
           extensions = with pkgs.extra-vscode-extensions; [

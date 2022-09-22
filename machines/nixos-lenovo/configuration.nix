@@ -3,7 +3,6 @@
 {
   imports = [
     ./hardware-configuration.nix
-    ./autorandr-profiles.nix
 
     # Load non-public settings
     ../../secrets
@@ -57,8 +56,6 @@
   services.logind.lidSwitch = "hibernate";
 
   custom = {
-    themes.serendipity-morning.enable = true;
-
     setups.work.enable = true;
     setups.gaming.enable = true;
 
@@ -93,11 +90,6 @@
       audio.enable = true;
       screen.enable = true;
       input.enable = true;
-    };
-
-    user.xsession.tint2 = {
-      winVM = true;
-      macVM = true;
     };
   };
 
