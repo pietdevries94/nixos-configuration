@@ -43,6 +43,8 @@ in {
           https-everywhere
           onepassword-password-manager
           ghostery
+          darkreader
+          i-dont-care-about-cookies
         ];
       };
 

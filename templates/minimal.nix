@@ -25,7 +25,7 @@ in {
   system.autoUpgrade.allowReboot = false;
 
   # needed for ddcutil
-  boot.kernelModules = [ "i2c-dev" ];
+  hardware.i2c.enable = true;
 
   environment.systemPackages = with pkgs; [
     htop

@@ -58,25 +58,6 @@ in {
             # Nix
             jnoortheen.nix-ide
           ]);
-          userSettings = {
-            "editor.fontFamily" = "'Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback', 'Font Awesome 5 Free Solid', 'Inconsolata Nerd Font'";
-            "editor.formatOnSave" = true;
-            "editor.tabSize" = 2;
-            "git.allowForcePush" = true;
-            "git.autofetch" = true;
-            "git.confirmSync" = false;
-            "git.rebaseWhenSync" = true;
-            "gitlens.currentLine.enabled" = false;
-            "window.menuBarVisibility" = "toggle";
-            "workbench.iconTheme" = "vscode-icons";
-            "nix.enableLanguageServer" = true;
-            "editor.fontLigatures" = true;
-
-            # "editor.fontFamily" = "'Victor Mono', 'monospace', monospace, 'Font Awesome 5 Free Solid', 'Inconsolata Nerd Font'";
-            # "editor.fontSize" = 16;
-            # "editor.fontWeight" = 500;
-          };
-
           keybindings = [
             {
               key = "f13";
@@ -109,9 +90,6 @@ in {
           extensions = with pkgs.extra-vscode-extensions; [
             golang.go
           ];
-          userSettings = {
-            "go.formatTool" = "goimports";
-          };
         })
 
         (mkIf cfg.languages.rust {
