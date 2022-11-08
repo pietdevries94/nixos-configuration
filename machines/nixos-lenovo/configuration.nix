@@ -38,6 +38,15 @@
       options kvm_amd nested=1
     '';
 
+    # needed for my touchbad // TODO: remove in 22.11
+    # kernelPatches = pkgs.lib.singleton {
+    #   name = "enable-pinctl-amd";
+    #   patch = null;
+    #   extraConfig = ''
+    #     PINCTRL_AMD y
+    #   '';
+    # }; 
+
     
     loader = {
       efi.canTouchEfiVariables = true;
@@ -151,20 +160,19 @@
     "192.168.122.161" = [ "win10" ];
   };
 
-  services.dnsmasq = {
-    enable = true;
-    extraConfig = ''
-    address=/.compenda-app.local/192.168.122.42
-    '';
-    servers = [
-      "172.22.0.201"
-      "172.22.0.202"
-      "8.8.8.8"
-      "8.8.4.4"
-    ];
-  };
-  networking.networkmanager.dns = "dnsmasq";
-  security.pki.certificates = [ "/home/piet/.office-addin-dev-certs/ca.crt" ];
+  # services.dnsmasq = {
+  #   enable = true;
+  #   extraConfig = ''
+  #   address=/.compenda-app.local/192.168.122.42
+  #   '';
+  #   servers = [
+  #     "172.22.0.201"
+  #     "172.22.0.202"
+  #     "8.8.8.8"
+  #     "8.8.4.4"
+  #   ];
+  # };
+  # networking.networkmanager.dns = "dnsmasq";
 
   services.xserver.libinput.enable = true;
 

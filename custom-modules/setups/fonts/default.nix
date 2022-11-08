@@ -18,6 +18,7 @@ in {
         font-awesome
         inconsolata-nerdfont
         siji
+        open-sans
       ];
     };
   };

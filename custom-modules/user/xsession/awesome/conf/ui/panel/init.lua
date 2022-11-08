@@ -33,7 +33,8 @@ end
 awful.spawn.easy_async_with_shell("sudo ddcutil detect | grep -c \"Display\"", function(stdout)
   local create_brightness_slider_monitor = require("ui.panel.brightness")
   for i = 1, tonumber(stdout), 1 do
-    top_actions:add(create_brightness_slider_monitor(i))
+    -- // TODO: fix the reset
+    -- top_actions:add(create_brightness_slider_monitor(i))
   end
 end)
 
