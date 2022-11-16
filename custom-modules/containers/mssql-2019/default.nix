@@ -20,7 +20,7 @@ in {
       serviceConfig.Type = "oneshot";
       script = ''
         mkdir -p /srv/container-volumes/mssql-2019
-        chown -r 10001 /srv/container-volumes/mssql-2019
+        chown -R 10001 /srv/container-volumes/mssql-2019
       '';
       wantedBy = [ "multi-user.target" ];
     };

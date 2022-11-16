@@ -7,6 +7,7 @@
     ./hardware/input
     ./hardware/screen
     ./impermanence
+    ./services/gitlabrunner
     ./services/xserver
     ./setups/base
     ./setups/fonts

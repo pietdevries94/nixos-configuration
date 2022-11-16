@@ -71,6 +71,8 @@
     setups.work.enable = true;
     setups.gaming.enable = true;
 
+    services.gitlab-runner.enable = true;
+
     user.services = {
       mailhog.enable = true;
     };

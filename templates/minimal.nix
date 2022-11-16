@@ -82,6 +82,11 @@ in {
   home-manager.useUserPackages = true;
   home-manager.useGlobalPkgs = true;
 
+  # virtualisation.podman = {
+  #   enable = true;
+  #   dockerCompat = true;
+  #   dockerSocket.enable = true;
+  # };
   virtualisation.oci-containers = {
     backend = "podman";
   };

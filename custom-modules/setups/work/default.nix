@@ -32,7 +32,7 @@ in {
         ferdium
         networkmanager-fortisslvpn
         networkmanager-openvpn
-        #azuredatastudio
+        azuredatastudio
         teams
         google-chrome
         libreoffice

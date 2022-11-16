@@ -44,7 +44,7 @@ in {
     ];
 
     home-manager.users.piet = {
-      home.packages = [pkgs.victor-mono];
+      home.packages = [pkgs.victor-mono pkgs.rnix-lsp];
       programs.vscode = mkMerge [
         {
           enable = true;
