@@ -2,7 +2,8 @@
 with lib;
 let
   cfg = config.custom.user.programs.shell;
-in {
+in
+{
   options.custom.user.programs.shell = {
     enable = mkEnableOption "The user his personal shell setup";
   };
@@ -29,6 +30,7 @@ in {
           tmp = "pushd && cd $(mktemp -d)";
           l = "ls -lah";
           xm = "systemctl --user restart xmodmap.service && exit";
+          nr = "npm run";
         };
         plugins = [
           {

@@ -1,16 +1,17 @@
 { pkgs, ... }:
 
 let
-  hmTarball = fetchTarball https://github.com/nix-community/home-manager/archive/release-22.05.tar.gz;
+  hmTarball = fetchTarball https://github.com/nix-community/home-manager/archive/release-22.11.tar.gz;
   impermanenceTarball = fetchTarball https://github.com/nix-community/impermanence/archive/refs/heads/master.tar.gz;
-in {
-  imports = [ 
+in
+{
+  imports = [
     ../custom-modules
     (import "${hmTarball}/nixos")
     (import "${impermanenceTarball}/nixos.nix")
   ];
 
-    nixpkgs = {
+  nixpkgs = {
     config.allowUnfree = true;
     overlays = [
       (import ../overlays/personal.nix)
@@ -20,7 +21,7 @@ in {
     ];
   };
 
-  system.stateVersion = "22.05";
+  system.stateVersion = "22.11";
   system.autoUpgrade.enable = true;
   system.autoUpgrade.allowReboot = false;
 
@@ -49,7 +50,7 @@ in {
   };
 
   boot.cleanTmpDir = true;
-  
+
   i18n.defaultLocale = "en_US.UTF-8";
   time.timeZone = "Europe/Amsterdam";
   networking.networkmanager.enable = true;
