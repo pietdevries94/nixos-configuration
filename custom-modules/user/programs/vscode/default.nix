@@ -2,7 +2,8 @@
 with lib;
 let
   cfg = config.custom.user.programs.vscode;
-in {
+in
+{
   options.custom.user.programs.vscode = {
     enable = mkEnableOption "VS Code";
     theme = {
@@ -44,7 +45,7 @@ in {
     ];
 
     home-manager.users.piet = {
-      home.packages = [pkgs.victor-mono pkgs.rnix-lsp];
+      home.packages = [ pkgs.victor-mono pkgs.rnix-lsp ];
       programs.vscode = mkMerge [
         {
           enable = true;
@@ -66,6 +67,9 @@ in {
 
             # Nix
             jnoortheen.nix-ide
+
+            # XML
+            pkgs.vscode-extensions.redhat.vscode-xml
           ]);
           userSettings = {
             "editor.fontFamily" = "'Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback', 'Font Awesome 5 Free Solid', 'Inconsolata Nerd Font'";

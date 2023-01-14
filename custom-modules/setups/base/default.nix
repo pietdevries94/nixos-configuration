@@ -2,7 +2,8 @@
 with lib;
 let
   cfg = config.custom.setups.base;
-in {
+in
+{
   options.custom.setups.base = {
     enable = mkEnableOption "Base software";
   };
@@ -24,7 +25,7 @@ in {
       home.packages = with pkgs; [
         chromium
         gimp-with-plugins
-        remmina
+        (remmina.override { freerdp = (freerdp.override { openssl = pkgs.openssl_1_1; }); })
         neofetch
         pciutils
         pavucontrol

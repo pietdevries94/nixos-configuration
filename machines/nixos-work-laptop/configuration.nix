@@ -22,6 +22,8 @@
   networking.interfaces.wlp4s0.useDHCP = true;
   networking.networkmanager.enable = true;
 
+  boot.supportedFilesystems = [ "ntfs" ];
+
   boot = {
     loader = {
       efi.canTouchEfiVariables = true;

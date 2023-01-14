@@ -69,7 +69,7 @@ in
 
     shell = pkgs.zsh;
     isNormalUser = true;
-    extraGroups = [ "wheel" "video" "networkmanager" "input" ];
+    extraGroups = [ "wheel" "video" "networkmanager" "input" "docker" ];
   };
 
   security.sudo.enable = true;
@@ -82,12 +82,15 @@ in
 
   home-manager.useUserPackages = true;
   home-manager.useGlobalPkgs = true;
+  home-manager.users.piet.home.stateVersion = "18.09";
+  home-manager.users.root.home.stateVersion = "18.09";
 
   # virtualisation.podman = {
   #   enable = true;
   #   dockerCompat = true;
   #   dockerSocket.enable = true;
   # };
+  virtualisation.docker.enable = true;
   virtualisation.oci-containers = {
     backend = "podman";
   };

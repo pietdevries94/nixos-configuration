@@ -2,7 +2,8 @@
 with lib;
 let
   cfg = config.custom.user.programs._1password;
-in {
+in
+{
   options.custom.user.programs._1password = {
     enable = mkEnableOption "1Password";
   };
@@ -14,8 +15,8 @@ in {
 
     programs._1password-gui = {
       enable = true;
-      gid = 5000;
-      polkitPolicyOwners = ["piet"];
+      # gid = 5000;
+      polkitPolicyOwners = [ "piet" ];
     };
 
     home-manager.users.piet = {

@@ -17,8 +17,9 @@ let
   };
 
   firefoxAddonsTarball = fetchTarball https://gitlab.com/rycee/nur-expressions/-/archive/master/nur-expressions-master.tar.gz?path=pkgs/firefox-addons;
-  firefoxAddons = (pkgs.callPackage "${firefoxAddonsTarball}/pkgs/firefox-addons/default.nix") {};
-in {
+  firefoxAddons = (pkgs.callPackage "${firefoxAddonsTarball}/pkgs/firefox-addons/default.nix") { };
+in
+{
   options.custom.user.programs.firefox = {
     enable = mkEnableOption "Firefox";
     defaultBrowser = mkOption {
@@ -40,7 +41,6 @@ in {
           };
         };
         extensions = with firefoxAddons; [
-          https-everywhere
           onepassword-password-manager
           ghostery
         ];
